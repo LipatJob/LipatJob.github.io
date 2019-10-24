@@ -14,7 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="all.js"></script>    
     <div id="fixednavbar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light p-3" id="nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,12 +44,12 @@
             <div class="shortdesc" class="m-5">
                 I do stuff. Maybe I'll post them here
             </div>
-
+            
         </div>
     </div>
     
     <div id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <nav class="navbar navbar-expand-lg navbar-light p-3 " id="nav" >
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -76,41 +76,80 @@
     
     <div id="aboutme" class="p-3">
         <div class="container" >
-            <h3 id="header">About me</h3>
-            <div class="container">
-                <div id="selfpic">
-                    <img src="res/slantpic.jpg" alt="" srcset="">
-                </div>
-                <div id="aboutdesc">
-                    <div>
+            <h3 class="header">About me</h3>
+            <div class="container py-5">
+                <div class="row">
+                    <div id="selfpic" class="col-4 ">
+                        <img src="res/slantpic.jpg" class="mx-auto" alt="" srcset="">
+                    </div>
+                    <div id="aboutdesc" class="col">
                         <p>
                             <span style="font-size: 35px; font-weight: bold;">Hi!</span> <br>
                             I'm Job Lipat. I am a Freshman B.S. Computer Science Student at Malayan Colleges Laguna. <br><br>
                             I like developing all kinds of stuff.<br><br>
-                            When I'm not studying or programming I would usually be playing a sport or reading a book.
+                            When I'm not studying or programming I would usually be reading a book.
                         </p>
-                    </div>
-                </div>                
+                    </div>  
+                    <div class="col-12 container mt-5">
+                        <p><span class="subheader"> Programming Languages</span></p>
+                        <div class="container" id="prglang">
+                            <div><img src="res/prglang/java.png" alt=""> </div>
+                            <div><img src="res/prglang/csharp.png" alt=""></div>
+                            <div><img src="res/prglang/cpp.png" alt=""></div>
+                            <div><img src="res/prglang/php.png" alt=""></div>
+                        </div>
+                    </div>  
+                </div>
             </div>
+            
         </div>
     </div>
+    
+    <hr>
+    
     <div id="projects">
         <div class="container">
-            <h3 id="header">Projects</h3>
+            <h3 class="header">Projects</h3>
             <div class="container">
-                MCL Scholarship Website
-                MCL ACM Website
-                Experiment Hyperspeed
-            </div>
-        </div>
-    </div>
-    <div id="contactme">
-        <div class="container">
-            <h3 id="header">Contact me</h3>
-            <div class="container">
+                <div id="project_item" class="row shadow">
+                    <div id="project_pic" class=" col-5">
+                        <img src="res/proj/mclscholar.jpg" alt="">
+                    </div>
+                    <div class="col">
+                        <p id="project_header">MCL Scholarship Website</p> 
+                        <p id="project_desc">The MCL Scholarship website is developed as the project for our OJT class. Scholars could receieve news, download forms and validate their scholarships in the website. It uses ASP.NET MVC as its framework and is deployed using Microsoft Azure Web Services. It has recieved the award of the best Work Immersion</p>
+                    </div>
+                </div>
                 
+                <div id="project_item" class="row shadow">
+                    <div id="project_pic" class=" col-5">
+                        <img src="res/proj/mclacm.jpg" alt="">
+                    </div>
+                    <div class="col">
+                        <p id="project_header">MCL ACM Student Chapter Website</p> 
+                        <p id="project_desc">The website is developed for Malayan Colleges Laguna's ACM student chapter. The website uses Laravel as its framework and MySQL for data management.</p>
+                    </div>
+                </div>
+
+                <div id="project_item" class="row shadow">
+                        <div id="project_pic" class=" col-5">
+                            <img src="res/proj/exphyp.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <p id="project_header">Experiment Hyperspeed</p> 
+                            <p id="project_desc">Experiment Hyperspeed is my first experience at developing games. It uses Unity as its engine and has been developed in less than a month. It has also been submitted to Android Masters 2019, an android application development competition.</p>
+                        </div>
+                    </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+        <hr>
+        <div id="contactme">
+            <div class="container">
+                <h3 class="header">Contact me</h3>
+                <div class="container">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
