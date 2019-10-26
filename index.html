@@ -107,7 +107,7 @@
     
     <hr>
     
-    <div id="projects">
+    <div id="projects" class="p-3">
         <div class="container">
             <h3 class="header">Projects</h3>
             <div class="container">
@@ -144,14 +144,42 @@
                 </div>
             </div>
         </div>
-        <hr>
-        <div id="contactme">
+    </div>
+    <hr>
+    <div id="contactme" class="p-3">
+        <div class="container">
+            <h3 class="header" >Contact me</h3>
             <div class="container">
-                <h3 class="header">Contact me</h3>
-                <div class="container">
-                    under construction
-                </div>
+                <form id="contactform" action="https://formspree.io/mgewybbd" method="POST">
+                    <div class="form-group row">
+                        <label for="name" class="col-lg-3 col-form-label">Name</label> 
+                        <div class="col-lg-9">
+                            <input type="text" name="name" class="form-control" placeholder="Enter name" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-lg-3 col-form-label">Email</label> 
+                        <div class="col-lg-9">
+                            <input type="email" name="_replyto" class="form-control" placeholder="Enter email" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="message" class="col-lg-3">Message</label> 
+                        <div class="col-lg-9">
+                            <textarea placeholder="Your message" name="message" id="" class="form-control" rows="10" style="width: 100%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-9 container">
+                            <div class="row">
+                                    <input type="submit" value="Send" id="contactbtn" class="btn btn-dark py-3 my-3 col-lg-5 mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </body>
-    </html>
+    </div>
+</body>
+</html>
