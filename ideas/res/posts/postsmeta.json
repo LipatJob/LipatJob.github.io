@@ -1,0 +1,7 @@
+data = [
+  {
+    "title":"Welcome to my Ideas page!",
+    "date":"October 2019",
+    "filename":"./welcome.html"
+  }
+]
