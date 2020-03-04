@@ -3,5 +3,10 @@ data = [
     "title":"Welcome to my Ideas page!",
     "date":"October 2019",
     "filename":"./welcome.html"
+  },
+  {
+    "title":"The Pragmatic Programmer",
+    "date":"March 2020",
+    "filename":"./pragmatic-programmer.html"
   }
 ]

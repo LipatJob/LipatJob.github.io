@@ -17,6 +17,7 @@
     grid-column: main;
     grid-column-start: main;
     grid-column-end: main;
+    margin-bottom: 20px;
 }
 
 #date{
