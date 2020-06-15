@@ -148,8 +148,21 @@
             <img id = "pdi-0-0" src="./res/img/covid/unicef.png" alt="" srcset="" height="100px" width = auto style="margin:10px">
             <img id = "pdi-0-1" src="./res/img/covid/whologo.png" alt="" srcset="" height="100px" width = auto style="margin:10px">
             <img id = "pdi-0-2" src="./res/img/covid/mcl.png" alt="" srcset="" height="100px" width = auto style="margin:10px"s>
+        
         </div>
+        <div class="card mx-auto mb-5" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id = "countryCardTitle">Card title</h5>
+              <p id = "countryPDI">Moderate</p>
+              <p id = "countryIDV">Moderate</p>
+              <p id = "countryMAS">Moderate</p>
+              <p id = "countryUAI">Moderate</p>
+            </div>
+          </div>
+    
     </div>
+    
+
     
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -234,9 +247,9 @@
             "CountryID": 9,
             "Country": "Control",
             "PDI": 2,
-            "IDV": 5,
-            "MAS": 8,
-            "UAI": 11
+            "IDV": 2,
+            "MAS": 2,
+            "UAI": 2
         }
         
         ]
@@ -269,9 +282,9 @@
             if(normVal == 0){
                 $("#ind-0-1").html("Donate to Your Neighborhood")
             }else if(normVal == 1){
-                $("#ind-0-1").html("Spend Time With Family")
+                $("#ind-0-1").html("Call Your Distant Relatives")
             }else if(normVal == 2){
-                $("#ind-0-1").html("Spend Time With Family")
+                $("#ind-0-1").html("Spend Time With Family at Home")
             }
         }
         
@@ -294,12 +307,23 @@
             }else if(normVal == 1){
                 $("#uai-0-1").html("Source: https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")
             }else if(normVal == 2){
-                $("#uai-0-1").html("Source: WHO (2020).<i>Coronavirus disease (COVID-19) advice for the public</i>. Retreived from https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")
+                $("#uai-0-1").html("Source: WHO (2020). <i>Coronavirus disease (COVID-19) advice for the public</i>. Retreived from https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")
             }
         }
-        
-        $(".country-item").click(function(){
-            country = $(this).attr('id');
+
+        var getGroup = function(value){
+            normVal = (value - 1) % 3
+            if(normVal == 0){
+                return "Low"
+            }else if(normVal == 1){
+                return "Moderate"
+            }else if(normVal == 2){
+                return "High"
+            }
+            return ""
+        }
+
+        var updateCountry = function(country){
             rowData = null
             data.forEach(element =>{
                 if(element["Country"] == country){
@@ -312,8 +336,22 @@
             updateMAS(rowData["MAS"]);
             updateUAI(rowData["UAI"]);
             $("#selectedCountry").html("Seleced Country: " + country)
-            
+            $("#countryCardTitle").html("Country Name: " + country);
+
+            $("#countryPDI").html("PDI: " + getGroup(rowData["PDI"]));
+            $("#countryIDV").html("IDV: " + getGroup(rowData["IDV"]));
+            $("#countryMAS").html("MAS: " + getGroup(rowData["MAS"]));
+            $("#countryUAI").html("UAI: " + getGroup(rowData["UAI"]));
+        }
+        
+        $(".country-item").click(function(){
+            country = $(this).attr('id');
+            updateCountry(country)
         });
+
+        updateCountry("Control")
+
+        
         
         
         
