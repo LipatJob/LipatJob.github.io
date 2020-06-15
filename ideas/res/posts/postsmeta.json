@@ -8,5 +8,10 @@ data = [
     "title":"The Pragmatic Programmer",
     "date":"March 2020",
     "filename":"./pragmatic-programmer.html"
+  },
+  {
+    "title":"Designing for Culture",
+    "date":"June 2020",
+    "filename":"./culture-covid.html"
   }
 ]
