@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id = "websiteTitle">Help Fight Covid</title>
+    
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">COVID Info</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"  style="color:black">Home <span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">
+                        Select Country
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item country-item" id = "Control">Control</a>
+                        <a class="dropdown-item country-item" id = "China">China</a>
+                        <a class="dropdown-item country-item" id = "United States">United States</a>
+                        <a class="dropdown-item country-item" id = "Russian Federation">Russia</a>
+                        <a class="dropdown-item country-item" id = "Japan">Japan</a>
+                        <a class="dropdown-item country-item" id = "Spain">Spain</a>
+                        <a class="dropdown-item country-item" id = "Taiwan">Taiwan</a>
+                        <a class="dropdown-item country-item" id = "South Korea">South Korea</a>
+                        <a class="dropdown-item country-item" id = "North Korea">North Korea</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li id="selectedCountry"> Selected Country: Control</li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <div class = "image mb-4" style = "background-image:url(covid.png); height : 50vh; display:flex; justify-content: center; align-items: center;">
+        <h1 style = "text-align: center; color:white">Measures to Help Fight COVID at Home</h1>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Wash Your Hands</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Follow Quarantine Rules</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" id = "ind-0-1" style="text-align: center;">Spend Time With Family</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Learn a New Skill</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Workout and Eat Healthy</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 id = "mas-0-1" class="card-title" style="text-align: center;">Create Daily Goals</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Self Isolate When Mild Symptoms Show</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Item  -->
+            <div class="col-lg-3 col-md-4 col-sm-6 my-2">
+                <div class="card m-1" style="height:100%">
+                    <img src="gray.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Avoid Touching Eyes, Nose and Mouth</h5>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <p id = "uai-0-1" class = "mt-4" style="text-align: center;">Source: https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</p>
+    </div>
+    <hr>
+    <div class="footer" style="height: 20vh;">
+        <h2 style = "text-align: center; color:black">Presented by</h2>
+        <div style=" display:flex; justify-content: center; align-items: center;" class="">
+            <img id = "pdi-0-0" src="unicef.png" alt="" srcset="" height="100px" width = auto style="margin:10px">
+            <img id = "pdi-0-1" src="whologo.png" alt="" srcset="" height="100px" width = auto style="margin:10px">
+            <img id = "pdi-0-2" src="mcl.png" alt="" srcset="" height="100px" width = auto style="margin:10px"s>
+        </div>
+    </div>
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <script>
+        data = [
+        {
+            "CountryID": 0,
+            "Country": "Control",
+            "PDI": 2,
+            "IDV": 5,
+            "MAS": 8,
+            "UAI": 11
+        },
+        {
+            "CountryID": 1,
+            "Country": "China",
+            "PDI": 3,
+            "IDV": 4,
+            "MAS": 9,
+            "UAI": 10
+        },
+        {
+            "CountryID": 2,
+            "Country": "United States",
+            "PDI": 2,
+            "IDV": 6,
+            "MAS": 8,
+            "UAI": 11
+        },
+        {
+            "CountryID": 3,
+            "Country": "Russian Federation",
+            "PDI": 3,
+            "IDV": 5,
+            "MAS": 8,
+            "UAI": 12
+        },
+        {
+            "CountryID": 4,
+            "Country": "Japan",
+            "PDI": 2,
+            "IDV": 5,
+            "MAS": 9,
+            "UAI": 12
+        },
+        {
+            "CountryID": 5,
+            "Country": "Spain",
+            "PDI": 2,
+            "IDV": 5,
+            "MAS": 8,
+            "UAI": 12
+        },
+        {
+            "CountryID": 6,
+            "Country": "Taiwan",
+            "PDI": 2,
+            "IDV": 4,
+            "MAS": 8,
+            "UAI": 12
+        },
+        {
+            "CountryID": 7,
+            "Country": "South Korea",
+            "PDI": 2,
+            "IDV": 4,
+            "MAS": 8,
+            "UAI": 12
+        },
+        {
+            "CountryID": 8,
+            "Country": "North Korea",
+            "PDI": 3,
+            "IDV": 4,
+            "MAS": 9,
+            "UAI": 10
+        },
+        {
+            "CountryID": 9,
+            "Country": "Control",
+            "PDI": 2,
+            "IDV": 5,
+            "MAS": 8,
+            "UAI": 11
+        }
+        
+        ]
+        
+        var pdi = 50;
+        var idv = 50;
+        var mas = 50;
+        var uai = 50;
+        
+        var updatePDI = function(pdi){
+            normVal = (pdi - 1) % 3;
+            //console.log(normVal)
+            if(normVal == 0){
+                $("#pdi-0-0").hide();
+                $("#pdi-0-1").hide();
+                $("#pdi-0-2").show();
+            }else if(normVal == 1){
+                $("#pdi-0-0").hide();
+                $("#pdi-0-1").show();
+                $("#pdi-0-2").show();
+            }else if(normVal == 2){
+                $("#pdi-0-0").show();
+                $("#pdi-0-1").show();
+                $("#pdi-0-2").show();
+            }
+        }
+        
+        var updateIDV = function(idv){
+            normVal = (idv - 1) % 3;
+            if(normVal == 0){
+                $("#ind-0-1").html("Donate to Your Neighborhood")
+            }else if(normVal == 1){
+                $("#ind-0-1").html("Spend Time With Family")
+            }else if(normVal == 2){
+                $("#ind-0-1").html("Spend Time With Family")
+            }
+        }
+        
+        var updateMAS = function(mas){
+            normVal = (mas - 1) % 3;
+            if(normVal == 0){
+                $("#mas-0-1").html("Take Mental Health Breaks")
+            }else if(normVal == 1){
+                $("#mas-0-1").html("Create Daily Goals")
+            }else if(normVal == 2){
+                $("#mas-0-1").html("Create Daily Goals to Further Your Skills")
+            }
+        }
+        
+        var updateUAI = function(uai){
+            normVal = (uai - 1) % 3;
+            console.log(normVal)
+            if(normVal == 0){
+                $("#uai-0-1").html("Source: WHO (2020)")
+            }else if(normVal == 1){
+                $("#uai-0-1").html("Source: https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")
+            }else if(normVal == 2){
+                $("#uai-0-1").html("Source: WHO (2020).<i>Coronavirus disease (COVID-19) advice for the public</i>. Retreived from https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public")
+            }
+        }
+        
+        $(".country-item").click(function(){
+            country = $(this).attr('id');
+            rowData = null
+            data.forEach(element =>{
+                if(element["Country"] == country){
+                    rowData = element
+                    return;
+                }
+            });
+            updatePDI(rowData["PDI"]);
+            updateIDV(rowData["IDV"]);
+            updateMAS(rowData["MAS"]);
+            updateUAI(rowData["UAI"]);
+            $("#selectedCountry").html("Seleced Country: " + country)
+            
+        });
+        
+        
+        
+        
+    </script>
+</body>
+</html>
