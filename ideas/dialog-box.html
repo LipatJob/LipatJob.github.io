@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dialog Box</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./res/base.css">
+    <link rel="stylesheet" href="./res/posts/posts.css">
     
     <style>
         *{
@@ -17,6 +20,11 @@
             flex-direction: column;
             flex-grow: 0;
             align-items: center;
+            height:100vh;
+            position: fixed;;
+            right: 0px;
+            top: 30px;
+            z-index: 10;
         }
         
         .header{
@@ -31,7 +39,7 @@
             font-size: 16px;
             width: 320px;
         }
-
+        
         .register{
             background: #000000;
             color:#ffffff;
@@ -55,10 +63,10 @@
         .content{
             text-align: center;
             padding: 20px;
-            padding-top: 0px;
+            padding-top: 20px;
             
         }
-
+        
         .info{
             margin-bottom: 22px;
         }
@@ -67,16 +75,16 @@
             width: 400px;
             height: auto;
         }
-
+        
         .decline{
             margin-top:10px;
         }
-
+        
         .textbox{
             padding: 8px;
             width:300px
         }
-
+        
         .textbox-label{
             margin-top: 10px;
             margin-bottom: 0px;
@@ -89,7 +97,37 @@
     </style>
 </head>
 <body>
-    <a href="home.html">back to ideas</a>
+    <div id="navigation"></div>
+    <div class="Other Content">
+        <div id="content" class="container">
+            <small id="date">July 2020</small>
+            <h1 id="title">Dialog Box</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                 Erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas sed sed. 
+                 Risus commodo viverra maecenas accumsan lacus vel. Ut porttitor leo a diam sollicitudin tempor id eu. 
+                Orci nulla pellentesque dignissim enim sit amet. Fermentum odio eu feugiat pretium nibh. Tortor aliquam 
+                nulla facilisi cras fermentum. Porttitor leo a diam sollicitudin tempor id eu. Venenatis cras sed felis 
+                eget velit aliquet. Dui accumsan sit amet nulla facilisi morbi tempus. Facilisi nullam 
+                vehicula ipsum a arcu cursus vitae. Ut morbi tincidunt augue interdum velit euismod in pellentesque. 
+                Id diam maecenas ultricies mi eget mauris. Lacinia quis vel eros donec ac. Quis vel eros donec ac odio 
+                tempor orci. Cursus turpis massa tincidunt dui ut ornare lectus. Aliquet enim tortor at auctor urna nunc 
+                id cursus. Eget egestas purus viverra accumsan. In metus vulputate eu scelerisque.
+            </p>
+            <p>
+                Pharetra et ultrices neque ornare aenean euismod elementum nisi. Nibh nisl 
+                condimentum id venenatis a. Convallis aenean et tortor at risus viverra adipiscing 
+                at. Turpis egestas pretium aenean pharetra magna. Elementum integer enim neque 
+                volutpat. Ut diam quam nulla porttitor massa. Malesuada fames ac turpis egestas 
+                sed tempus urna et. Et ultrices neque ornare aenean euismod elementum. Mi quis 
+                hendrerit dolor magna eget est lorem. Id velit ut tortor pretium viverra suspendisse
+                 potenti nullam ac. Urna neque viverra justo nec ultrices. Nunc id cursus metus aliquam.
+                  Convallis tellus id interdum velit laoreet id.
+            </p>
+        </div>
+    </div>
+
     <div class="notification">
         <img src="res/img/dialogbox/poster.png" class = "poster" alt="" srcset="">
         <div class="content" id = "con1">
@@ -113,33 +151,35 @@
                 <a href="" >No thanks, maybe next time</a>
             </div>
             
-
+            
         </div>
-
+        
         <div class="content" id = "con2">
             <div><p class = "header">Fifth Teaching Lab Event</p></div>
-            <small id = "date"></small>
-            <p class="textbox-label">First Name</p>
-            <input class="textbox" type="text" name="" id="" placeholder="Please Enter Your First Name">
-            <p class="textbox-label">First Name</p>
-            <input class="textbox" type="text" name="" id="" placeholder="Please Enter Your Last Name">
+            <small id = "eventdate"></small>
+            <p class="textbox-label">Full Name</p>
+            <input class="textbox" type="text" name="" id="" placeholder="eg. John Doe">
             <p class="textbox-label">Email</p>
-            <input class="textbox" type="email" name="" id="" placeholder="Please Enter Your Email">
+            <input class="textbox" type="email" name="" id="" placeholder="eg. johndoe@Orange.com">
             <div>
                 <input class = "register" type="button" value="Finish Registration">
             </div>
-            <div class = "decline">
+            <div class = "back">
                 <a href="" >Back</a>
             </div>
             <a href="" >Privacy Policy</a>
-
+            
         </div>
-        
-        
-        
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <a href="home.html">back to ideas</a>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./res/base.js"></script>
+    <script src="./res/posts/post.js"></script>
+
     <script>
+        $("#con2").hide()
         $(".register").attr("disabled", true);
         $(".select").change(function(){
             if($(this).val() == 1){
@@ -148,15 +188,25 @@
                 $(".register").attr("disabled", false);
             }
         })
-
+        
         $(".register").click(function(){
-            $("#date").html($(".select").val())
+            $("#eventdate").html($(".select").val())
             $("#con1").hide()
             $("#con2").show()
         })
 
-        $("#con2").hide()
+        $(".back").click(function(event){
+            event.preventDefault()
+            $("#con1").show()
+            $("#con2").hide()
+        })
+        
 
+        $(".decline").click(function(event){
+            event.preventDefault()
+            $(".notification").hide()
+        })
+        
     </script>
     
 </body>
