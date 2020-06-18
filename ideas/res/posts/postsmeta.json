@@ -1,8 +1,13 @@
 data = [
   {
-    "title":"Welcome to my Ideas page!",
-    "date":"October 2019",
-    "filename":"./welcome.html"
+    "title":"Dialog Box",
+    "date":"June 2020",
+    "filename":"./dialog-box.html"
+  },
+  {
+    "title":"Designing for Culture",
+    "date":"June 2020",
+    "filename":"./culture-covid.html"
   },
   {
     "title":"The Pragmatic Programmer",
@@ -10,8 +15,9 @@ data = [
     "filename":"./pragmatic-programmer.html"
   },
   {
-    "title":"Designing for Culture",
-    "date":"June 2020",
-    "filename":"./culture-covid.html"
-  }
+    "title":"Welcome to my Ideas page!",
+    "date":"October 2019",
+    "filename":"./welcome.html"
+  },
+  
 ]

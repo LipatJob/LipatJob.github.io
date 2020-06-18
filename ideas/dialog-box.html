@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .notification{
+            background-color: #f1f1f1;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 0;
+            align-items: center;
+        }
+        
+        .header{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        
+        .select{
+            padding: 10px;
+            font-size: 16px;
+            width: 320px;
+        }
+        .register{
+            background: #000000;
+            color:#ffffff;
+            padding: 10px;
+            font-size: 18px;
+            margin-top:10px;
+            width: 320px;
+            border-style: none;
+        }
+        
+        .register:active{
+            background: #ffffff;
+            color:#000000;
+        }
+        
+        .register:disabled{
+            background: #858585;
+            color:#ffffff;
+        }
+        
+        .content{
+            text-align: center;
+            padding: 20px;
+            padding-top: 0px;
+            
+        }
+
+        .info{
+            margin-bottom: 22px;
+        }
+        
+        .poster{
+            width: 400px;
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="home.html">back to ideas</a>
+    <div class="notification">
+        <img src="res/img/dialogbox/poster.png" class = "poster" alt="" srcset="">
+        <div class="content">
+            <div><p class = "header">Fifth Teaching Lab Event</p></div>
+            <p class = "info">
+                The registration for the seminar on <b> "Conscious Communication in the Academic Field"</b> that is going to be held on the Fifth Teaching Lab Event on <b> December 16 or 17, 2019</b> is now open
+            </p>
+            
+            <div>
+                <select class = "select" onchange="">
+                    <option class = "option" value=1>Select a date</option>
+                    <option class = "option" value=2>December 16 02:00 PM - 05:00 PM</option>
+                    <option class = "option" value=3>December 17 02:00 PM - 05:00 PM</option>
+                </select>
+            </div>
+            
+            <div>
+                <input class = "register" type="button" value="Register" action = >
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(".register").attr("disabled", true);
+        $(".select").change(function(){
+            if($(this).val() == 1){
+                $(".register").attr("disabled", true);
+            }else{
+                $(".register").attr("disabled", false);
+            }
+        })
+
+        $(".register").click(function(){
+            alert("The user will then be taken to another page to enter their information");
+        })
+    </script>
+    
+</body>
+</html>
