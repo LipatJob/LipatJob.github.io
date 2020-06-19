@@ -20,18 +20,27 @@
             flex-direction: column;
             flex-grow: 0;
             align-items: center;
-            height:100vh;
+            height: 90vh;
+            height:calc(100vh - 30px);
             position: fixed;;
             right: 0px;
             top: 30px;
             z-index: 10;
         }
+
+        @media only screen and (max-width: 700px) {
+            .notification{
+                width:100%;
+            }
+
+        }
         
         .header{
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
         
         .select{
@@ -72,8 +81,13 @@
         }
         
         .poster{
-            width: 400px;
+            width: 100%;
             height: auto;
+        }
+
+        .poster-container{
+            height: 40vh;
+            overflow: hidden;
         }
         
         .decline{
@@ -129,7 +143,9 @@
     </div>
 
     <div class="notification">
-        <img src="res/img/dialogbox/poster.png" class = "poster" alt="" srcset="">
+        <div class="poster-container">
+            <img src="res/img/dialogbox/poster.png" class = "poster" alt="" srcset="">
+        </div>
         <div class="content" id = "con1">
             <div><p class = "header">Fifth Teaching Lab Event</p></div>
             <p class = "info">
