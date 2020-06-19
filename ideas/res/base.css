@@ -66,9 +66,10 @@
 }
 
 
-.navbar-brand{
+.navbar-brand a{
     font-weight: bold;
     font-size: 25px;
+    color: black;
 }
 
 #navimg{
