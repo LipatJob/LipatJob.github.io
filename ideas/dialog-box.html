@@ -27,7 +27,7 @@
             top: 30px;
             z-index: 10;
         }
-
+        
         @media only screen and (max-width: 700px) {
             .notification{
                 width:100%;
@@ -36,12 +36,12 @@
                 height:auto;
                 justify-content: end;
                 box-shadow: 0 0 6px gray;
-
+                
             }
             .poster-container{
                 display: none;
             }
-
+            
         }
         
         .header{
@@ -93,7 +93,7 @@
             width: 100%;
             height: auto;
         }
-
+        
         .poster-container{
             height: 40%;
             overflow: hidden;
@@ -102,7 +102,7 @@
         .decline{
             margin-top:10px;
         }
-
+        
         .back{
             margin-top:10px;
         }
@@ -120,21 +120,33 @@
             font-weight: 600;
             font-size:16px;
         }
-
+        
         .link{
             color: #000000;
             font-weight: 600;
             text-decoration: underline;
         }
-
+        
         #con2 .header{
             margin-bottom: 0px;
         }
-
+        
         .eventdatecontainer{
             margin-bottom: 10px;
         }
+        
+        .completeicon{
+            height: auto;
+            width: 100%;
+        }
+        
+        .complete{
+            padding-left: 90px;
+            padding-right: 90px;
 
+            padding-top: 0;
+        }
+        
         
         
     </style>
@@ -145,11 +157,12 @@
         <div id="content" class="container">
             <small id="date">July 2020</small>
             <h1 id="title">Dialog Box</h1>
+            <p>No data is actually being collected in this page</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                 Erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas sed sed. 
-                 Risus commodo viverra maecenas accumsan lacus vel. Ut porttitor leo a diam sollicitudin tempor id eu. 
+                Erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas sed sed. 
+                Risus commodo viverra maecenas accumsan lacus vel. Ut porttitor leo a diam sollicitudin tempor id eu. 
                 Orci nulla pellentesque dignissim enim sit amet. Fermentum odio eu feugiat pretium nibh. Tortor aliquam 
                 nulla facilisi cras fermentum. Porttitor leo a diam sollicitudin tempor id eu. Venenatis cras sed felis 
                 eget velit aliquet. Dui accumsan sit amet nulla facilisi morbi tempus. Facilisi nullam 
@@ -165,12 +178,12 @@
                 volutpat. Ut diam quam nulla porttitor massa. Malesuada fames ac turpis egestas 
                 sed tempus urna et. Et ultrices neque ornare aenean euismod elementum. Mi quis 
                 hendrerit dolor magna eget est lorem. Id velit ut tortor pretium viverra suspendisse
-                 potenti nullam ac. Urna neque viverra justo nec ultrices. Nunc id cursus metus aliquam.
-                  Convallis tellus id interdum velit laoreet id.
+                potenti nullam ac. Urna neque viverra justo nec ultrices. Nunc id cursus metus aliquam.
+                Convallis tellus id interdum velit laoreet id.
             </p>
         </div>
     </div>
-
+    
     <div class="notification">
         <div class="poster-container">
             <img src="res/img/dialogbox/poster.png" class = "poster" alt="" srcset="">
@@ -190,7 +203,7 @@
             </div>
             
             <div>
-                <input class = "register" type="button" value="Register">
+                <input class = "register continue" type="button" value="Register">
             </div>
             <div class = "decline">
                 <a class = "link" href="" >No thanks, maybe next time</a>
@@ -202,12 +215,12 @@
         <div class="content" id = "con2">
             <div><p class = "header">Fifth Teaching Lab Event</p></div>
             <div class = "eventdatecontainer"><small id = "eventdate"></small></div>
-            <p class="textbox-label">Full Name</p>
+            <p class="textbox-label">Full Name <span style="color:red;">*</span></p>
             <input class="textbox" type="text" name="" id="" placeholder="eg. John Doe">
-            <p class="textbox-label">Email</p>
+            <p class="textbox-label">Email <span style="color:red;">*</span></p>
             <input class="textbox" type="email" name="" id="" placeholder="eg. johndoe@Orange.com">
             <div>
-                <input class = "register" type="button" value="Finish Registration">
+                <input class = "register finish" type="button" value="Finish Registration">
             </div>
             <div class = "back">
                 <a class = "link" href="">Back</a>
@@ -215,43 +228,68 @@
             <a class = "link" href="" >Privacy Policy</a>
             
         </div>
+        
+        <div class="content" id = "con3">
+
+            <div class="complete">
+                <img src="res/img/dialogbox/complete.png" class = "completeicon" alt="" srcset="">
+            </div>
+            <p class = "header">Thank you for Registering</p>
+            <a class = "link" href="" id = "close">Close</a>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./res/base.js"></script>
-    <script src="./res/posts/post.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./res/base.js"></script>
+<script src="./res/posts/post.js"></script>
 
-    <script>
-        $("#con2").hide()
-        $(".register").attr("disabled", true);
-        $(".select").change(function(){
-            if($(this).val() == 1){
-                $(".register").attr("disabled", true);
-            }else{
-                $(".register").attr("disabled", false);
-            }
-        })
-        
-        $(".register").click(function(){
-            $("#eventdate").html("Selected Date: "+$(".select").val())
-            $("#con1").hide()
-            $("#con2").show()
-        })
-
-        $(".back").click(function(event){
-            event.preventDefault()
-            $("#con1").show()
-            $("#con2").hide()
-        })
-        
-
-        $(".decline").click(function(event){
-            event.preventDefault()
-            $(".notification").hide()
-        })
-        
-    </script>
+<script>
+    $("#con2").hide()
+    $("#con3").hide()
     
+    $(".register").attr("disabled", true);
+    $(".select").change(function(){
+        if($(this).val() == 1){
+            $(".register").attr("disabled", true);
+        }else{
+            $(".register").attr("disabled", false);
+        }
+    })
+    
+    $(".continue").click(function(){
+        $("#eventdate").html("Selected Date: "+$(".select").val())
+        $("#con1").hide()
+        $("#con2").show()
+    })
+    
+    $(".finish").click(function(){
+        $("#eventdate").html("Selected Date: "+$(".select").val())
+        $("#con1").hide()
+        $("#con2").hide()
+        $("#con3").show()
+        
+    })
+    
+    $(".back").click(function(event){
+        event.preventDefault()
+        $("#con1").show()
+        $("#con2").hide()
+    })
+    
+    
+    $(".decline").click(function(event){
+        event.preventDefault()
+        $(".notification").hide()
+    })
+
+    $("#close").click(function(event){
+        event.preventDefault()
+        $(".notification").hide()
+    })
+    
+</script>
+
 </body>
 </html>
