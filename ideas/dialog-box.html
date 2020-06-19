@@ -31,6 +31,15 @@
         @media only screen and (max-width: 700px) {
             .notification{
                 width:100%;
+                bottom: 0px;
+                top: auto;
+                height:auto;
+                justify-content: end;
+                box-shadow: 0 0 6px gray;
+
+            }
+            .poster-container{
+                display: none;
             }
 
         }
@@ -73,7 +82,7 @@
             text-align: center;
             padding: 20px;
             padding-top: 20px;
-            
+            height : 60%;
         }
         
         .info{
@@ -86,26 +95,37 @@
         }
 
         .poster-container{
-            height: 40vh;
+            height: 40%;
             overflow: hidden;
         }
         
         .decline{
             margin-top:10px;
         }
+
+        .back{
+            margin-top:10px;
+        }
         
         .textbox{
             padding: 8px;
-            width:300px
+            width:320px
         }
         
         .textbox-label{
-            margin-top: 10px;
+            margin-top: 8px;
             margin-bottom: 0px;
             text-align: left;
             font-weight: 600;
             font-size:16px;
         }
+
+        .link{
+            color: #000000;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
         
         
     </style>
@@ -164,7 +184,7 @@
                 <input class = "register" type="button" value="Register">
             </div>
             <div class = "decline">
-                <a href="" >No thanks, maybe next time</a>
+                <a class = "link" href="" >No thanks, maybe next time</a>
             </div>
             
             
@@ -181,13 +201,12 @@
                 <input class = "register" type="button" value="Finish Registration">
             </div>
             <div class = "back">
-                <a href="" >Back</a>
+                <a class = "link" href="">Back</a>
             </div>
-            <a href="" >Privacy Policy</a>
+            <a class = "link" href="" >Privacy Policy</a>
             
         </div>
     </div>
-    <a href="home.html">back to ideas</a>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -206,7 +225,7 @@
         })
         
         $(".register").click(function(){
-            $("#eventdate").html($(".select").val())
+            $("#eventdate").html("Selected Date: "+$(".select").val())
             $("#con1").hide()
             $("#con2").show()
         })
