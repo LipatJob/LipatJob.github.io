@@ -109,11 +109,12 @@
         
         .textbox{
             padding: 8px;
-            width:320px
+            width:320px;
+            margin-bottom:10px;
         }
         
         .textbox-label{
-            margin-top: 8px;
+            margin-top: 0px;
             margin-bottom: 0px;
             text-align: left;
             font-weight: 600;
@@ -124,6 +125,14 @@
             color: #000000;
             font-weight: 600;
             text-decoration: underline;
+        }
+
+        #con2 .header{
+            margin-bottom: 0px;
+        }
+
+        .eventdatecontainer{
+            margin-bottom: 10px;
         }
 
         
@@ -192,7 +201,7 @@
         
         <div class="content" id = "con2">
             <div><p class = "header">Fifth Teaching Lab Event</p></div>
-            <small id = "eventdate"></small>
+            <div class = "eventdatecontainer"><small id = "eventdate"></small></div>
             <p class="textbox-label">Full Name</p>
             <input class="textbox" type="text" name="" id="" placeholder="eg. John Doe">
             <p class="textbox-label">Email</p>
