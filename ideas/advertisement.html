@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisement</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        p{
+            margin:0;
+        }
+        
+        #ad{
+            background-color: #eeeeee;
+        }
+        
+        #banner{
+            border-bottom: solid;
+            border-width: 1px;
+            font-size: 14px;
+        }
+        
+        #bannerwrap{
+            text-align: center;
+        }
+        
+        #team{
+            font-size: 12px;
+        }
+        
+        #teamwrap{
+            width:70%;
+            text-align: center;
+            border-right: solid 1px;
+        }
+        
+        #score{
+            font-size: 12px;
+        }
+        
+        #scorewrap{
+            width: 30%;
+            text-align: center;
+        }
+        
+        #betten{
+            font-weight: bold;
+            margin:0;
+            font-size: 18px;
+        }
+        
+        #bettenwrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #towinval{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        #towinvalwrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #versus{
+            font-size: 12px;
+        }
+        #versuswrap{
+            text-align: center;
+        }
+        
+        #date{
+            font-size: 10px;
+        }
+        
+        #datewrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #time{
+            font-size: 10px;
+        }
+        
+        #timewrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #bet{
+            font-size: 12px;
+            
+        }
+        
+        #betwrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #towin{
+            font-size: 12px;
+        }
+        
+        #towinwrap{
+            width: 50%;
+            text-align: center;
+        }
+        
+        #bettowin{
+            border-top: solid 1px;
+        }
+        
+        #bettowinval{
+        }
+        
+        #datetime{
+            border-top: solid 1px;
+        }
+        
+        #bettowinend{
+            border-bottom: solid 1px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div style="width: 120px;" id = "ad">
+        <div id = "panic" style="display: none; text-align:center; height:112px; vertical-align: middle;">
+            <div style="display: flex; flex-direction: column; justify-content: center; height:100%">
+                <p style="font-size:18px; font-weight: bold;">BETABET</p>
+                <p style="margin-bottom: 6px;">A Better World</p>
+                <p style = "font-size:16px">BET NOW</p>
+            </div>
+        </div>
+        <div id = "active"> 
+            <div style="height: 18px" id = "bannerwrap"><p id = "banner">BETABET</p></div>
+            <div style="height: 17px; display: flex; flex-direction:row"><div id = "teamwrap"><p id = "team"></p></div><div id = "scorewrap"><p id = "score"></p></div></div>
+            <div style="height: 15px; display: flex; flex-direction:row" id = "bettowin"><div id = "betwrap"><p id="bet">BET</p></div><div id = "towinwrap"><p id = "towin">TO WIN</p></div></div>
+            <div style="height: 20px; display: flex; flex-direction:row" id = "bettowinval"><div id = "bettenwrap"><p id = "betten"></p></div><div id = "towinvalwrap"><p id = "towinval"></p></div></div>
+            <div style="height:  7px" id = "bettowinend"></div>
+            <div style="height: 19px" id = "versuswrap"><p id = "versus"></p></div>
+            <div style="height: 16px; display: flex; flex-direction:row" id = "datetime"><div id = "datewrap"><p id = "date"></p></div><div id = "timewrap"><p id = "time"></p></div></div>
+        </div>
+    </div>
+    
+    <button id = "data1">Select Data 1</button>
+    <button id = "data2">Select Data 2</button>
+    <button id = "panickbutton">Select Panic</button>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>    
+    <script>
+        validateValues = function(values){
+            keys = ["team", "score", "betten", "towin", "versus", "date", "time"]
+            for (const e of keys){
+                if(!(e in values)){
+                    return false
+                }
+            }
+            return true;
+        }
+        
+        setPanic = function(){
+            $("#active").css("display", "none");
+            $("#panic").css("display", "block");
+        }
+
+        setNonPanic = function(){
+            $("#active").css("display", "block");
+            $("#panic").css("display", "none");
+        }
+
+        setValues = function(values){
+            if(!validateValues(values)){
+                setPanic()
+                throw "Invalid values";
+            }else{
+                setNonPanic()
+            }
+            $("#team").html(values["team"])
+            $("#score").html(values["score"])
+            $("#betten").html(values["betten"])
+            $("#towinval").html(values["towin"])
+            $("#versus").html(values["versus"])
+            $("#date").html(values["date"])
+            $("#time").html(values["time"])
+        }
+        
+        initAd = function(){
+            index = 0
+            betaBetLogo = "<p style = 'font-weight : bold;'>BETABET </p>"
+            messages = [betaBetLogo,"LATEST ODDS", "TO WIN"]
+            updateBanner = function(){
+                index = (index + 1) % 3
+                $("#banner").html(messages[index])
+            }
+            setInterval(updateBanner, 1000)
+            
+            data = [{
+                "team":"Liverpool 3-1",
+                "score":"5/1",
+                "betten":"$10",
+                "towin":"$50",
+                "versus":"Liverpool v Man Utd",
+                "date":"12th Jun",
+                "time":"7pm",
+            },{
+                "team":"Chelsea 2-2",
+                "score":"7/1",
+                "betten":"$10",
+                "towin":"$70",
+                "versus":"Chelsea v Tot. Spurs",
+                "date":"14th Jun",
+                "time":"6pm",
+            },{
+                "team":"Tot. Spurs 2-2",
+                "score":"7/1",
+                "versus":"Chelsea v Tot. Spurs",
+                "date":"14th Jun",
+                "time":"6pm",
+            }
+            ]
+            
+            setValues(data[0])
+            
+        }
+        
+        $("#data1").click(function(){
+            setValues(data[0])
+        });
+        
+        $("#data2").click(function(){
+            setValues(data[1])
+        });
+        
+        $("#panickbutton").click(function(){
+            setValues(data[2])
+        });
+        
+        
+        try{
+            initAd()
+        }catch(err){
+            alert(err)
+        }
+        
+    </script>
+</body>
+</html>
