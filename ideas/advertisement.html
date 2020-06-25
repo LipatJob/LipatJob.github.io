@@ -15,7 +15,7 @@
         }
         
         #ad{
-            background-color: #0f73db;
+            background-color: #1b7ce0;
             padding:4px;
         }
         
@@ -87,6 +87,9 @@
         #datewrap{
             width: 60%;
             text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
         }
         
         #time{
@@ -96,6 +99,9 @@
         #timewrap{
             width: 40%;
             text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
         }
         
         #bet{
@@ -131,6 +137,7 @@
             border-top: solid 1px;
             border-color: #fa8907;
             font-weight: 500;
+            padding-top: 2px;
         }
         
         #bettowinend{
@@ -157,7 +164,9 @@
             <div style="height: 20px; display: flex; flex-direction:row" id = "bettowinval"><div id = "bettenwrap"><p id = "betten"></p></div><div id = "towinvalwrap"><p id = "towinval"></p></div></div>
             <div style="height:  7px" id = "bettowinend"></div>
             <div style="height: 19px" id = "versuswrap"><p id = "versus"></p></div>
-            <div style="height: 16px; display: flex; flex-direction:row" id = "datetime"><div id = "datewrap"><p id = "date"></p></div><div id = "timewrap"><p id = "time"></p></div></div>
+            <div style="height: 16px; display: flex; flex-direction:row" id = "datetime">
+                <div id = "datewrap"> <img src="res/img/finals/calendar.png" style="height: 12px; width: auto; padding-right:3px;" alt=""><p id = "date"></p></div>
+                <div id = "timewrap"> <img src="res/img/finals/clock.png" style="height: 15px; width: auto; padding-right:2px;" alt="">  <p id = "time"></p></div></div>
         </div>
     </div>
     
