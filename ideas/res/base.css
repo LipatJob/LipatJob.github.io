@@ -36,11 +36,12 @@
     background-color: rgb(245, 245, 245);
 }
 
-.nav-link{
+#nav-link{
     margin-right: 7px;
     margin-left: 7px;
-    font-size: 18px;
-    color: black !important;
+    color:black;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .nav-link:hover{

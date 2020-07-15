@@ -81,7 +81,7 @@
     <div id="aboutme" class="p-3">
         <div class="container" >
             <h3 class="header">About me</h3>
-            <div class="container py-5">
+            <div class="container pb-5 pt-2">
                 <div class="row">
                     <div id="selfpic" class="p-4 col-lg-4 col-sm-12">
                         <img src="res/slantpic.jpg" class="mx-auto" alt="" srcset="">
@@ -91,7 +91,7 @@
                             <span style="font-size: 35px; font-weight: bold;">Hi!</span> <br>
                             I'm Job Lipat. I am a Freshman B.S. Computer Science Student at Malayan Colleges Laguna. <br><br>
                             I like developing all kinds of stuff.<br><br>
-                            I post my thoughts <a href="ideas/home.html">here</a> if you want to know more about me.
+                            I post my thoughts <a href="ideas/home.html" class = "link" style = "text-decoration: underline;">here</a> if you want to know more about me.
                         </p>
                     </div>  
                     <div class="col-12 container mt-5">
@@ -114,50 +114,57 @@
     <div id="projects" class="p-3">
         <div class="container">
             <h3 class="header">Featured Projects</h3>
-            <div class="container">
-                <div id="project_item" class="row shadow">
-                    <div id="project_pic" class=" col-lg-5 col-sm-12">
-                        <img src="res/proj/covidccis.jpg" alt="">
-                    </div>
-                    <div class="col">
-                        <p id="project_header">MCL CCIS COVID-19 Case Tracker</p> 
-                        <p id="project_desc">The MCL CCIS COVID-19 Case Tracker is a dashboard that tracks COVID cases in Laguna, Philippines. The website mainly uses Chart JS for graphs, uses PHP for the backend, and MySQL as its database. I took part in the back end, data collection, and refactoring</p>
+            <div class="container row">
+                <div class="p-3 col-lg-4 col-md-6 col-sm-12">
+                    <div id="" class="project_item">
+                        <div id="project_pic" class="">
+                            <img src="res/proj/covidccis.jpg" alt="">
+                        </div>
+                        <div class="project_desc_container">
+                            <p id="project_header">MCL CCIS COVID-19 Case Tracker</p> 
+                            <p id="project_desc">The MCL CCIS COVID-19 Case Tracker is a dashboard that tracks COVID cases in Laguna, Philippines. The website mainly uses Chart JS for graphs, uses PHP for the backend, and MySQL as its database. I took part in the back end, data collection, and refactoring</p>
+                        </div>
                     </div>
                 </div>
-                <div id="project_item" class="row shadow">
-                    <div id="project_pic" class=" col-lg-5 col-sm-12">
-                        <img src="res/proj/mclscholar.jpg" alt="">
-                    </div>
-                    <div class="col">
-                        <p id="project_header">MCL Scholarship Website</p> 
-                        <p id="project_desc">The MCL Scholarship website is developed as the project for our OJT class. Scholars could receive news, download forms and validate their scholarships in the website. It uses ASP.NET MVC as its framework and is deployed using Microsoft Azure Web Services. Because of the project, I have received the award "Best in Work Immersion".</p>
-                    </div>
-                </div>
-                    <!-- <div id="project_item" class="row shadow">
-                        <div id="project_pic" class=" col-lg-5 col-sm-12">
-                            <img src="res/proj/mclacm.jpg" alt="">
-                        </div>
-                        <div class="col">
-                            <p id="project_header">MCL ACM Student Chapter Website</p> 
-                            <p id="project_desc">The website is developed for Malayan Colleges Laguna's ACM student chapter. The website uses Laravel as its framework and MySQL for data management.</p>
-                        </div>
-                    </div> -->
                 
-                <div id="project_item" class="row shadow">
-                    <div id="project_pic" class=" col-lg-5 col-sm-12">
-                        <img src="res/proj/exphyp.jpg" alt="">
-                    </div>
-                    <div class="col">
-                        <p id="project_header">Experiment Hyperspeed</p> 
-                        <p id="project_desc">Experiment Hyperspeed is my first experience at developing games. It uses Unity as its engine and has been developed in less than a month. It has also been submitted to Android Masters 2019, an android application development competition.</p>
+                <div class="p-3 col-lg-4 col-md-6 col-sm-12">
+                    <div id="" class="project_item">
+                        <div id="project_pic" class="">
+                            <img src="res/proj/mclscholar.jpg" alt="">
+                        </div>
+                        <div class="project_desc_container">
+                            <p id="project_header">MCL Scholarship Website</p> 
+                            <p id="project_desc">The MCL Scholarship website is developed as the project for our OJT class. Scholars could receive news, download forms and validate their scholarships in the website. It uses ASP.NET MVC as its framework and is deployed using Microsoft Azure Web Services. Because of the project, I have received the award "Best in Work Immersion".</p>
+                        </div>
                     </div>
                 </div>
+                <!-- <div id="project_item" class="row shadow">
+                    <div id="project_pic" class=" col-lg-5 col-sm-12">
+                        <img src="res/proj/mclacm.jpg" alt="">
+                    </div>
+                    <div class="col">
+                        <p id="project_header">MCL ACM Student Chapter Website</p> 
+                        <p id="project_desc">The website is developed for Malayan Colleges Laguna's ACM student chapter. The website uses Laravel as its framework and MySQL for data management.</p>
+                    </div>
+                </div> -->
+                <div class="p-3 col-lg-4 col-md-6 col-sm-12">
+                    <div id="" class="project_item">
+                        <div id="project_pic" class="">
+                            <img src="res/proj/exphyp.jpg" alt="">
+                        </div>
+                        <div class="project_desc_container">
+                            <p id="project_header">Experiment Hyperspeed</p> 
+                            <p id="project_desc">Experiment Hyperspeed is my first experience at developing games. It uses Unity as its engine and has been developed in less than a month. It has also been submitted to Android Masters 2019, an android application development competition.</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
     <hr>
-
-
+    
+    
     <hr>
     <div id="contactme" class="p-3">
         <div class="container">
@@ -186,7 +193,7 @@
                         <div class="col-lg-3"></div>
                         <div class="col-lg-9 container">
                             <div class="row">
-                                    <input type="submit" value="Send" id="contactbtn" class="btn btn-dark py-3 my-3 col-lg-5 mx-auto">
+                                <input type="submit" value="Send" id="contactbtn" class="btn btn-dark py-3 my-3 col-lg-5 mx-auto">
                             </div>
                         </div>
                     </div>
