@@ -10,9 +10,9 @@
     "
   >
     <div class="flex flex-col text-center sm:text-left">
-      <span class="text-2xl font-medium font-body">Hi, my name is</span>
-      <span class="text-7xl font-bold font-body my-4"> Job Lipat </span>
-      <span class="text-xl font-medium font-body">
+      <span class="text-2xl font-semibold">Hi, my name is</span>
+      <span class="text-6xl sm:text-7xl font-bold my-4"> Job Lipat </span>
+      <span class="text-xl font-medium">
         I'm a Computer Science student <br />
         at Malayan Colleges Laguna
       </span>
