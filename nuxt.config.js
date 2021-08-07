@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "lipatjobj.github.io",
+    title: "Job Lipat",
     htmlAttrs: {
       lang: "en"
     },
@@ -15,7 +15,7 @@ export default {
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: "/slant.jpg" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter&display=swap"
