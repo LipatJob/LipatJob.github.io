@@ -11,7 +11,7 @@
   >
     <div class="flex flex-col text-center sm:text-left">
       <span class="text-2xl font-semibold">Hi, my name is</span>
-      <span class="text-6xl sm:text-7xl font-bold my-4"> Job Lipat </span>
+      <span class="text-6xl font-bold my-4"> Job Lipat </span>
       <span class="text-xl font-medium">
         I'm a Computer Science student <br />
         at Malayan Colleges Laguna
@@ -21,16 +21,18 @@
       class="
         mt-4
         flex flex-row
-        gap-6
+        gap-8
         justify-center
         sm:justify-start
         mt-8
         sm:mt-0
       "
     >
-      <a v-for="social in socials" :key="social.link" :href="social.link">
-        <img :src="social.icon" :alt="social.alt" height="75" width="75" />
-      </a>
+      <SocialIcon
+        v-for="(social, index) in socials"
+        :key="index"
+        :data="social"
+      />
     </div>
   </div>
 </template>
