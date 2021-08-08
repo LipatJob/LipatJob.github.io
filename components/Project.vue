@@ -1,7 +1,7 @@
 <template>
   <div class="border-4 border-gray-800 rounded-lg p-0 overflow-hidden">
     <img :src="thumbnail" alt="" />
-    <div class="flex flex-col p-4">
+    <div class="flex flex-col p-4 pt-2">
       <span> {{ moment(date).format("MMMM YYYY") }} </span>
       <span class="font-bold text-xl"> {{ title }} </span>
       <span> {{ summary }} </span>
