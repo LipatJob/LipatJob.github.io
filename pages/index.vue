@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-screen-md mx-auto">
+  <div class="max-w-screen-md mx-auto mb-3">
     <MainCard />
-    <ProjectList class="mx-4 sm:mx-0 mt-12"/>
+    <ProjectList class="mx-4 sm:mx-0 mt-12" />
   </div>
 </template>
 

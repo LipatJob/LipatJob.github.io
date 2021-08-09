@@ -21,9 +21,8 @@
       class="
         mt-4
         flex flex-row
-        gap-8
         justify-center
-        sm:justify-start
+        sm:justify-evenly
         mt-8
         sm:mt-0
       "

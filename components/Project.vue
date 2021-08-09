@@ -1,10 +1,10 @@
 <template>
-  <div class="border-4 border-gray-800 rounded-lg p-0 overflow-hidden">
+  <div class="border-2 border-gray-700 rounded-lg p-0 overflow-hidden">
     <img :src="thumbnail" alt="" />
     <div class="flex flex-col p-4 pt-2">
       <span> {{ moment(date).format("MMMM YYYY") }} </span>
       <span class="font-bold text-xl"> {{ title }} </span>
-      <span> {{ summary }} </span>
+      <span class="mt-2"> {{ summary }} </span>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     },
     date: {
       required: true,
-      type: Date,
+      type: String,
     },
     summary: {
       required: true,
