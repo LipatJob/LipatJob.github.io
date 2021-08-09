@@ -1,6 +1,6 @@
 <template>
-  <div class="border-2 border-gray-700 rounded-lg p-0 overflow-hidden">
-    <img :src="thumbnail" alt="" />
+  <div class="border-2 border-gray-700 rounded-lg overflow-hidden" style="margin:-1px;">
+    <img :src="thumbnail" alt="" class="" />
     <div class="flex flex-col p-4 pt-2">
       <span> {{ moment(date).format("MMMM YYYY") }} </span>
       <span class="font-bold text-xl"> {{ title }} </span>

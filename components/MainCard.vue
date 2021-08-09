@@ -10,9 +10,9 @@
     "
   >
     <div class="flex flex-col text-center sm:text-left">
-      <span class="text-2xl font-semibold">Hi, my name is</span>
+      <span class="text-2xl font-medium">Hi, my name is</span>
       <span class="text-6xl font-bold my-4"> Job Lipat </span>
-      <span class="text-xl font-medium">
+      <span class="text-xl font-normal">
         I'm a Computer Science student <br />
         at Malayan Colleges Laguna
       </span>
@@ -21,8 +21,7 @@
       class="
         mt-4
         flex flex-row
-        justify-center
-        sm:justify-evenly
+        justify-evenly
         mt-8
         sm:mt-0
       "
