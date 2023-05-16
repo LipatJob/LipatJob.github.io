@@ -1,0 +1,88 @@
+* {
+	font-family: 'Inter', Helvetica, Arial, sans-serif;
+	--primary: #2b71c5;
+	--secondary: #474747;
+}
+
+body{
+	margin: 0;;
+}
+
+$primary: #2b71c5;
+$secondary: #474747;
+$text-secondary: #474747;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+	@media (min-width: #{$screen-sm-min}) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin md {
+	@media (min-width: #{$screen-md-min}) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin lg {
+	@media (min-width: #{$screen-lg-min}) {
+		@content;
+	}
+}
+
+// Extra large devices
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	margin-bottom: 30px;
+}
+
+.header-label {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	color: $primary;
+}
+
+.header-title {
+	font-weight: 600;
+	font-size: 32px;
+}
+
+.header-subtitle {
+	font-size: 20px;
+	color: $secondary;
+	margin-top: 20px;
+}
+
+
+
