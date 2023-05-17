@@ -55,7 +55,6 @@
 	}
 
 	.overflow {
-		scroll-snap-align: start;
 		display: flex;
 		gap: 48px;
 	}
@@ -66,7 +65,6 @@
 	}
 
 	.snappable {
-		scroll-snap-align: start;
 	}
 
 	.screen-height {
