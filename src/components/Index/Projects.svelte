@@ -112,7 +112,7 @@
 			margin: 0 auto;
 		}
 		max-width: $screen-lg-min;
-		margin-bottom: 20px;
+		padding-bottom: 40px;
 	}
 
 	.projects-list {
@@ -123,7 +123,7 @@
 		top: 0;
 		left: 0;
 		@include sm {
-			margin: 0 100px;
+			padding: 10px 100px;
 		}
 		padding: 0;
 		overflow-x: scroll;
