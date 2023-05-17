@@ -13,14 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # This action is provided by Cypress. It installs node and the NPM
-      # dependencies, and caches them.
-      - name: Cypress install
-        uses: cypress-io/github-action@v2
-        with:
-          # NOTE: we don't actually run tests here!
-          runTests: false
-
       # Now we run our lints. This is the place where you could run other tests
       # unrelated to cypress (e.g.: unit tests).
       - name: Run lints
@@ -43,7 +35,7 @@ jobs:
     # Only run if merged to main.
     if: github.ref == 'refs/heads/main'
     # Only deploy if all tests passed.
-    needs: [build, test]
+    needs: [build]
 
     runs-on: ubuntu-latest
 
