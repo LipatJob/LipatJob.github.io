@@ -13,7 +13,7 @@
 	<div class="nav">
 		<Navigation />
 	</div>
-	<div class="about section screen-height" id="About">
+	<div class="section about screen-height" id="About">
 		<About />
 	</div>
 
@@ -62,11 +62,11 @@
 	.section {
 		display: flex;
 		@include sm {
+			width: $screen-lg-min;
+			max-width: $screen-lg-min;
 			margin: 0 auto;
 		}
 		gap: 24px;
-		width: $screen-lg-min;
-		max-width: $screen-lg-min;
 	}
 
 	.section-full {

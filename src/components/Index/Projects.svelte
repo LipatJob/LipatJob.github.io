@@ -34,14 +34,14 @@
 			imageLink: '/banners/CovidTrackerV3.jpg',
 			title: 'MMCL COVID19 Tracker (v3)',
 			description:
-				"A dashboard where users may view visualizations of COVID-19 cases in the cities and barangays of the provice of Laguna, Philippines",
+				'A dashboard where users may view visualizations of COVID-19 cases in the cities and barangays of the provice of Laguna, Philippines',
 			link: ''
 		},
 		{
 			imageLink: '/banners/DiscoverMapuaMCL.png',
 			title: 'Discover Mapua MCL',
 			description:
-				"An application that allows users to navigate the campus of Mapua Malayan Colleges Laguna with the help of augmented reality.",
+				'An application that allows users to navigate the campus of Mapua Malayan Colleges Laguna with the help of augmented reality.',
 			link: ''
 		},
 		{
@@ -62,14 +62,14 @@
 			imageLink: '/banners/CFlat.png',
 			title: 'Cb (C Flat)',
 			description:
-				"A compiled and statically typed programming language that aims combine the simplicity of Python and the type safety of C.",
+				'A compiled and statically typed programming language that aims combine the simplicity of Python and the type safety of C.',
 			link: ''
 		},
 		{
 			imageLink: '/banners/4Pycs1Word.png',
 			title: '4pycs1word',
 			description:
-				"The classic mobile game 4 Pics 1 Word written in Python complete with coins, hints, and level skips.",
+				'The classic mobile game 4 Pics 1 Word written in Python complete with coins, hints, and level skips.',
 			link: ''
 		}
 	];
@@ -85,7 +85,7 @@
 		</p>
 	</div>
 	<div class="projects-container">
-		<div class="projects-list" style="--column-count: {Math.ceil(projects.length / 2)}">
+		<div class="projects-list" style="--project-count: {projects.length}">
 			{#each projects as project}
 				<div class="project">
 					<Project
@@ -112,6 +112,7 @@
 			margin: 0 auto;
 		}
 		max-width: $screen-lg-min;
+		margin-bottom: 20px;
 	}
 
 	.projects-list {
@@ -121,7 +122,10 @@
 		gap: 30px;
 		top: 0;
 		left: 0;
-		padding: 20px 100px;
+		@include sm {
+			margin: 0 100px;
+		}
+		padding: 0;
 		overflow-x: scroll;
 		overflow-y: visible;
 
@@ -129,9 +133,13 @@
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE 10+ */
 
-		@include md {
-			grid-template-columns: repeat(var(--column-count), 1fr);
+		grid-template-columns: repeat(calc(var(--project-count) / 2), 1fr);
+		grid-template-rows: 1fr 1fr;
+
+		@include sm {
+			grid-template-columns: repeat(calc(var(--project-count) / 2), 1fr);
 			grid-template-rows: 1fr 1fr;
+
 			font-size: 128px;
 		}
 	}
@@ -142,7 +150,10 @@
 	}
 
 	.project {
-		width: 400px;
+		@include sm {
+			width: 400px;
+		}
+		width: 100vw;
 		min-width: auto;
 	}
 </style>
