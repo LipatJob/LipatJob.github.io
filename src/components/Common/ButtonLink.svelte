@@ -49,11 +49,14 @@
 		text-decoration: none;
 		background-color: $primary;
 		border: none;
-		color: white !important;
 
 		@include md {
 			width: 130px;
 		}
+	}
+
+	.button-primary .button-text {
+		color: white;
 	}
 
 	.button-icon {

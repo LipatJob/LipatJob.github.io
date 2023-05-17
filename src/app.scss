@@ -2,11 +2,12 @@ $primary: #347be6;
 $secondary: #474747;
 $text-secondary: #474747;
 $black: #3e3e3e;
-$white: #f7f7f7;
+$white: #f0f0f0;
 $border: 1px solid rgb(151, 151, 151);
 
 * {
 	font-family: 'Inter', Helvetica, Arial, sans-serif;
+	color: $black;
 }
 
 html {
@@ -95,8 +96,8 @@ p {
 	height: 100vh;
 }
 
-.popup:hover{
+.popup:hover {
 	transform: translateY(-4px);
-	transition: .1s transform ease-in-out;
+	transition: 0.1s transform ease-in-out;
 	box-shadow: 0 4px 4px rgb(0 0 0 / 0.1);
 }

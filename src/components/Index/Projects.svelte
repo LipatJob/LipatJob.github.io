@@ -3,31 +3,29 @@
 
 	let projects = [
 		{
-			imageLink: 'TheModernBibliotheca.png',
-			title: 'The Modern Bibliotheca',
+			imageLink: '/banners/SpeakByHand.png',
+			title: 'Speak by Hand',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+				'A Smartwatch-Based Alternative Communication Aid for Nonverbal Individuals that uses a CNN Based Gesture Recognition Model',
 			link: ''
 		},
 		{
-			imageLink: 'TheModernBibliotheca.png',
-			title: 'The Modern Bibliotheca',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			imageLink: '/banners/MMCLACMWebsite.png',
+			title: 'Mapua MCL ACM Website',
+			description: 'The website for the ACM Student Chapter of Mapua Malayan Colleges Laguna. Built using TailwindCSS and Gatsby.',
 			link: ''
 		},
 		{
-			imageLink: 'TheModernBibliotheca.png',
-			title: 'The Modern Bibliotheca',
+			imageLink: '/banners/LokalMusic.png',
+			title: 'Lokal Music',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+				'An eCommerce website where fans may purchase and download music uploaded by independent Filipino artists. Built using SQL Server, ASP.NET WebForms and ADO.NET',
 			link: ''
 		},
 		{
-			imageLink: 'TheModernBibliotheca.png',
-			title: 'The Modern Bibliotheca',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			imageLink: '/banners/SeatSave.png',
+			title: 'Seat Save',
+			description: "A website where visitors of Mapua MCL's library may find and reserve a seat. Built using ASP.NET WebAPI, Entity Framework, and React",
 			link: ''
 		}
 	];
