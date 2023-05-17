@@ -26,7 +26,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: dev ? '' : '/lipatjobj.github.io'
+			base: "",
 		}
 	}
 };

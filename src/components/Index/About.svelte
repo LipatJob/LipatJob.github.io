@@ -11,7 +11,7 @@
 			I use code to transform complexity into simplicity.
 		</p>
 		<div class="button-container">
-			<ButtonLink link="resume_cv.pdf" iconLink="resume-icon.svg" text="Resume" type="primary" />
+			<ButtonLink link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link" iconLink="resume-icon.svg" text="Resume" type="primary" />
 			<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
 			<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
 		</div>
