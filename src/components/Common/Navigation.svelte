@@ -38,6 +38,9 @@
 </div>
 
 <style lang="scss">
+	.nav{
+		overflow: hidden;
+	}
 	.nav-header {
 		color: $primary;
 		font-size: 24px;

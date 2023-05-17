@@ -20,14 +20,12 @@
 </div>
 
 <style lang="scss">
-
 	.project {
 		display: flex;
 		flex-direction: column;
 		border: $border;
 		border-radius: 14px;
 		overflow: hidden;
-
 	}
 
 	.information {
@@ -45,10 +43,16 @@
 		font-style: normal;
 		font-weight: 400;
 		font-size: 16px;
-		color: #454545;
+		color: $black;
 		line-height: 25px;
 		margin-bottom: 20px;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3; /* number of lines to show */
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
 	}
+
 	.link {
 		font-weight: 600;
 		font-size: 16px;

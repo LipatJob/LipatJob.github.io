@@ -10,28 +10,28 @@
 </script>
 
 <div class="container">
-	<div class="nav ">
+	<div class="nav">
 		<Navigation />
 	</div>
 	<div class="about section screen-height" id="About">
 		<About />
 	</div>
 
-	<div class="section screen-height snappable" id="Projects">
+	<div class="section-full screen-height" id="Projects">
 		<Projects />
 	</div>
-	<div class="section screen-height snappable" id="Skills">
+	<div class="section screen-height" id="Skills">
 		<Skills />
 	</div>
-	<div class="section screen-height snappable">
+	<div class="section screen-height">
 		<div id="Experience">
 			<Experience />
 		</div>
-		<div class="" id="Education">
+		<div id="Education">
 			<Education />
 		</div>
 	</div>
-	<div class="">
+	<div class="section">
 		<div id="Affiliations">
 			<Affiliations />
 		</div>
@@ -43,15 +43,15 @@
 
 <style lang="scss">
 	.container {
-		max-width: $screen-lg-min;
 		gap: 140px;
-		@include sm {
-			margin: 0 auto;
-		}
-
+		width: 100%;
 		padding: 0 25px;
 		display: flex;
 		flex-direction: column;
+
+		@include sm {
+			padding: 0 0;
+		}
 	}
 
 	.overflow {
@@ -61,10 +61,20 @@
 
 	.section {
 		display: flex;
-		gap: 48px;
+		@include sm {
+			margin: 0 auto;
+		}
+		gap: 24px;
+		width: $screen-lg-min;
+		max-width: $screen-lg-min;
+	}
+
+	.section-full {
+		max-width: 100%;
 	}
 
 	.snappable {
+		scroll-snap-align: start;
 	}
 
 	.screen-height {
