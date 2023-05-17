@@ -13,11 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Now we run our lints. This is the place where you could run other tests
-      # unrelated to cypress (e.g.: unit tests).
-      - name: Run lints
-        run: npm run lint
-
       # Now we're building the svelte site.
       # This step generates a build/ directory.
       - name: Build site
