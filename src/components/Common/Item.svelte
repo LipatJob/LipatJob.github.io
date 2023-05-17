@@ -29,7 +29,7 @@
 	.item-container {
 		display: flex;
 		flex-direction: column;
-		gap: 13px;
+		gap: 16px;
 
 		@include sm {
 			flex-direction: row;
@@ -45,8 +45,6 @@
 		display: flex;
 		width: 60px;
 		height: 60px;
-		border: 1px solid black;
-		border-radius: 8px;
 		padding: 4px;
 	}
 
@@ -63,8 +61,6 @@
 		}
 		margin-bottom: 8px;
 	}
-
-
 
 	.title {
 		font-weight: 700;
@@ -86,7 +82,7 @@
 
 	.subtitle {
 		font-style: italic;
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
 		@include sm {
 			text-align: left;
@@ -100,6 +96,6 @@
 	}
 
 	.bullet {
-		font-size: 14px;
+		font-size: 16px;
 	}
 </style>

@@ -1,16 +1,23 @@
-* {
-	font-family: 'Inter', Helvetica, Arial, sans-serif;
-	--primary: #2b71c5;
-	--secondary: #474747;
-}
-
-body{
-	margin: 0;;
-}
-
-$primary: #2b71c5;
+$primary: #347be6;
 $secondary: #474747;
 $text-secondary: #474747;
+$black: #3e3e3e;
+$white: #f7f7f7;
+$border: 1px solid rgb(151, 151, 151);
+
+* {
+	font-family: 'Inter', Helvetica, Arial, sans-serif;
+}
+
+html {
+	scroll-snap-type: y proximity;
+	scroll-padding-top: 80px;
+}
+
+body {
+	margin: 0;
+	background-color: $white;
+}
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
@@ -69,20 +76,27 @@ p {
 .header-label {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 20px;
 	color: $primary;
 }
 
 .header-title {
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 32px;
 }
 
 .header-subtitle {
 	font-size: 20px;
 	color: $secondary;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
+.contain-height {
+	height: 100vh;
+}
 
-
+.popup:hover{
+	transform: translateY(-4px);
+	transition: .1s transform ease-in-out;
+	box-shadow: 0 4px 4px rgb(0 0 0 / 0.1);
+}

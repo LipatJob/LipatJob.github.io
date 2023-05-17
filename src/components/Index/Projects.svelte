@@ -1,5 +1,36 @@
 <script lang="ts">
 	import Project from '../Projects/Project.svelte';
+
+	let projects = [
+		{
+			imageLink: 'TheModernBibliotheca.png',
+			title: 'The Modern Bibliotheca',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			link: ''
+		},
+		{
+			imageLink: 'TheModernBibliotheca.png',
+			title: 'The Modern Bibliotheca',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			link: ''
+		},
+		{
+			imageLink: 'TheModernBibliotheca.png',
+			title: 'The Modern Bibliotheca',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			link: ''
+		},
+		{
+			imageLink: 'TheModernBibliotheca.png',
+			title: 'The Modern Bibliotheca',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus.',
+			link: ''
+		}
+	];
 </script>
 
 <section class="section">
@@ -11,32 +42,19 @@
 			science.
 		</p>
 	</div>
-
-	<div class="projects-list">
-		<Project
-			imageLink="TheModernBibliotheca.png"
-			title="The Modern Bibliotheca"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus."
-			link=""
-		/>
-		<Project
-			imageLink="CovidTrackerV3.jpg"
-			title="MCL COVID19 Tracker"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus."
-			link=""
-		/>
-		<Project
-			imageLink="Community.png"
-			title="Community"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus."
-			link=""
-		/>
-		<Project
-			imageLink="TheModernBibliotheca.png"
-			title="The Modern Bibliotheca"
-			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis auctor purus."
-			link=""
-		/>
+	<div class="project-container">
+		<div class="projects-list" style="--column-count: {Math.ceil(projects.length / 2)}">
+			{#each projects as project}
+				<div class="project">
+					<Project
+						imageLink={project.imageLink}
+						title={project.title}
+						description={project.description}
+						link={project.link}
+					/>
+				</div>
+			{/each}
+		</div>
 	</div>
 </section>
 
@@ -45,13 +63,35 @@
 		max-width: 100%;
 	}
 
-	.projects-list {
-		gap: 60px;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+	.project-container {
+		z-index: -1;
+		flex: 1;
+		display: flex;
+	}
 
-		@include sm {
-			grid-template-columns: repeat(2, 1fr);
-		}
+	.projects-list {
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: repeat(var(--column-count), 1fr);
+		grid-template-rows: 1fr 1fr;
+		min-height: min-content;
+		gap: 30px;
+		left: 0;
+		overflow-x: scroll;
+		overflow-y: visible;
+
+		// Hide scrollbar
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+
+	.projects-list::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
+	}
+
+	.project {
+		width: auto;
+		min-width: auto;
 	}
 </style>

@@ -3,7 +3,7 @@
 	import Item from '../Common/Item.svelte';
 </script>
 
-<section class="section">
+<section class="section ">
 	<div class="header">
 		<p class="header-label">Affiliations</p>
 		<header class="header-title">Organizations I'm Affiliated With</header>
@@ -43,19 +43,14 @@
 	}
 	.affiliations {
 		gap: 20px;
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		width: 100%;
 		@include lg {
-			flex-direction: row;
-			justify-content: space-between;
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 
 	.affiliations > * {
 		min-width: 100%;
-		@include lg {
-			min-width: 263px;
-		}
 	}
 </style>

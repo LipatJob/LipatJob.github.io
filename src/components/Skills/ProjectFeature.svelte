@@ -2,29 +2,24 @@
 	import ChevronRight from '../Common/ChevronRight.svelte';
 
 	export let imageLink: string;
-	export let title: string;
-	export let description: string;
 	export let link: string;
 </script>
 
-<div class="project popup">
-	<img src={imageLink} alt={`${title} project banner`} class="projectImage" />
-	<div class="information">
-		<p class="title">{title}</p>
-		<p class="description">{description}</p>
-		<!-- <a href={link} class="link">
-			<p class="linkText">View Project</p>
-			<ChevronRight />
-		</a> -->
-	</div>
-</div>
+<a class="project" href={link}>
+	<img src={imageLink} alt={`project banner`} class="projectImage" />
+</a>
 
-<style lang="scss">
+<style>
+	.project:hover {
+		transform: translateY(-3px);
+		transition: 0.1s transform ease-in-out;
+		box-shadow: 0 3px 3px rgb(0 0 0 / 0.1);
+	}
 
 	.project {
 		display: flex;
 		flex-direction: column;
-		border: $border;
+		border: solid black 1px;
 		border-radius: 14px;
 		overflow: hidden;
 	}

@@ -17,18 +17,39 @@
 		<Skill
 			skillName="Back-End Development"
 			tools={['ASP.NET', 'Express.js']}
-			description="Hello world"
+			bullets={[
+				'Used frameworks such as ASP.NET Core, Express.Js, and Laravel to create RESTful APIs',
+				'Queried and manipulated databases using MS SQL, My SQL, Prisma, Entity Framework, and GraphQL',
+				'Involved in software design and architecture of multiple projects'
+			]}
 		/>
-		<Skill skillName="Data Science" tools={['Tensorflow', 'PyTorch']} description="Hello world" />
+		<Skill
+			skillName="Data Science"
+			tools={['Tensorflow', 'PyTorch']}
+			bullets={[
+				'Trained a computer vision model that detects how many people are inside a room using PyTorch',
+				'Developed CNN and LSTM based models that detects Gestures using TensorFlow',
+				'Developed natural language processing models that predict the grades of essays'
+			]}
+		/>
 		<Skill
 			skillName="Front-End Development"
 			tools={['React.js', 'Vue.js', 'TailwindCSS']}
-			description="Hello world"
+			bullets={[
+				'Developed multiple projects using front-end frameworks including React, Vue.Js, and Svelte',
+				'Used user interface frameworks such as SASS, TailwindCSS and Bootstrap',
+				'Created dashboard data visualizations using ApexCharts and ChartJs'
+			]}
 		/>
 		<Skill
 			skillName="Project Management"
 			tools={['Agile', 'Traditional', 'Jira']}
-			description="Hello world"
+			bullets={[
+				'Lead different teams through the planning, analysis, design, and implementation of various projects',
+				'Enforced agile practices and principles as a scrum master in different projects',
+				'Collaborated with the project sponsors and stakeholders regularly for progress updates',
+				'Used tools such as Trello, Jira, and GitHub Issues for managing project deliverables'
+			]}
 		/>
 	</div>
 </section>

@@ -9,7 +9,7 @@
 	export let description: string;
 </script>
 
-<a class="item-container" href={link}>
+<a class="item-container popup" href={link}>
 	<div class="item">
 		<div class="item-header">
 			<img class="logo" src={logo} alt={name} />
@@ -21,12 +21,10 @@
 	</div>
 </a>
 
-<style>
+<style lang="scss">
 	.item-container {
+		border: $border;
 		border-radius: 20px;
-
-		width: 263px;
-		border: 1px solid black;
 		text-decoration: none;
 		color: black;
 	}
@@ -34,7 +32,7 @@
 	.item {
 		display: flex;
 		flex-direction: column;
-		padding: 20px 12px;
+		padding: 20px 20px;
 	}
 
 	.item-header {
@@ -43,7 +41,7 @@
 	}
 
 	.logo {
-		height: 40px;
+		height: 60px;
 		width: auto;
 	}
 
@@ -54,21 +52,20 @@
 	}
 
 	.name {
-		font-weight: 600;
-		font-size: 14px;
+		font-weight: 700;
+		font-size: 16px;
 		margin-top: 8px;
 		margin-bottom: 4px;
 	}
 
 	.date {
-		font-weight: 300;
-		font-size: 12px;
+		font-size: 14px;
 		margin-bottom: 8px;
 	}
 
 	.description {
 		font-weight: 400;
-		font-size: 12px;
+		font-size: 14px;
 		font-style: italic;
 	}
 </style>

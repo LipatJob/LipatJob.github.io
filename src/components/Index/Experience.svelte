@@ -10,7 +10,7 @@
 
 	<div class="experiences">
 		<Item
-			icon="unknown.svg"
+			icon="teacher.png"
 			title="Programming Mentor"
 			subtitle="Freelance"
 			bullets={[

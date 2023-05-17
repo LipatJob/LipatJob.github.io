@@ -14,10 +14,9 @@
 			title="B.S. Computer Science"
 			subtitle="Mapua Malayan Colleges Laguna"
 			bullets={[
-				'X.XX General Weighted Average',
-				"Dean's Lister (1st Term S.Y. 19-20 until 2nd Term S.Y. 22-23)",
-				"President's Lister (1st Term S.Y. 19-20 until 2nd Term S.Y. 22-23)",
-				'Full Academic Scholar (1st Term S.Y. 19-20 until 2nd Term S.Y. 22-23)'
+				'Full Academic Scholar, Dean’s Lister, and President’s Lister for 3 years',
+				'Running General Weighted Average of 1.06 (Expected to graduate Summa Cum Laude)',
+				'Expected to graduate in June 2023'
 			]}
 			dateStart="August 2019"
 			dateEnd="Present"

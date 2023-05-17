@@ -1,18 +1,18 @@
 <script lang="ts">
 	import ChevronRight from '../Common/ChevronRight.svelte';
+	import ProjectFeature from './ProjectFeature.svelte';
 
 	export let skillName: string;
 	export let tools: Array<string>;
-	export let description: string;
-
-	let open = false;
+	export let bullets: Array<string>;
+	let opened = true;
 </script>
 
 <div class="skill">
 	<button
 		class="skill-toggle"
 		on:click={() => {
-			open = !open;
+			opened = !opened;
 		}}
 	>
 		<p class="skill-name"><span class="toggle"><ChevronRight /></span>{skillName}</p>
@@ -23,10 +23,15 @@
 		</div>
 	</button>
 
-	{#if open}
-	<hr/>
+	{#if opened}
+		<hr />
 		<div class="description">
-			{description}
+			<ul>
+				{#each bullets as bullet}
+					<li>{bullet}</li>
+				{/each}
+			</ul>
+
 		</div>
 	{/if}
 </div>
@@ -76,11 +81,22 @@
 		padding: 8px;
 		font-size: 12px;
 		border-radius: 40px;
-		border: 1px solid black;
+		border: $border;
 	}
 
 	.description {
 		margin: 18px 0;
 		margin-left: 12px;
+	}
+
+	.description ul li {
+		margin: 14px 0;
+	}
+
+	.features {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		margin: 0 40px;
 	}
 </style>
