@@ -64,8 +64,7 @@
 	.projects-list {
 		max-width: 100%;
 		display: grid;
-		grid-template-columns: repeat(var(--column-count), 1fr);
-		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
 		min-height: min-content;
 		gap: 30px;
 		left: 0;
@@ -74,6 +73,12 @@
 		// Hide scrollbar
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE 10+ */
+
+		@include md {
+			grid-template-columns: repeat(var(--column-count), 1fr);
+			grid-template-rows: 1fr 1fr;
+			font-size: 128px;
+		}
 	}
 
 	.projects-list::-webkit-scrollbar {

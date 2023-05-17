@@ -7,11 +7,14 @@
 	<div class="section">
 		<p class="greeting">Hi, I'm <span class="greeting-name">Job Lipat</span>.</p>
 		<p class="info">I am a 4th-year Computer Science student at Mapua Malayan Colleges Laguna.</p>
-		<p class="subinfo">
-			I use code to transform complexity into simplicity.
-		</p>
+		<p class="subinfo">I use code to transform complexity into simplicity.</p>
 		<div class="button-container">
-			<ButtonLink link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link" iconLink="resume-icon.svg" text="Resume" type="primary" />
+			<ButtonLink
+				link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
+				iconLink="resume-icon.svg"
+				text="Resume"
+				type="primary"
+			/>
 			<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
 			<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
 		</div>
@@ -31,7 +34,7 @@
 	}
 
 	.greeting {
-		font-size: 30px;
+		font-size: 64px;
 		font-weight: 900;
 		margin-bottom: 24px;
 		@include md {
@@ -42,12 +45,20 @@
 
 	.greeting-name {
 		color: $primary;
-		font-size: 128px;
+		font-size: 72px;
 		font-family: 'Roboto', sans-serif;
+		@include md {
+			font-size: 128px;
+		}
+	}
+
+	.greeting-name::before {
+		content: '\A';
+		white-space: pre;
 	}
 
 	.info {
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 600;
 		margin-bottom: 16px;
 		@include md {
@@ -56,7 +67,7 @@
 	}
 
 	.subinfo {
-		font-size: 14px;
+		font-size: 18px;
 		color: $secondary;
 		margin-bottom: 38px;
 		@include md {

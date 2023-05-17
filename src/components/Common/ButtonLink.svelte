@@ -26,6 +26,10 @@
 		border-radius: 8px;
 		font-size: 16px;
 		border: $border;
+		padding: 8px 18px;
+		justify-content: center;
+		width: 50px;
+
 		text-decoration: none;
 		color: $black;
 
@@ -39,18 +43,20 @@
 		gap: 10px;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		font-weight: 500;
+		justify-content: center;
 		font-size: 16px;
 		line-height: 19px;
 		border-radius: 8px;
 		font-size: 16px;
+		width: 50px;
 		padding: 8px 18px;
 		text-decoration: none;
 		background-color: $primary;
 		border: none;
 
 		@include md {
+			align-items: center;
 			width: 130px;
 		}
 	}
