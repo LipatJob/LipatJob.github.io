@@ -12,7 +12,8 @@
 		{
 			imageLink: '/banners/MMCLACMWebsite.png',
 			title: 'Mapua MCL ACM Website',
-			description: 'The website for the ACM Student Chapter of Mapua Malayan Colleges Laguna. Built using TailwindCSS and Gatsby.',
+			description:
+				'The website for the ACM Student Chapter of Mapua Malayan Colleges Laguna. Built using TailwindCSS and Gatsby.',
 			link: ''
 		},
 		{
@@ -25,7 +26,8 @@
 		{
 			imageLink: '/banners/SeatSave.png',
 			title: 'Seat Save',
-			description: "A website where visitors of Mapua MCL's library may find and reserve a seat. Built using ASP.NET WebAPI, Entity Framework, and React",
+			description:
+				"A website where visitors of Mapua MCL's library may find and reserve a seat. Built using ASP.NET WebAPI, Entity Framework, and React",
 			link: ''
 		}
 	];
@@ -40,31 +42,23 @@
 			science.
 		</p>
 	</div>
-	<div class="project-container">
-		<div class="projects-list" style="--column-count: {Math.ceil(projects.length / 2)}">
-			{#each projects as project}
-				<div class="project">
-					<Project
-						imageLink={project.imageLink}
-						title={project.title}
-						description={project.description}
-						link={project.link}
-					/>
-				</div>
-			{/each}
-		</div>
+	<div class="projects-list" style="--column-count: {Math.ceil(projects.length / 2)}">
+		{#each projects as project}
+			<div class="project">
+				<Project
+					imageLink={project.imageLink}
+					title={project.title}
+					description={project.description}
+					link={project.link}
+				/>
+			</div>
+		{/each}
 	</div>
 </section>
 
 <style lang="scss">
 	.section {
 		max-width: 100%;
-	}
-
-	.project-container {
-		z-index: -1;
-		flex: 1;
-		display: flex;
 	}
 
 	.projects-list {
@@ -75,7 +69,6 @@
 		min-height: min-content;
 		gap: 30px;
 		left: 0;
-		overflow-x: scroll;
 		overflow-y: visible;
 
 		// Hide scrollbar

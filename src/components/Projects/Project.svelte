@@ -8,7 +8,7 @@
 </script>
 
 <div class="project popup">
-	<img src={imageLink} alt={`${title} project banner`} class="projectImage" />
+	<img src={imageLink} alt={`${title} project banner`} class="project-image" />
 	<div class="information">
 		<p class="title">{title}</p>
 		<p class="description">{description}</p>
@@ -27,6 +27,7 @@
 		border: $border;
 		border-radius: 14px;
 		overflow: hidden;
+
 	}
 
 	.information {
@@ -55,7 +56,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: black;
+		color: $black;
 		text-decoration: none;
 	}
 
@@ -63,7 +64,9 @@
 		margin-right: 6px;
 	}
 
-	.projectImage {
+	.project-image {
 		max-width: 100%;
+		height: auto;
+		border: none;
 	}
 </style>

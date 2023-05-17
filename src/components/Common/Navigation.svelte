@@ -25,7 +25,7 @@
 
 <style lang="scss">
 	.nav {
-		z-index: 20;
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		gap: 32px;
@@ -41,14 +41,14 @@
 
 	.nav-item {
 		position: relative;
-		color: #000;
+		color: $black;
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 20px;
 	}
 
 	.nav-item:hover {
-		color: #000;
+		color: $black;
 	}
 
 	.nav-item::after {
