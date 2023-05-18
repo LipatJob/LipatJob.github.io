@@ -55,6 +55,11 @@
 	.greeting-name::before {
 		content: '\A';
 		white-space: pre;
+
+		@include md {
+			content: '';
+			white-space: normal;
+		}
 	}
 
 	.info {
