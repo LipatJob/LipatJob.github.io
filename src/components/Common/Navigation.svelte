@@ -14,14 +14,14 @@
 	}
 
 	let menuToggled = false;
-	function toggleMenu(){
+	function toggleMenu() {
 		menuToggled = !menuToggled;
 	}
 </script>
 
 <div class={'nav ' + className}>
 	<div id="menuToggle">
-		<input type="checkbox" bind:checked={menuToggled}/>
+		<input type="checkbox" bind:checked={menuToggled} />
 		<span />
 		<span />
 		<span />
@@ -38,8 +38,9 @@
 </div>
 
 <style lang="scss">
-	.nav{
+	.nav {
 		overflow: hidden;
+		z-index: 10;
 	}
 	.nav-header {
 		color: $primary;

@@ -82,6 +82,7 @@
 	}
 
 	.nav {
+		z-index: 10;
 		position: sticky;
 		align-self: center;
 		width: 100%;

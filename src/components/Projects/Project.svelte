@@ -7,20 +7,19 @@
 	export let link: string;
 </script>
 
-<div class="project popup">
-	<img src={imageLink} alt={`${title} project banner`} class="project-image" />
-	<div class="information">
-		<p class="title">{title}</p>
-		<p class="description">{description}</p>
-		<!-- <a href={link} class="link">
-			<p class="linkText">View Project</p>
-			<ChevronRight />
-		</a> -->
+<a href={link} class="link" target="_blank">
+	<div class="project popup">
+		<img src={imageLink} alt={`${title} project banner`} class="project-image" />
+		<div class="information">
+			<p class="title">{title}</p>
+			<p class="description">{description}</p>
+		</div>
 	</div>
-</div>
+</a>
 
 <style lang="scss">
 	.project {
+		z-index: 0;
 		display: flex;
 		flex-direction: column;
 		border: $border;

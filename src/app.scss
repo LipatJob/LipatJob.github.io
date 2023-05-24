@@ -97,6 +97,7 @@ p {
 }
 
 .popup:hover {
+	z-index: 0;
 	transform: translateY(-4px);
 	transition: 0.1s transform ease-in-out;
 	box-shadow: 0 4px 4px rgb(0 0 0 / 0.1);
