@@ -16,7 +16,7 @@
 			description:
 				'The website for the ACM Student Chapter of Mapua Malayan Colleges Laguna. Built using TailwindCSS and Gatsby.',
 			link: 'https://acm.mcl-ccis.net',
-			tags: ['Gatsby', 'Tailwind', 'ACM']
+			tags: ['React', 'Gatsby', 'Tailwind', 'ACM']
 		},
 		{
 			imageLink: '/banners/LokalMusic.png',
@@ -29,7 +29,8 @@
 		{
 			imageLink: '/banners/SeatSave.png',
 			title: 'Seat Save',
-			description: "A website where visitors of Mapua MCL's library may find and reserve a seat. Built using ASP.NET WebAPI, Entity Framework, and React.",
+			description:
+				"A website where visitors of Mapua MCL's library may find and reserve a seat. Built using ASP.NET WebAPI, Entity Framework, and React.",
 			link: 'https://github.com/LipatJob/SeatSave',
 			tags: ['ASP.NET', 'React', 'Agile']
 		},
@@ -39,7 +40,7 @@
 			description:
 				'A dashboard where users may view visualizations of COVID-19 cases in the cities and barangays of the provice of Laguna, Philippines',
 			link: 'https://mcl-covid19tracker-laguna.netlify.app/',
-			tags: ['ApexCharts', 'Data Pipeline', 'Vue']
+			tags: ['Vue', 'ApexCharts', 'Data Pipeline']
 		},
 		{
 			imageLink: '/banners/DiscoverMapuaMCL.png',
@@ -53,17 +54,17 @@
 			imageLink: '/banners/Sparse.png',
 			title: 'Sparse',
 			description:
-				"A website where students may view how how many people are in the Library of MCL. Built using WebForms and PyTorch",
+				'A website where students may view how how many people are in the Library of MCL. Built using WebForms and PyTorch',
 			link: 'https://github.com/zoloenma/Sparse-System',
-			tags: ["ASP.NET", "Computer Vision", "PyTorch"]
+			tags: ['ASP.NET', 'Computer Vision', 'PyTorch']
 		},
 		{
 			imageLink: '/banners/TheModernBibliotheca.png',
 			title: 'TheModernBibliotheca',
 			description:
-				"A website where people could browse, borrow and returns books. Built using WebForms and Bootstrap",
+				'A website where people could browse, borrow and returns books. Built using WebForms and Bootstrap',
 			link: 'https://github.com/charmaine-rabano/TheModernBibliotheca',
-			tags: ["WebForms", "Boostrap", "Responsive"]
+			tags: ['WebForms', 'Boostrap', 'Responsive']
 		},
 		{
 			imageLink: '/banners/CFlat.png',
@@ -71,7 +72,7 @@
 			description:
 				'A compiled and statically typed programming language that aims combine the simplicity of Python and the type safety of C.',
 			link: 'https://github.com/LipatJob/CFlat',
-			tags: ["Programming Language", "Recursive Descent"]
+			tags: ['Programming Language', 'Recursive Descent']
 		},
 		{
 			imageLink: '/banners/4Pycs1Word.png',
@@ -79,7 +80,7 @@
 			description:
 				'The classic mobile game 4 Pics 1 Word written in Python complete with coins, hints, and level skips.',
 			link: 'https://github.com/LipatJob/4pycs1word',
-			tags: ["Python", "TKinter", "Game"]
+			tags: ['Python', 'Tkinter', 'Game']
 		}
 	];
 </script>

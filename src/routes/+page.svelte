@@ -42,10 +42,6 @@
 </div>
 
 <style lang="scss">
-	html {
-		scroll-behavior: smooth;
-	}
-
 	.container {
 		gap: 140px;
 		width: 100%;
@@ -91,6 +87,5 @@
 		align-self: center;
 		width: 100%;
 		top: 0px;
-		background-color: $white;
 	}
 </style>

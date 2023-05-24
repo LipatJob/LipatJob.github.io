@@ -36,9 +36,13 @@
 		</ul>
 	</div>
 </div>
+<div class="gradient" />
+
 
 <style lang="scss">
 	.nav {
+		background-color: $white;
+
 		overflow: hidden;
 		z-index: 10;
 	}
@@ -93,7 +97,7 @@
 	#menuToggle {
 		display: block;
 		position: relative;
-		padding: 25px;
+		padding: 20px;
 
 		@include md {
 			top: 0;
@@ -198,7 +202,7 @@
 			transform: translate(0, 0);
 			margin: 0 0 0 0;
 			position: relative;
-			padding: 20px;
+			padding: 10px;
 			width: 100%;
 			display: flex;
 			flex-direction: row;
@@ -209,11 +213,12 @@
 	#menu li {
 		padding: 10px 0;
 		font-size: 22px;
+		@include md {
+			padding: 0;
+		}
 	}
 
-	/*
- * And let's slide it in from the left
- */
+
 	#menuToggle input:checked ~ ul {
 		transform: none;
 	}
