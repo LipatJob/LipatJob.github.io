@@ -23,6 +23,8 @@
 
 <style lang="scss">
 	.section-container {
+		margin: auto 0;
+		padding-top: 100px;
 		display: flex;
 		flex-direction: column;
 	}

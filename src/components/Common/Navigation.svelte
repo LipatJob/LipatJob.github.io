@@ -179,7 +179,6 @@
 		width: 300px;
 		margin: 0 0 0 -50px;
 		padding: 50px;
-		padding-top: 50px;
 
 		background: $white;
 		list-style-type: none;

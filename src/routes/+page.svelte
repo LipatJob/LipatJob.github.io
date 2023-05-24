@@ -83,7 +83,7 @@
 
 	.nav {
 		z-index: 10;
-		position: sticky;
+		position: fixed;
 		align-self: center;
 		width: 100%;
 		top: 0px;
