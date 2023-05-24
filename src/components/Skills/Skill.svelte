@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { text } from 'svelte/internal';
 	import ChevronRight from '../Common/ChevronRight.svelte';
+	import Pill from '../Common/Pill.svelte';
 	import ProjectFeature from './ProjectFeature.svelte';
 
 	export let skillName: string;
@@ -18,7 +20,7 @@
 		<p class="skill-name"><span class="toggle"><ChevronRight /></span>{skillName}</p>
 		<div class="tools">
 			{#each tools as tool}
-				<div class="tool">{tool}</div>
+				<Pill text={tool} />
 			{/each}
 		</div>
 	</button>
@@ -31,7 +33,6 @@
 					<li>{bullet}</li>
 				{/each}
 			</ul>
-
 		</div>
 	{/if}
 </div>
@@ -75,13 +76,6 @@
 		@include sm {
 			margin-left: auto;
 		}
-	}
-
-	.tool {
-		padding: 8px;
-		font-size: 12px;
-		border-radius: 40px;
-		border: $border;
 	}
 
 	.description {

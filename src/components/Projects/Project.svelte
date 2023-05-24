@@ -1,10 +1,12 @@
 <script lang="ts">
 	import ChevronRight from '../Common/ChevronRight.svelte';
+	import Pill from '../Common/Pill.svelte';
 
 	export let imageLink: string;
 	export let title: string;
 	export let description: string;
 	export let link: string;
+	export let tags: Array<string>;
 </script>
 
 <a href={link} class="link" target="_blank">
@@ -13,6 +15,11 @@
 		<div class="information">
 			<p class="title">{title}</p>
 			<p class="description">{description}</p>
+			<div class="tags">
+				{#each tags as tag}
+					<Pill text={tag} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </a>
@@ -71,5 +78,11 @@
 		max-width: 100%;
 		height: auto;
 		border: none;
+	}
+
+	.tags {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
 	}
 </style>

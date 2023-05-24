@@ -42,6 +42,10 @@
 </div>
 
 <style lang="scss">
+	html {
+		scroll-behavior: smooth;
+	}
+
 	.container {
 		gap: 140px;
 		width: 100%;

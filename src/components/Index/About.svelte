@@ -40,7 +40,7 @@
 		font-weight: 900;
 		margin-bottom: 24px;
 		@include md {
-			font-size: 96px;
+			font-size: 90px;
 		}
 		font-family: 'Roboto', sans-serif;
 	}
@@ -50,7 +50,7 @@
 		font-size: 72px;
 		font-family: 'Roboto', sans-serif;
 		@include md {
-			font-size: 128px;
+			font-size: 118px;
 		}
 	}
 
