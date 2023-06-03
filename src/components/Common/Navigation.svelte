@@ -33,11 +33,11 @@
 			<a class="nav-item" on:click={handleAnchorClick} href="#Education"> Education</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#Affiliations"> Affiliations</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#Contact"> Contact</a>
+			<a class="practicum popup" href="/practicum"> Practicum</a>
 		</ul>
 	</div>
 </div>
 <div class="gradient" />
-
 
 <style lang="scss">
 	.nav {
@@ -46,10 +46,19 @@
 		overflow: hidden;
 		z-index: 10;
 	}
+
 	.nav-header {
 		color: $primary;
 		font-size: 24px;
 		font-weight: 700;
+	}
+
+	.practicum {
+		border: 2px $black dashed;
+		padding: 8px 16px;
+		border-radius: 10px;
+		font-weight: 500;
+		font-size: 20px;
 	}
 
 	.nav-item {
@@ -113,8 +122,6 @@
 	#menuToggle a {
 		text-decoration: none;
 		color: #232323;
-
-		transition: color 0.3s ease;
 	}
 
 	#menuToggle input {
@@ -196,6 +203,7 @@
 
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 32px;
 
 		@include md {
@@ -217,7 +225,6 @@
 			padding: 0;
 		}
 	}
-
 
 	#menuToggle input:checked ~ ul {
 		transform: none;
