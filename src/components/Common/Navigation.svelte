@@ -54,7 +54,7 @@
 	}
 
 	.practicum {
-		border: 2px $black dashed;
+		border: $border;
 		padding: 8px 16px;
 		border-radius: 10px;
 		font-weight: 500;

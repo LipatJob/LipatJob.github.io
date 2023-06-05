@@ -13,5 +13,6 @@
 		font-size: 14px;
         min-width: 40px;
         text-align: center;
+		font-weight: 500;
 	}
 </style>

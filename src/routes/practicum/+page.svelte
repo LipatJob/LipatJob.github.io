@@ -1,24 +1,64 @@
+<script>
+	import ActivitiesTimeline from '../../components/Practicum/ActivitiesTimeline.svelte';
+	import Activity from '../../components/Practicum/Activity.svelte';
+	import Project from '../../components/Projects/Project.svelte';
+	import courseraTimeline from '../../content/courseraTimeline.js';
+	import linkedinTimeline from '../../content/linkedinTimeline.js';
+	import metacraftersTimeline from '../../content/metacraftersTimeline.js';
+	import courseraActivities from '../../content/courseraActivities.js';
+	import linkedinActivities from '../../content/linkedinActivities.js';
+	import metacraftersActivities from '../../content/metacraftersActivities.js';
+</script>
+
 <div class="container">
 	<div id="introduction" class="section">
-		<h1>CS Practicum Final Report</h1>
-		<div>
-			<p>
-				This report will detail my activities and achievements during my practicum, divided into
-				three sections corresponding to the three major parts of my practicum. Each section will
-				begin with an overview of the company, followed by a discussion of the tasks and assignments
-				I undertook. Next, I will be providing key numbers on that section of my practicum which
-				will be followed by the timeline of activities. The timeline will show the tasks I have
-				accomplished, and when I have started and finished those tasks. I will then be presenting
-				the outputs that I have created for that segment of my practicum. Lastly, I will provide a
-				synthesis for each section, encompassing my insights, lessons learned, realizations, and
-				concluding remarks
-			</p>
+		<div class="subsection">
+			<h1>CS Practicum Final Report</h1>
+			<div>
+				<p>
+					This report will detail my activities and achievements during my practicum, divided into
+					three sections corresponding to the three major parts of my practicum. Each section will
+					begin with an overview of the company, followed by a discussion of the tasks and
+					assignments I undertook. Next, I will be providing key numbers on that section of my
+					practicum which will be followed by the timeline of activities. The timeline will show the
+					tasks I have accomplished, and when I have started and finished those tasks. I will then
+					be presenting the outputs that I have created for that segment of my practicum. Lastly, I
+					will provide a synthesis for each section, encompassing my insights, lessons learned,
+					realizations, and concluding remarks
+				</p>
+			</div>
+		</div>
+
+		<div class="subsection section-link-container">
+			<a href="#linkedin-learning">
+				<div class="section-link">
+					<h2>Part 1. Required LinkedIn Learning Modules</h2>
+				</div>
+			</a>
+			<a href="#coursera">
+				<div class="section-link">
+					<h2>Part 2. IBM DevOps and Software Engineering Professional Certificate</h2>
+				</div>
+			</a>
+			<a href="#metacrafters">
+				<div class="section-link">
+					<h2>Part 3. Metacrafters</h2>
+				</div>
+			</a>
+			<a href="#overall-synthesis">
+				<div class="section-link">
+					<h2>Overall Synthesis</h2>
+				</div>
+			</a>
 		</div>
 	</div>
-	<div id="linkedin-learning" class="section">
-		<h1>Part 1. Required LinkedIn Learning Modules</h1>
 
-		<div class="company-info">
+	<div id="linkedin-learning" class="section snappable">
+		<div class="subsection">
+			<h1>Part 1. Required LinkedIn Learning Modules</h1>
+		</div>
+
+		<div class="company-info subsection">
 			<h2>LinkedIn</h2>
 			<p>
 				LinkedIn began in co-founder Reid Hoffman's living room in 2002 and was officially launched
@@ -30,7 +70,7 @@
 			</p>
 		</div>
 
-		<div class="company-info">
+		<div class="company-info subsection">
 			<h2>LinkedIn Learning</h2>
 			<p>
 				LinkedIn Learning is an online educational platform that helps you discover and develop
@@ -40,7 +80,7 @@
 			</p>
 		</div>
 
-		<div class="nature-of-assignments">
+		<div class="nature-of-assignments subsection">
 			<h2>Nature of Assignments</h2>
 			<table>
 				<tr>
@@ -73,29 +113,7 @@
 			</table>
 		</div>
 
-		<div class="key-figures">
-			<h2>Total Hours Rendered</h2>
-			<p>Engagement Hours: 45</p>
-			<p>Credit Hours: 90</p>
-		</div>
-
-		<div class="timeline-of-activities">
-			<h2>Timeline of Activities</h2>
-		</div>
-
-		<div class="outputs">
-			<h2>Outputs</h2>
-			<div class="certificate">
-				<h3>Certificate</h3>
-				<p>Name:</p>
-				<p>Date Received:</p>
-				<p>Link:</p>
-				<!-- Image of Certificate -->
-				<img src="" alt="" />
-			</div>
-		</div>
-
-		<div class="synthesis">
+		<div class="synthesis subsection">
 			<h2>Synthesis</h2>
 			<div>
 				<p>
@@ -143,12 +161,57 @@
 				</p>
 			</div>
 		</div>
+
+		<div class="key-figures subsection">
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Projects</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Courses</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Quizes</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">45</p>
+				<p class="name">Engagement Hours</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">90</p>
+				<p class="name">Credit Hours</p>
+			</div>
+		</div>
+
+		<div class="timeline-of-activities subsection-full">
+			<div class="subsection-header">
+				<h2>Timeline of Activities</h2>
+			</div>
+			<ActivitiesTimeline data={linkedinTimeline} />
+		</div>
+
+		<div class="outputs subsection-full">
+			<div class="subsection-header">
+				<h2>Outputs</h2>
+			</div>
+			<div class="outputs-list">
+				{#each linkedinActivities as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
 	</div>
 
-	<div id="coursera" class="section">
-		<h1>Part 2. IBM DevOps and Software Engineering Professional Certificate</h1>
+	<div id="coursera" class="section snappable">
+		<div class="subsection">
+			<h1>Part 2. IBM DevOps and Software Engineering Professional Certificate</h1>
+		</div>
 
-		<div class="company-info">
+		<div class="company-info subsection">
 			<h2>Coursera</h2>
 			<p>
 				Coursera was founded by Daphne Koller and Andrew Ng in 2012 with a vision of providing
@@ -163,7 +226,7 @@
 			</p>
 		</div>
 
-		<div class="company-info">
+		<div class="company-info subsection">
 			<h2>IBM</h2>
 			<p>
 				IBM integrates technology and expertise, providing infrastructure, software (including
@@ -172,8 +235,8 @@
 			</p>
 		</div>
 
-		<div class="company-info">
-			<h2>IBM</h2>
+		<div class="company-info subsection">
+			<h2>IBM DevOps and Software Engineering Professional Certificate</h2>
 			<p>
 				The IBM DevOps and Software Engineering Professional Certificate can help you launch your
 				career with technical skills valued by IT employers. This self-paced certificate program of
@@ -184,7 +247,7 @@
 			</p>
 		</div>
 
-		<div class="nature-of-assignments">
+		<div class="nature-of-assignments subsection">
 			<h2>Nature of Assignments</h2>
 			<table>
 				<tr>
@@ -237,29 +300,7 @@
 			</table>
 		</div>
 
-		<div class="key-figures">
-			<h2>Total Hours Rendered</h2>
-			<p>Engagement Hours: 165</p>
-			<p>Credit Hours: 330</p>
-		</div>
-
-		<div class="timeline-of-activities">
-			<h2>Timeline of Activities</h2>
-		</div>
-
-		<div class="outputs">
-			<h2>Outputs</h2>
-			<div class="certificate">
-				<h3>Certificate</h3>
-				<p>Name:</p>
-				<p>Date Received:</p>
-				<p>Link:</p>
-				<!-- Image of Certificate -->
-				<img src="" alt="" />
-			</div>
-		</div>
-
-		<div class="synthesis">
+		<div class="synthesis subsection">
 			<h2>Synthesis</h2>
 			<div>
 				<p>
@@ -355,12 +396,57 @@
 				</p>
 			</div>
 		</div>
+
+		<div class="key-figures subsection">
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Projects</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Courses</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">QQ</p>
+				<p class="name">Quizes</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">165</p>
+				<p class="name">Engagement Hours</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">330</p>
+				<p class="name">Credit Hours</p>
+			</div>
+		</div>
+
+		<div class="timeline-of-activities subsection-full">
+			<div class="subsection-header">
+				<h2>Timeline of Activities</h2>
+			</div>
+			<ActivitiesTimeline data={courseraTimeline} />
+		</div>
+
+		<div class="outputs subsection-full">
+			<div class="subsection-header">
+				<h2>Outputs</h2>
+			</div>
+			<div class="outputs-list">
+				{#each courseraActivities as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
 	</div>
 
-	<div id="metacrafters" class="section">
-		<h1>Part 3. Metacrafters</h1>
+	<div id="metacrafters" class="section snappable">
+		<div class="subsection">
+			<h1>Part 3. Metacrafters</h1>
+		</div>
 
-		<div class="company-info">
+		<div class="company-info subsection">
 			<h2>Metacrafters</h2>
 			<p>
 				Metacrafters is a learning platform with gamification designed to educate and engage
@@ -373,7 +459,7 @@
 			</p>
 		</div>
 
-		<div class="nature-of-assignments">
+		<div class="nature-of-assignments subsection">
 			<h2>Nature of Assignments</h2>
 			<table>
 				<tr>
@@ -419,29 +505,7 @@
 			</table>
 		</div>
 
-		<div class="key-figures">
-			<h2>Total Hours Rendered</h2>
-			<p>Engagement Hours: 67</p>
-			<p>Credit Hours: 134</p>
-		</div>
-
-		<div class="timeline-of-activities">
-			<h2>Timeline of Activities</h2>
-		</div>
-
-		<div class="outputs">
-			<h2>Outputs</h2>
-			<div class="certificate">
-				<h3>Certificate</h3>
-				<p>Name:</p>
-				<p>Date Received:</p>
-				<p>Link:</p>
-				<!-- Image of Certificate -->
-				<img src="" alt="" />
-			</div>
-		</div>
-
-		<div class="synthesis">
+		<div class="synthesis subsection">
 			<h2>Synthesis</h2>
 			<div>
 				<p>
@@ -490,9 +554,52 @@
 				</p>
 			</div>
 		</div>
+
+		<div class="key-figures subsection">
+			<div class="key-figure">
+				<p class="value">6</p>
+				<p class="name">Projects</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">3</p>
+				<p class="name">Courses</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">3</p>
+				<p class="name">Quizes</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">67</p>
+				<p class="name">Engagement Hours</p>
+			</div>
+			<div class="key-figure">
+				<p class="value">134</p>
+				<p class="name">Credit Hours</p>
+			</div>
+		</div>
+
+		<div class="timeline-of-activities subsection-full">
+			<div class="subsection-header">
+				<h2>Timeline of Activities</h2>
+			</div>
+			<ActivitiesTimeline data={metacraftersTimeline} />
+		</div>
+
+		<div class="outputs subsection-full">
+			<div class="subsection-header">
+				<h2>Outputs</h2>
+			</div>
+			<div class="outputs-list">
+				{#each metacraftersActivities as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
 	</div>
 
-	<div id="overall-synthesis" class="section">
+	<div id="overall-synthesis" class="section subsection snappable">
 		<h1>Overall Synthesis</h1>
 		<p>
 			My practicum was primary divided in three parts. The first part was my required modules that I
@@ -563,7 +670,19 @@
 		margin-inline-start: 0px;
 		margin-inline-end: 0px;
 	}
-	.container {
+
+	.subsection {
+		max-width: $screen-md-min;
+		margin: 0 auto;
+	}
+
+	.subsection-full {
+		max-width: $screen-xl-min;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.subsection-header {
 		max-width: $screen-md-min;
 		margin: 0 auto;
 	}
@@ -589,5 +708,70 @@
 
 	h3 {
 		font-size: 18px;
+	}
+
+	.section-link-container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+	.section-link {
+		border: $border;
+		border-radius: 20px;
+		padding: 16px;
+		@extend .popup;
+		h2 {
+			font-size: 20px;
+			margin: 0;
+		}
+	}
+
+	.key-figures {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.key-figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: $border;
+		width: 180px;
+		height: 100px;
+		border-radius: 20px;
+		padding: 20px;
+
+		.name {
+			font-size: 18px;
+			font-weight: 400;
+			margin: 0;
+			font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-align: center;
+		}
+
+		.value {
+			font-size: 32px;
+			font-weight: 700;
+			margin: 0;
+			font-family: sohne, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+	}
+
+	.outputs-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 20px;
+	}
+
+	.snappable {
+		scroll-snap-align: start;
 	}
 </style>

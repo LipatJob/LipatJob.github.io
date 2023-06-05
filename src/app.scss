@@ -3,7 +3,7 @@ $secondary: #474747;
 $text-secondary: #474747;
 $black: #3e3e3e;
 $white: #f3f3f3;
-$border: 1px solid rgb(151, 151, 151);
+$border: 2px solid $black;
 
 * {
 	font-family: 'Inter', Helvetica, Arial, sans-serif;
@@ -11,12 +11,13 @@ $border: 1px solid rgb(151, 151, 151);
 }
 
 html {
-	scroll-snap-type: y proximity;
 	scroll-padding-top: 80px;
 	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
 }
 
 body {
+	scroll-snap-type: y proximity;
 	margin: 0;
 	background-color: $white;
 }

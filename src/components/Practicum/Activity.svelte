@@ -4,7 +4,6 @@
 
 	export let imageLink: string;
 	export let title: string;
-	export let description: string;
 	export let link: string;
 	export let tags: Array<string> = [];
 </script>
@@ -14,12 +13,6 @@
 		<img src={imageLink} alt={`${title} project banner`} class="project-image" />
 		<div class="information">
 			<p class="title">{title}</p>
-			<p class="description">{description}</p>
-			<div class="tags">
-				{#each tags as tag}
-					<Pill text={tag} />
-				{/each}
-			</div>
 		</div>
 	</div>
 </a>
@@ -35,23 +28,19 @@
 	}
 
 	.information {
+		display: flex;
 		padding: 20px;
+		height: 76px;
 	}
 
 	.title {
+		margin: auto auto;
+		text-align: center;
 		font-style: normal;
-		font-weight: 600;
-		font-size: 24px;
-		margin-bottom: 16px;
-	}
-
-	.description {
-		font-style: normal;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 16px;
 		color: $black;
 		line-height: 25px;
-		margin-bottom: 20px;
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-line-clamp: 3; /* number of lines to show */
@@ -78,6 +67,8 @@
 		max-width: 100%;
 		height: auto;
 		border: none;
+		aspect-ratio: 2 / 1;
+		object-fit: cover;
 	}
 
 	.tags {
