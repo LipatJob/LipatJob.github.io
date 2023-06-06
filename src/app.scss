@@ -11,13 +11,12 @@ $border: 2px solid $black;
 }
 
 html {
-	scroll-padding-top: 80px;
+	scroll-padding-top: 100px;
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
 }
 
 body {
-	scroll-snap-type: y proximity;
 	margin: 0;
 	background-color: $white;
 }

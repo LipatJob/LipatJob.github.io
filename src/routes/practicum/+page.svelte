@@ -9,26 +9,38 @@
 	import linkedinActivities from '../../content/linkedinActivities.js';
 	import metacraftersActivities from '../../content/metacraftersActivities.js';
 	import Icon from '@iconify/svelte';
+	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 </script>
 
 <div class="container">
+	<div class="nav">
+		<PracticumNav />
+	</div>
+	<div id="introduction" class="section snappable">
+		<div class="section-header">
+			<div>
+				<h1>CS Practicum Final Report</h1>
+				<h2>Job Lipat</h2>
+			</div>
+		</div>
+	</div>
 	<div id="linkedin-learning" class="section">
-		<div class="section section-header snappable">
+		<div class="subsection section-header snappable">
 			<div>
 				<h1>Part 1. Required LinkedIn Learning Modules</h1>
 				<div class="key-figures-container">
 					<div class="key-figures">
 						<div class="key-figure">
-							<p class="value">QQ</p>
-							<p class="name">Projects</p>
-						</div>
-						<div class="key-figure">
-							<p class="value">QQ</p>
+							<p class="value">36</p>
 							<p class="name">Courses</p>
 						</div>
 						<div class="key-figure">
-							<p class="value">QQ</p>
-							<p class="name">Quizes</p>
+							<p class="value">4</p>
+							<p class="name">Learning Paths</p>
+						</div>
+						<div class="key-figure">
+							<p class="value">11</p>
+							<p class="name">Certificates</p>
 						</div>
 						<div class="key-figure">
 							<p class="value">45</p>
@@ -43,7 +55,7 @@
 			</div>
 		</div>
 
-		<div class="company-info subsection snappable">
+		<div class="subsection snappable">
 			<div class="company-info">
 				<img src="/practicum/linkedin/logo.png" class="company-logo" alt="linked in logo" />
 				<p>
@@ -231,8 +243,9 @@
 		display: flex;
 		max-width: $screen-md-min;
 		margin: 0 auto;
-		h1 {
+		h1, h2{
 			margin-bottom: 30px;
+			text-align: center;
 		}
 		> div {
 			margin: auto;
@@ -266,10 +279,10 @@
 
 	h3 {
 		font-size: 20px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
-	.section-link-container {
+	.section-links {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
@@ -282,13 +295,28 @@
 	}
 
 	.section-link {
+		height: 50px;
+		width: 300px;
+		text-align: center;
 		border: $border;
 		border-radius: 20px;
-		padding: 16px;
+		padding: 4px 14px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-items: center;
+		align-content: center;
 		@extend .popup;
+		> img {
+			height: 70%;
+			width: auto;
+			aspect-ratio: 1 / 1;
+			margin-right: 20px;
+		}
 		h2 {
+			line-height: 1.1em;
 			font-size: 20px;
-			margin: 0;
+			margin: auto;
 		}
 	}
 
@@ -334,6 +362,13 @@
 		scroll-snap-align: start;
 	}
 
+	.company-info {
+		> p {
+			font-size: 24px;
+			line-height: 1.6em;
+		}
+	}
+
 	.company-logo {
 		max-width: 400px;
 	}
@@ -377,9 +412,28 @@
 		gap: 20px;
 		> div {
 		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+		}
 		li {
 			font-size: 20px;
-			margin-bottom: 14px;
 		}
+	}
+
+	#introduction {
+		display: flex;
+		.section-header {
+			margin: auto;
+		}
+	}
+
+	.nav {
+		z-index: 10;
+		position: fixed;
+		align-self: center;
+		width: 100%;
+		top: 0px;
 	}
 </style>

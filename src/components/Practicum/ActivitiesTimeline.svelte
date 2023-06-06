@@ -39,7 +39,7 @@
 		],
 		chart: {
 			height: 80 * data.length,
-			type: 'rangeBar',
+			type: 'rangeBar'
 		},
 		plotOptions: {
 			bar: {
@@ -50,7 +50,8 @@
 			type: 'datetime',
 			labels: {
 				style: {
-					fontSize: '14px'
+					fontSize: '14px',
+					fontFamily: 'Inter, Helvetica, Arial, sans-serif'
 				}
 			}
 		},
@@ -59,14 +60,30 @@
 				maxWidth: 300,
 				style: {
 					fontSize: '16px',
-					cssClass: 'wrap'
+					cssClass: 'wrap',
+					fontFamily: 'Inter, Helvetica, Arial, sans-serif'
+				}
+			},
+			lines: {
+				show: true
+			}
+		},
+		grid: {
+			xaxis: {
+				lines: {
+					show: true
+				}
+			},
+			yaxis: {
+				lines: {
+					show: false
 				}
 			}
 		},
 		fill: {
 			opacity: 1,
 			colors: ['#347be6']
-		},
+		}
 	};
 	console.log(options);
 </script>
