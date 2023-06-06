@@ -1,0 +1,57 @@
+<script>
+	import Icon from '@iconify/svelte';
+
+	let expanded = false;
+	function toggleExpand() {
+		expanded = !expanded;
+	}
+</script>
+
+<svelte:window />
+
+<slot name="mainSection" />
+{#if expanded}
+	<slot name="collapsableSection" />
+{/if}
+
+<div class="button-container">
+	<button on:click={toggleExpand} class="expandButton popup">
+		{#if !expanded}
+			<p>Expand</p>
+			<div class="icon">
+				<Icon icon="ooui:expand" class="" width="inherit" height="inherit" />
+			</div>
+		{:else}
+			<p>Collapse</p>
+			<div class="icon">
+				<Icon icon="ooui:collapse" class="" width="inherit" height="inherit" />
+			</div>
+		{/if}
+	</button>
+</div>
+
+<style lang="scss">
+	.button-container {
+		width: 100%;
+		margin: auto auto;
+		display: flex;
+		justify-content: center;
+	}
+	.expandButton {
+		border: $border;
+		border-radius: 20px;
+		padding: 10px 20px;
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		> p {
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.icon {
+			width: 30px;
+		}
+	}
+</style>

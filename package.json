@@ -13,6 +13,7 @@
 		"gh-pages": "npm run build && npx gh-pages -d build -t true"
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^3.1.4",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.5.0",
@@ -34,6 +35,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@vercel/analytics": "^1.0.1"
+		"@vercel/analytics": "^1.0.1",
+		"apexcharts": "^3.40.0",
+		"moment": "^2.29.4"
 	}
 }

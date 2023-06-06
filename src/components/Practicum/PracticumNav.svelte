@@ -26,13 +26,12 @@
 		<span />
 		<span />
 		<ul id="menu">
-			<a class="nav-item" on:click={handleAnchorClick} href="#About"> About</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Projects"> Projects</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Skills"> Skills</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Experience"> Experience</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Education"> Education</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Affiliations"> Affiliations</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#Contact"> Contact</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#introduction"> Introduction</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#linkedin-learning"> LinkedIn Learning</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#coursera"> Coursera</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#metacrafters"> Metacrafters</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#overall-synthesis"> Overall Synthesis</a>
+			<a class="practicum popup" href="/"> Back</a>
 		</ul>
 	</div>
 </div>
