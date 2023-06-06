@@ -1,22 +1,50 @@
-<script>
+<script lang="ts">
+	import { fade } from 'svelte/transition';
 	import ButtonLink from '../Common/ButtonLink.svelte';
 	import Navigation from '../Common/Navigation.svelte';
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	let animationIndex = 1;
+	onMount(() => (ready = true));
+	setInterval(() => {
+		if (ready && animationIndex < 10) {
+			animationIndex++;
+		}
+	}, 500);
+	$: animateIn = (targetIndex: number, animation: string) => {
+		return targetIndex >= animationIndex ? 'hidden' : animation;
+	};
 </script>
 
 <div class="section-container">
 	<div class="section">
-		<p class="greeting">Hi, I'm <span class="greeting-name">Job Lipat</span>.</p>
-		<p class="info">I am a 4th-year Computer Science student at Mapua Malayan Colleges Laguna.</p>
-		<p class="subinfo">I use code to transform complexity into simplicity.</p>
+
+		<p class={'greeting ' + animateIn(1, 'fade')} transition:fade>
+			Hi, I'm <span class="greeting-name">Job Lipat</span>.
+		</p>
+		<p class={'info ' + animateIn(2, 'fade')}>
+			I am a 4th-year Computer Science student at Mapua Malayan Colleges Laguna.
+		</p>
+		<p class={'subinfo ' + animateIn(3, 'fade')}>
+			I use code to transform complexity into simplicity.
+		</p>
 		<div class="button-container">
-			<ButtonLink
-				link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
-				iconLink="resume-icon.svg"
-				text="Resume"
-				type="primary"
-			/>
-			<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
-			<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
+			<div class={animateIn(4, 'fade')}>
+				<ButtonLink
+					link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
+					iconLink="resume-icon.svg"
+					text="Resume"
+					type="primary"
+				/>
+			</div>
+			<div class={animateIn(4, 'fade')}>
+				<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
+			</div>
+
+			<div class={animateIn(4, 'fade')}>
+				<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
+			</div>
 		</div>
 	</div>
 </div>
@@ -98,4 +126,6 @@
 			gap: 24px;
 		}
 	}
+
+
 </style>

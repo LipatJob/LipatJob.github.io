@@ -605,7 +605,7 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="mdi:quiz-outline" class="" width="inherit" height="inherit" />
+							<Icon icon="material-symbols:keyboard-outline" class="" width="inherit" height="inherit" />
 						</div>
 						<div class="name">Challenges</div>
 						<div class="description">
