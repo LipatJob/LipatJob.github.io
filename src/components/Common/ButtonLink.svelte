@@ -21,10 +21,9 @@
 		flex-direction: row;
 		align-items: center;
 		font-weight: 500;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 19px;
 		border-radius: 8px;
-		font-size: 16px;
 		border: $border;
 		padding: 8px 18px;
 		justify-content: center;
@@ -35,7 +34,7 @@
 
 		@include md {
 			width: 120px;
-			padding: 8px 12px;
+			padding: 12px 12px;
 		}
 	}
 
@@ -45,7 +44,7 @@
 		flex-direction: row;
 		font-weight: 500;
 		justify-content: center;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 19px;
 		border-radius: 8px;
 		font-size: 16px;
@@ -53,11 +52,12 @@
 		padding: 8px 18px;
 		text-decoration: none;
 		background-color: $primary;
-		border: none;
+		border: $primary 2px solid;
 
 		@include md {
 			align-items: center;
-			width: 130px;
+			width: 120px;
+			padding: 12px 12px;
 		}
 	}
 
