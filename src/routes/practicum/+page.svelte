@@ -18,15 +18,40 @@
 	<div class="nav">
 		<PracticumNav />
 	</div>
+	
 	<div id="introduction" class="section snappable">
 		<div class="section-header">
 			<div>
 				<h1>CS Practicum Final Report</h1>
-				<h2>Job Lipat</h2>
+			</div>
+			<div class="key-figures-container">
+				<div class="key-figures">
+					<div class="key-figure">
+						<p class="value">53</p>
+						<p class="name">Courses</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">28</p>
+						<p class="name">Certificates</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">12</p>
+						<p class="name">Projects</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">277</p>
+						<p class="name">Engagement Hours</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">554</p>
+						<p class="name">Credit Hours</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div />
 	</div>
+
 	<div id="linkedin-learning" class="section">
 		<div class="subsection section-header snappable">
 			<div>
@@ -239,7 +264,7 @@
 							<p class="name">Mini Projects</p>
 						</div>
 						<div class="key-figure">
-							<p class="value">11</p>
+							<p class="value">14</p>
 							<p class="name">Certificates</p>
 						</div>
 						<div class="key-figure">
@@ -1054,6 +1079,10 @@
 		display: flex;
 		.section-header {
 			margin: auto;
+		}
+
+		h1{
+			font-size: 52px;
 		}
 	}
 
