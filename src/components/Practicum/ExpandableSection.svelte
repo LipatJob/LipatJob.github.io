@@ -15,7 +15,7 @@
 	<slot name="collapsableSection" />
 {/if}
 <div class="button-container">
-	<button on:click={toggleExpand} class="expandButton popup">
+	<button on:click={toggleExpand} class="expandButton popup" type="button">
 		{#if !expanded}
 			<p>Expand</p>
 			<div class="icon">
