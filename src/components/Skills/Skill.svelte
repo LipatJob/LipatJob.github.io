@@ -9,17 +9,21 @@
 	export let skillName: string;
 	export let tools: Array<string>;
 	export let bullets: Array<string>;
-	let opened = true;
+	export let opened: boolean = true;
+
+	function toggle() {
+		opened = !opened;
+	}
 </script>
 
 <div class="skill">
-	<button
-		class="skill-toggle"
-		on:click={() => {
-			opened = !opened;
-		}}
-	>
-		<p class="skill-name"><span class="toggle"><ChevronRight /></span>{skillName}</p>
+	<button class="skill-toggle" on:click={toggle}>
+		<div class="toggle" class:closed={!opened}>
+			<ChevronRight />
+		</div>
+		<p class="skill-name">
+			{skillName}
+		</p>
 		<div class="tools">
 			{#each tools as tool}
 				<Pill text={tool} />
@@ -58,6 +62,8 @@
 
 	.toggle {
 		margin-right: 8px;
+		transform: rotate(90deg);
+		transition: transform 0.2s ease-in-out;
 	}
 
 	.skill-name {
@@ -85,6 +91,7 @@
 	.description {
 		margin: 18px 0;
 		margin-left: 12px;
+		font-size: 18px;
 	}
 
 	.description ul li {
@@ -96,5 +103,10 @@
 		flex-direction: row;
 		gap: 20px;
 		margin: 0 40px;
+	}
+
+	.closed {
+		transform: rotate(0deg);
+		transition: transform 0.2s ease-in-out;
 	}
 </style>
