@@ -704,7 +704,7 @@
 	</div>
 
 	<div id="overall-synthesis" class="section snappable">
-		<div class="section-header">
+		<div class="subsection">
 			<div>
 				<h1>Overall Synthesis</h1>
 			</div>
@@ -764,7 +764,7 @@
 	</div>
 
 	<div id="appendices" class="section snappable">
-		<div class="subsection section-header">
+		<div class="subsection">
 			<div>
 				<h1>Appendices</h1>
 				<div class="appendices-container">
