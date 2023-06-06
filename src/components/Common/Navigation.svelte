@@ -33,7 +33,7 @@
 			<a class="nav-item" on:click={handleAnchorClick} href="#Education"> Education</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#Affiliations"> Affiliations</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#Contact"> Contact</a>
-			<a class="practicum popup" href="/"> Practicum</a>
+			<a class="practicum popup" href="/practicum"> Practicum</a>
 		</ul>
 	</div>
 </div>
