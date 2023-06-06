@@ -11,21 +11,47 @@
 	import Icon from '@iconify/svelte';
 	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 	import ExpandableSection from '../../components/Practicum/ExpandableSection.svelte';
+	import { fade } from 'svelte/transition';
 </script>
 
 <div class="container">
 	<div class="nav">
 		<PracticumNav />
 	</div>
+	
 	<div id="introduction" class="section snappable">
 		<div class="section-header">
 			<div>
 				<h1>CS Practicum Final Report</h1>
-				<h2>Job Lipat</h2>
+			</div>
+			<div class="key-figures-container">
+				<div class="key-figures">
+					<div class="key-figure">
+						<p class="value">53</p>
+						<p class="name">Courses</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">28</p>
+						<p class="name">Certificates</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">12</p>
+						<p class="name">Projects</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">277</p>
+						<p class="name">Engagement Hours</p>
+					</div>
+					<div class="key-figure">
+						<p class="value">554</p>
+						<p class="name">Credit Hours</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div />
 	</div>
+
 	<div id="linkedin-learning" class="section">
 		<div class="subsection section-header snappable">
 			<div>
@@ -145,56 +171,57 @@
 
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
-
-			<ExpandableSection>
-				<div slot="mainSection">
-					<p>
-						For the first part of my practicum, I had to take online courses in LinkedIn Learning.
-						Through the courses, I have learned various soft skills that would help me as a future
-						software engineer.
-					</p>
-					<p>
-						For the design thinking module, I have learned what it takes to create innovative
-						solutions. From the courses, I learned that innovation starts with critical thinking. As
-						defined by Mike Figliuolo, one of the instructors of the courses, critical thinking is
-						the ability to think of the correct decision given bottlenecks, problems, and limited
-						time. Critical thinking is one of the main components of creativity. As defined by
-						Stefan Mumaw, creativity is the ability to create solutions that are both novel and
-						relevant. However, being creative is not enough in the industry. We must also put our
-						creative ideas into practice by being innovative.
-					</p>
-					<p>
-						As for the project management module, I have learned the process of how to turn ideas
-						into reality. The undertaking of turning an idea to reality is called a project. More
-						formally, a project is a temporary endeavor that has a specific and unique goal, and
-						usually a budget. There are typically two methods for managing projects. There is the
-						traditional way of project management, and there is agile project management. For
-						software projects, agile project management is usually used as it enables the team to
-						quickly deliver value and change depending on the needs of the user.
-					</p>
-				</div>
-				<div slot="collapsableSection">
-					<p>
-						As for the workplace management module, I have learned how I should act in the
-						workplace. The module covers three primary skills. The first is communication in the
-						workplace. Through the courses, I learned how to communicate better with other people.
-						In addition to this, I have learned the proper etiquette when calling, emailing, and
-						texting. The second skill I have learned to improve is time management. Through the
-						courses. I have learned how to maximize my calendar, and I have learned ways to balance
-						work and personal time. Lastly, the module has helped me be more productive. I have
-						learned that productivity goes hand in hand with time management. The better you are at
-						time management, the more productive you are. In addition to this, I have learned better
-						ways and better tools to keep track of tasks that I need to accomplish.
-					</p>
-					<p>
-						Overall, the experience of improving my soft skills through LinkedIn learning brought a
-						fresh perspective. As a software engineer, soft skills are often overlooked as there is
-						so much to learn in our field. Soft skills are either overlooked or ignored so we often
-						get stuck in our own ways. However, through these modules, I have been able to gain new
-						perspectives, tools, and techniques to improve my soft skills.
-					</p>
-				</div>
-			</ExpandableSection>
+			<div>
+				<ExpandableSection>
+					<div slot="mainSection">
+						<p>
+							For the first part of my practicum, I had to take online courses in LinkedIn Learning.
+							Through the courses, I have learned various soft skills that would help me as a future
+							software engineer.
+						</p>
+						<p>
+							For the design thinking module, I have learned what it takes to create innovative
+							solutions. From the courses, I learned that innovation starts with critical thinking.
+							As defined by Mike Figliuolo, one of the instructors of the courses, critical thinking
+							is the ability to think of the correct decision given bottlenecks, problems, and
+							limited time. Critical thinking is one of the main components of creativity. As
+							defined by Stefan Mumaw, creativity is the ability to create solutions that are both
+							novel and relevant. However, being creative is not enough in the industry. We must
+							also put our creative ideas into practice by being innovative.
+						</p>
+						<p>
+							As for the project management module, I have learned the process of how to turn ideas
+							into reality. The undertaking of turning an idea to reality is called a project. More
+							formally, a project is a temporary endeavor that has a specific and unique goal, and
+							usually a budget. There are typically two methods for managing projects. There is the
+							traditional way of project management, and there is agile project management. For
+							software projects, agile project management is usually used as it enables the team to
+							quickly deliver value and change depending on the needs of the user.
+						</p>
+					</div>
+					<div slot="collapsableSection" transition:fade|local>
+						<p>
+							As for the workplace management module, I have learned how I should act in the
+							workplace. The module covers three primary skills. The first is communication in the
+							workplace. Through the courses, I learned how to communicate better with other people.
+							In addition to this, I have learned the proper etiquette when calling, emailing, and
+							texting. The second skill I have learned to improve is time management. Through the
+							courses. I have learned how to maximize my calendar, and I have learned ways to
+							balance work and personal time. Lastly, the module has helped me be more productive. I
+							have learned that productivity goes hand in hand with time management. The better you
+							are at time management, the more productive you are. In addition to this, I have
+							learned better ways and better tools to keep track of tasks that I need to accomplish.
+						</p>
+						<p>
+							Overall, the experience of improving my soft skills through LinkedIn learning brought
+							a fresh perspective. As a software engineer, soft skills are often overlooked as there
+							is so much to learn in our field. Soft skills are either overlooked or ignored so we
+							often get stuck in our own ways. However, through these modules, I have been able to
+							gain new perspectives, tools, and techniques to improve my soft skills.
+						</p>
+					</div>
+				</ExpandableSection>
+			</div>
 		</div>
 
 		<div class="outputs subsection-full snappable">
@@ -212,7 +239,7 @@
 					</svelte:fragment>
 					<svelte:fragment slot="collapsableSection">
 						{#each linkedinActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
@@ -237,7 +264,7 @@
 							<p class="name">Mini Projects</p>
 						</div>
 						<div class="key-figure">
-							<p class="value">11</p>
+							<p class="value">14</p>
 							<p class="name">Certificates</p>
 						</div>
 						<div class="key-figure">
@@ -398,7 +425,7 @@
 							Software Engineering.
 						</p>
 					</div>
-					<div slot="collapsableSection">
+					<div slot="collapsableSection" transition:fade|local>
 						<p>
 							In addition to learning what software engineering and DevOps are, I have also learned
 							the technologies that enable teams to create highly effective software. One of these
@@ -490,7 +517,7 @@
 					</svelte:fragment>
 					<svelte:fragment slot="collapsableSection">
 						{#each courseraActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
@@ -652,7 +679,7 @@
 						deploying contracts to the Avalanche C Chain.
 					</p>
 				</div>
-				<div slot="collapsableSection">
+				<div slot="collapsableSection" transition:fade|local>
 					<p>
 						I have also created four projects for the intermediate solidity and avalanche course.
 						For the first project, I created a smart contract called MetaTrivia which is a trivia
@@ -691,7 +718,7 @@
 					</svelte:fragment>
 					<svelte:fragment slot="collapsableSection">
 						{#each metacraftersActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
@@ -700,63 +727,125 @@
 			</div>
 		</div>
 	</div>
+
 	<div id="overall-synthesis" class="section snappable">
-		<div class="section-header snappable">
+		<div class="subsection">
 			<div>
 				<h1>Overall Synthesis</h1>
 			</div>
+			<div>
+				<p>
+					My practicum was primary divided in three parts. The first part was my required modules
+					that I had to take in LinkedIn Learning. The second part was the IBM DevOps and Software
+					Engineering professional certificate which I had to take in Coursera. The third and final
+					parts were the three modules I had to take in Metacrafters.
+				</p>
+				<p>
+					Through the three parts of my practicum. I have also learned a lot of new knowledge and
+					skills that I can apply once I am in the workplace. Through my required modules, I have
+					learned how to improve my soft skills including my creativity, critical thinking, project
+					management, and time management. I have learned more about software engineering and DevOps
+					through my professional certificate. I have also learned more about blockchain and smart
+					contracts throughout the course in Metacrafters.
+				</p>
+				<p>
+					These skills and knowledge would be especially useful for me once I become a part of the
+					workforce as a Junior Software Engineer. For example, as a software engineer, I will be
+					working in a team, and creativity, critical thinking, and communication will be especially
+					useful. The practices and technologies such as test-driven development, CI/CD, and
+					microservices will be especially useful as these are commonly used in the industry.
+					Learning about blockchain and smart contracts also opens more possibilities for innovation
+					and employment.
+				</p>
+				<p>
+					Through the courses, I have also realized how much more there is to learn. Most of these,
+					we will not be able to learn just by following instructions and watching video lectures.
+					These could only be learned by experiencing them and by actually doing them. However,
+					despite the overwhelming amount of untapped knowledge out there, I am more confident in my
+					skills, and I now have a better idea of which areas I need to improve on.
+				</p>
+				<p>
+					I also honestly did not expect that learning the modules would be as hard as it was. At
+					first, I thought that if I just need to make some time to watch the modules, I would be
+					doing fine. However, I quickly realized that just allocating time for watching the modules
+					is not enough since I also had to absorb the lessons from the modules. By rushing through
+					the modules, I was able to get a lot done, but I couldn’t learn as much as I want to.
+				</p>
+				<p>
+					From this experience, I learned how important it is to pace yourself when you are doing
+					work. While it may be tempting to accomplish work all in one go, this increases the risk
+					of having low-quality outputs. In addition to this, I also realized that pacing work
+					improves health. By allocating time, I was able to avoid burning out and I was able to
+					make time for self-care.
+				</p>
+				<p>
+					All in all, I found the experience of doing this practicum an eye-opener. It opened my
+					eyes to new practices, technologies, and tools. I was able to gain a deeper understanding
+					of these through the courses I have taken. Most importantly, my eyes were also opened to
+					the areas I could improve to become a complete Software Engineer.
+				</p>
+			</div>
 		</div>
+	</div>
+
+	<div id="appendices" class="section snappable">
 		<div class="subsection">
-			<p>
-				My practicum was primary divided in three parts. The first part was my required modules that
-				I had to take in LinkedIn Learning. The second part was the IBM DevOps and Software
-				Engineering professional certificate which I had to take in Coursera. The third and final
-				parts were the three modules I had to take in Metacrafters.
-			</p>
-			<p>
-				Through the three parts of my practicum. I have also learned a lot of new knowledge and
-				skills that I can apply once I am in the workplace. Through my required modules, I have
-				learned how to improve my soft skills including my creativity, critical thinking, project
-				management, and time management. I have learned more about software engineering and DevOps
-				through my professional certificate. I have also learned more about blockchain and smart
-				contracts throughout the course in Metacrafters.
-			</p>
-			<p>
-				These skills and knowledge would be especially useful for me once I become a part of the
-				workforce as a Junior Software Engineer. For example, as a software engineer, I will be
-				working in a team, and creativity, critical thinking, and communication will be especially
-				useful. The practices and technologies such as test-driven development, CI/CD, and
-				microservices will be especially useful as these are commonly used in the industry. Learning
-				about blockchain and smart contracts also opens more possibilities for innovation and
-				employment.
-			</p>
-			<p>
-				Through the courses, I have also realized how much more there is to learn. Most of these, we
-				will not be able to learn just by following instructions and watching video lectures. These
-				could only be learned by experiencing them and by actually doing them. However, despite the
-				overwhelming amount of untapped knowledge out there, I am more confident in my skills, and I
-				now have a better idea of which areas I need to improve on.
-			</p>
-			<p>
-				I also honestly did not expect that learning the modules would be as hard as it was. At
-				first, I thought that if I just need to make some time to watch the modules, I would be
-				doing fine. However, I quickly realized that just allocating time for watching the modules
-				is not enough since I also had to absorb the lessons from the modules. By rushing through
-				the modules, I was able to get a lot done, but I couldn’t learn as much as I want to.
-			</p>
-			<p>
-				From this experience, I learned how important it is to pace yourself when you are doing
-				work. While it may be tempting to accomplish work all in one go, this increases the risk of
-				having low-quality outputs. In addition to this, I also realized that pacing work improves
-				health. By allocating time, I was able to avoid burning out and I was able to make time for
-				self-care.
-			</p>
-			<p>
-				All in all, I found the experience of doing this practicum an eye-opener. It opened my eyes
-				to new practices, technologies, and tools. I was able to gain a deeper understanding of
-				these through the courses I have taken. Most importantly, my eyes were also opened to the
-				areas I could improve to become a complete Software Engineer.
-			</p>
+			<div>
+				<h1>Appendices</h1>
+				<div class="appendices-container">
+					<a
+						href="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
+						target="_blank"
+					>
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Competency-Based CV</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_practicum_confirmation" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Practicum Confirmation and Acceptance Form</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_liability_waiver" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Student Training Agreement and Liability Waiver</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_learning_path_proposal" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Learning Path Proposal</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_weekly_journal" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Complete Weekly Journal</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Final Report Document</p>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -781,6 +870,7 @@
 	}
 
 	.subsection {
+		padding-top: 120px;
 		min-height: 100vh;
 		max-width: $screen-md-min;
 		width: 100%;
@@ -789,6 +879,7 @@
 	}
 
 	.subsection-full {
+		padding-top: 120px;
 		max-width: $screen-xl-min;
 		width: 100%;
 		margin: 0 auto;
@@ -796,7 +887,9 @@
 	}
 
 	.section-header {
+		padding-top: 0;
 		display: flex;
+		flex-direction: column;
 		max-width: $screen-md-min;
 		margin: 0 auto;
 		h1,
@@ -957,7 +1050,7 @@
 			}
 
 			.icon {
-				width: 80px;
+				width: 60px;
 				display: block;
 			}
 
@@ -987,6 +1080,10 @@
 		.section-header {
 			margin: auto;
 		}
+
+		h1{
+			font-size: 52px;
+		}
 	}
 
 	.nav {
@@ -995,5 +1092,34 @@
 		align-self: center;
 		width: 100%;
 		top: 0px;
+	}
+
+	.appendices-container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		a {
+			text-decoration: none;
+		}
+
+		.appendix {
+			border: $border;
+			padding: 0px 10px;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.icon {
+				width: 40px;
+				height: auto;
+				margin-right: 14px;
+			}
+
+			p {
+				font-weight: 600;
+			}
+		}
 	}
 </style>

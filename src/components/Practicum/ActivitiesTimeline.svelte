@@ -63,23 +63,9 @@
 					cssClass: 'wrap',
 					fontFamily: 'Inter, Helvetica, Arial, sans-serif'
 				}
-			},
-			lines: {
-				show: true
 			}
 		},
-		grid: {
-			xaxis: {
-				lines: {
-					show: true
-				}
-			},
-			yaxis: {
-				lines: {
-					show: false
-				}
-			}
-		},
+
 		fill: {
 			opacity: 1,
 			colors: ['#347be6']

@@ -27,20 +27,23 @@
 		<span />
 		<ul id="menu">
 			<a class="nav-item" on:click={handleAnchorClick} href="#introduction"> Introduction</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#linkedin-learning"> LinkedIn Learning</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#linkedin-learning">
+				LinkedIn Learning</a
+			>
 			<a class="nav-item" on:click={handleAnchorClick} href="#coursera"> Coursera</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#metacrafters"> Metacrafters</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#overall-synthesis"> Overall Synthesis</a>
-			<a class="practicum popup" href="/"> Back</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#overall-synthesis">
+				Overall Synthesis</a
+			>
+			<a class="nav-item" on:click={handleAnchorClick} href="#appendices"> Appendices</a>
+			<a class="practicum popup" href="/"> Home</a>
 		</ul>
 	</div>
 </div>
-<div class="gradient" />
 
 <style lang="scss">
 	.nav {
 		background-color: $white;
-
 		overflow: hidden;
 		z-index: 10;
 	}
@@ -104,7 +107,7 @@
 	#menuToggle {
 		display: block;
 		position: relative;
-		padding: 20px;
+		padding: 10px;
 
 		@include md {
 			top: 0;
