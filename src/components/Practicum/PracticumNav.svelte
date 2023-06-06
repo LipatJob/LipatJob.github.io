@@ -36,7 +36,7 @@
 				Overall Synthesis</a
 			>
 			<a class="nav-item" on:click={handleAnchorClick} href="#appendices"> Appendices</a>
-			<a class="practicum popup" href="/"> Back</a>
+			<a class="practicum popup" href="/"> Home</a>
 		</ul>
 	</div>
 </div>
