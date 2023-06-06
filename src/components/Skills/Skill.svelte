@@ -3,6 +3,8 @@
 	import ChevronRight from '../Common/ChevronRight.svelte';
 	import Pill from '../Common/Pill.svelte';
 	import ProjectFeature from './ProjectFeature.svelte';
+	import { fade, slide } from 'svelte/transition';
+	import { quintInOut } from 'svelte/easing';
 
 	export let skillName: string;
 	export let tools: Array<string>;
@@ -26,13 +28,15 @@
 	</button>
 
 	{#if opened}
-		<hr />
-		<div class="description">
-			<ul>
-				{#each bullets as bullet}
-					<li>{bullet}</li>
-				{/each}
-			</ul>
+		<div transition:slide={{ duration: 100, axis: 'y' }}>
+			<hr />
+			<div class="description">
+				<ul>
+					{#each bullets as bullet}
+						<li>{bullet}</li>
+					{/each}
+				</ul>
+			</div>
 		</div>
 	{/if}
 </div>

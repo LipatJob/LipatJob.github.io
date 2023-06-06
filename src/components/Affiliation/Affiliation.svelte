@@ -9,24 +9,29 @@
 	export let description: string;
 </script>
 
-<a class="item-container popup" href={link}>
-	<div class="item">
-		<div class="item-header">
-			<img class="logo" src={logo} alt={name} />
-			<span class="link-icon"><LinkIcon /> </span>
+<div class="item-container popup">
+	<a href={link}>
+		<div class="item">
+			<div class="item-header">
+				<img class="logo" src={logo} alt={name} />
+				<span class="link-icon"><LinkIcon /> </span>
+			</div>
+			<p class="name">{name}</p>
+			<p class="date">{startDate} to {endDate}</p>
+			<p class="description">{description}</p>
 		</div>
-		<p class="name">{name}</p>
-		<p class="date">{startDate} to {endDate}</p>
-		<p class="description">{description}</p>
-	</div>
-</a>
+	</a>
+</div>
 
 <style lang="scss">
 	.item-container {
 		border: $border;
 		border-radius: 20px;
-		text-decoration: none;
-		color: black;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		min-height: 100%;
 	}
 
 	.item {

@@ -1,5 +1,32 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Project from '../Projects/Project.svelte';
+
+	let ready = false;
+	let animationIndex = 1;
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(elements) => {
+				const element = elements[0];
+				if (element.isIntersecting) {
+					ready = true;
+				}
+			},
+			{
+				threshold: 0.3
+			}
+		);
+		observer.observe(document.querySelector('#projects') as Element);
+	});
+	setInterval(() => {
+		if (ready && animationIndex < 1000) {
+			animationIndex++;
+		}
+	}, 50);
+	$: animateIn = (targetIndex: number, animation: string) => {
+		return targetIndex >= animationIndex ? 'hidden' : animation;
+	};
+	const animationSpeed = 3
 
 	let projects = [
 		{
@@ -85,19 +112,19 @@
 	];
 </script>
 
-<section class="section">
+<section class="section" id="projects">
 	<div class="header">
-		<p class="header-label">Projects</p>
-		<header class="header-title">What I've Built</header>
-		<p class="header-subtitle">
+		<p class={'header-label ' + animateIn(1 * animationSpeed, 'fade')}>Projects</p>
+		<header class={'header-title ' + animateIn(2 * animationSpeed, 'fade')}>What I've Built</header>
+		<p class={'header-subtitle ' + animateIn(3 * animationSpeed, 'fade')}>
 			I do all sorts of projects ranging from front-end development, back-end development to data
 			science.
 		</p>
 	</div>
 	<div class="projects-container">
 		<div class="projects-list" style="--project-count: {projects.length}">
-			{#each projects as project}
-				<div class="project">
+			{#each projects as project, index}
+				<div class={'project ' + animateIn( (4 + index) * (animationSpeed/1.5), 'fade')}>
 					<Project
 						imageLink={project.imageLink}
 						title={project.title}

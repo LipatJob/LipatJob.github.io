@@ -102,3 +102,20 @@ p {
 	transition: 0.1s transform ease-in-out;
 	box-shadow: 0 4px 4px rgb(0 0 0 / 0.1);
 }
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade {
+	animation: 0.4s fadeInUp;
+}
+
+.hidden {
+	opacity: 0;
+}
