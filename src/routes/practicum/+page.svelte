@@ -804,7 +804,7 @@
 							<p>Competency-Based CV</p>
 						</div>
 					</a>
-					<a href="/practicum/appendices/lipat_practicum_confirmation" target="_blank">
+					<a href="/practicum/appendices/lipat_practicum_confirmation.pdf" target="_blank">
 						<div class="appendix popup">
 							<div class="icon">
 								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
@@ -812,7 +812,7 @@
 							<p>Practicum Confirmation and Acceptance Form</p>
 						</div>
 					</a>
-					<a href="/practicum/appendices/lipat_liability_waiver" target="_blank">
+					<a href="/practicum/appendices/lipat_liability_waiver.pdf" target="_blank">
 						<div class="appendix popup">
 							<div class="icon">
 								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
@@ -820,7 +820,7 @@
 							<p>Student Training Agreement and Liability Waiver</p>
 						</div>
 					</a>
-					<a href="/practicum/appendices/lipat_learning_path_proposal" target="_blank">
+					<a href="/practicum/appendices/lipat_learning_path_proposal.pdf" target="_blank">
 						<div class="appendix popup">
 							<div class="icon">
 								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
@@ -828,7 +828,7 @@
 							<p>Learning Path Proposal</p>
 						</div>
 					</a>
-					<a href="/practicum/appendices/lipat_weekly_journal" target="_blank">
+					<a href="/practicum/appendices/lipat_weekly_journal.pdf" target="_blank">
 						<div class="appendix popup">
 							<div class="icon">
 								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
@@ -836,7 +836,7 @@
 							<p>Complete Weekly Journal</p>
 						</div>
 					</a>
-					<a href="/practicum/appendices/" target="_blank">
+					<a href="/practicum/appendices/lipat_final_report.pdf" target="_blank">
 						<div class="appendix popup">
 							<div class="icon">
 								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
