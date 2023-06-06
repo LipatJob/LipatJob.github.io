@@ -11,6 +11,7 @@
 	import Icon from '@iconify/svelte';
 	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 	import ExpandableSection from '../../components/Practicum/ExpandableSection.svelte';
+	import { fade  } from 'svelte/transition';
 </script>
 
 <div class="container">
@@ -145,74 +146,75 @@
 
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
-
-			<ExpandableSection>
-				<div slot="mainSection">
-					<p>
-						For the first part of my practicum, I had to take online courses in LinkedIn Learning.
-						Through the courses, I have learned various soft skills that would help me as a future
-						software engineer.
-					</p>
-					<p>
-						For the design thinking module, I have learned what it takes to create innovative
-						solutions. From the courses, I learned that innovation starts with critical thinking. As
-						defined by Mike Figliuolo, one of the instructors of the courses, critical thinking is
-						the ability to think of the correct decision given bottlenecks, problems, and limited
-						time. Critical thinking is one of the main components of creativity. As defined by
-						Stefan Mumaw, creativity is the ability to create solutions that are both novel and
-						relevant. However, being creative is not enough in the industry. We must also put our
-						creative ideas into practice by being innovative.
-					</p>
-					<p>
-						As for the project management module, I have learned the process of how to turn ideas
-						into reality. The undertaking of turning an idea to reality is called a project. More
-						formally, a project is a temporary endeavor that has a specific and unique goal, and
-						usually a budget. There are typically two methods for managing projects. There is the
-						traditional way of project management, and there is agile project management. For
-						software projects, agile project management is usually used as it enables the team to
-						quickly deliver value and change depending on the needs of the user.
-					</p>
-				</div>
-				<div slot="collapsableSection">
-					<p>
-						As for the workplace management module, I have learned how I should act in the
-						workplace. The module covers three primary skills. The first is communication in the
-						workplace. Through the courses, I learned how to communicate better with other people.
-						In addition to this, I have learned the proper etiquette when calling, emailing, and
-						texting. The second skill I have learned to improve is time management. Through the
-						courses. I have learned how to maximize my calendar, and I have learned ways to balance
-						work and personal time. Lastly, the module has helped me be more productive. I have
-						learned that productivity goes hand in hand with time management. The better you are at
-						time management, the more productive you are. In addition to this, I have learned better
-						ways and better tools to keep track of tasks that I need to accomplish.
-					</p>
-					<p>
-						Overall, the experience of improving my soft skills through LinkedIn learning brought a
-						fresh perspective. As a software engineer, soft skills are often overlooked as there is
-						so much to learn in our field. Soft skills are either overlooked or ignored so we often
-						get stuck in our own ways. However, through these modules, I have been able to gain new
-						perspectives, tools, and techniques to improve my soft skills.
-					</p>
-				</div>
-			</ExpandableSection>
+			<div >
+				<ExpandableSection>
+					<div slot="mainSection">
+						<p>
+							For the first part of my practicum, I had to take online courses in LinkedIn Learning.
+							Through the courses, I have learned various soft skills that would help me as a future
+							software engineer.
+						</p>
+						<p>
+							For the design thinking module, I have learned what it takes to create innovative
+							solutions. From the courses, I learned that innovation starts with critical thinking.
+							As defined by Mike Figliuolo, one of the instructors of the courses, critical thinking
+							is the ability to think of the correct decision given bottlenecks, problems, and
+							limited time. Critical thinking is one of the main components of creativity. As
+							defined by Stefan Mumaw, creativity is the ability to create solutions that are both
+							novel and relevant. However, being creative is not enough in the industry. We must
+							also put our creative ideas into practice by being innovative.
+						</p>
+						<p>
+							As for the project management module, I have learned the process of how to turn ideas
+							into reality. The undertaking of turning an idea to reality is called a project. More
+							formally, a project is a temporary endeavor that has a specific and unique goal, and
+							usually a budget. There are typically two methods for managing projects. There is the
+							traditional way of project management, and there is agile project management. For
+							software projects, agile project management is usually used as it enables the team to
+							quickly deliver value and change depending on the needs of the user.
+						</p>
+					</div>
+					<div slot="collapsableSection" transition:fade|local>
+						<p>
+							As for the workplace management module, I have learned how I should act in the
+							workplace. The module covers three primary skills. The first is communication in the
+							workplace. Through the courses, I learned how to communicate better with other people.
+							In addition to this, I have learned the proper etiquette when calling, emailing, and
+							texting. The second skill I have learned to improve is time management. Through the
+							courses. I have learned how to maximize my calendar, and I have learned ways to
+							balance work and personal time. Lastly, the module has helped me be more productive. I
+							have learned that productivity goes hand in hand with time management. The better you
+							are at time management, the more productive you are. In addition to this, I have
+							learned better ways and better tools to keep track of tasks that I need to accomplish.
+						</p>
+						<p>
+							Overall, the experience of improving my soft skills through LinkedIn learning brought
+							a fresh perspective. As a software engineer, soft skills are often overlooked as there
+							is so much to learn in our field. Soft skills are either overlooked or ignored so we
+							often get stuck in our own ways. However, through these modules, I have been able to
+							gain new perspectives, tools, and techniques to improve my soft skills.
+						</p>
+					</div>
+				</ExpandableSection>
+			</div>
 		</div>
 
 		<div class="outputs subsection-full snappable">
 			<div class="subsection-header">
 				<h2>Outputs</h2>
 			</div>
-			<div class="outputs-list">
+			<div class="outputs-list" >
 				<ExpandableSection>
 					<svelte:fragment slot="mainSection">
 						{#each linkedinActivities.slice(0, 8) as project}
-							<div>
+							<div >
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
 					</svelte:fragment>
-					<svelte:fragment slot="collapsableSection">
+					<svelte:fragment slot="collapsableSection" >
 						{#each linkedinActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
@@ -371,7 +373,7 @@
 			<h2>What I have learned</h2>
 			<div>
 				<ExpandableSection>
-					<div slot="mainSection">
+					<div slot="mainSection" >
 						<p>
 							In the second part of my practicum, I had to get my IBM DevOps and Software
 							Engineering Professional Certificate through Coursera. In this professional
@@ -398,7 +400,7 @@
 							Software Engineering.
 						</p>
 					</div>
-					<div slot="collapsableSection">
+					<div slot="collapsableSection" transition:fade|local>
 						<p>
 							In addition to learning what software engineering and DevOps are, I have also learned
 							the technologies that enable teams to create highly effective software. One of these
@@ -490,7 +492,7 @@
 					</svelte:fragment>
 					<svelte:fragment slot="collapsableSection">
 						{#each courseraActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
@@ -652,7 +654,7 @@
 						deploying contracts to the Avalanche C Chain.
 					</p>
 				</div>
-				<div slot="collapsableSection">
+				<div slot="collapsableSection" transition:fade|local>
 					<p>
 						I have also created four projects for the intermediate solidity and avalanche course.
 						For the first project, I created a smart contract called MetaTrivia which is a trivia
@@ -691,7 +693,7 @@
 					</svelte:fragment>
 					<svelte:fragment slot="collapsableSection">
 						{#each metacraftersActivities.slice(8) as project}
-							<div>
+							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}

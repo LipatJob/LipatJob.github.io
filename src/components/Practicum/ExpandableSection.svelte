@@ -1,5 +1,6 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import { fade } from 'svelte/transition';
 
 	let expanded = false;
 	function toggleExpand() {
@@ -13,7 +14,6 @@
 {#if expanded}
 	<slot name="collapsableSection" />
 {/if}
-
 <div class="button-container">
 	<button on:click={toggleExpand} class="expandButton popup">
 		{#if !expanded}
