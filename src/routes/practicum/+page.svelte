@@ -1062,7 +1062,7 @@
 	.courses-taken {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 14px;
 		> div {
 		}
 		ul {
@@ -1072,6 +1072,10 @@
 		}
 		li {
 			font-size: 20px;
+		}
+
+		h3{
+			margin-top: 0;
 		}
 	}
 
