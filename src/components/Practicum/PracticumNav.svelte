@@ -27,8 +27,8 @@
 		<span />
 		<ul id="menu">
 			<a class="nav-item" on:click={handleAnchorClick} href="#introduction"> Introduction</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#linkedin"> Linked Learning</a>
-			<a class="nav-item" on:click={handleAnchorClick} href="#skills"> Coursera</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#linkedin-learning"> LinkedIn Learning</a>
+			<a class="nav-item" on:click={handleAnchorClick} href="#coursera"> Coursera</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#metacrafters"> Metacrafters</a>
 			<a class="nav-item" on:click={handleAnchorClick} href="#overall-synthesis"> Overall Synthesis</a>
 			<a class="practicum popup" href="/"> Back</a>

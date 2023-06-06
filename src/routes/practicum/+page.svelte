@@ -23,6 +23,7 @@
 				<h2>Job Lipat</h2>
 			</div>
 		</div>
+		<div />
 	</div>
 	<div id="linkedin-learning" class="section">
 		<div class="subsection section-header snappable">
@@ -74,7 +75,7 @@
 						<div class="name">Lecture Videos</div>
 						<div class="description">
 							Lecture videos were the primary way of delivering lessons. These videos are delivered
-							by subject matter experts and were usually 5 to 10 minutes long.
+							by experts and were usually 5 to 10 minutes long.
 						</div>
 					</div>
 					<div class="assignment">
@@ -142,7 +143,7 @@
 		</div>
 
 		<div class="synthesis subsection snappable">
-			<h2>Synthesis</h2>
+			<h2>What I have learned</h2>
 			<div>
 				<p>
 					For the first part of my practicum, I had to take online courses in LinkedIn Learning.
@@ -203,6 +204,262 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="coursera" class="section">
+		<div class="subsection section-header snappable">
+			<div>
+				<h1>Part 2. IBM DevOps and Software Engineering Professional Certificate</h1>
+				<div class="key-figures-container">
+					<div class="key-figures">
+						<div class="key-figure">
+							<p class="value">14</p>
+							<p class="name">Courses</p>
+						</div>
+						<div class="key-figure">
+							<p class="value">6</p>
+							<p class="name">Mini Projects</p>
+						</div>
+						<div class="key-figure">
+							<p class="value">11</p>
+							<p class="name">Certificates</p>
+						</div>
+						<div class="key-figure">
+							<p class="value">165</p>
+							<p class="name">Engagement Hours</p>
+						</div>
+						<div class="key-figure">
+							<p class="value">330</p>
+							<p class="name">Credit Hours</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="subsection snappable">
+			<div class="company-info">
+				<img src="/practicum/coursera/logo.png" class="company-logo" alt="linked in logo" />
+				<p>
+					Coursera is a global platform for online learning and career development that offers
+					anyone, anywhere, access to online courses and degrees from leading universities and
+					companies.
+				</p>
+			</div>
+
+			<div class="nature-of-assignments">
+				<h2>Nature of my Assignments</h2>
+				<div class="assignments">
+					<div class="assignment">
+						<div class="icon">
+							<Icon icon="ph:video" class="" width="inherit" height="inherit" />
+						</div>
+						<div class="name">Lecture Videos</div>
+						<div class="description">
+							Lecture videos were the primary way of delivering lessons. These videos are delivered
+							by experts and were usually 5 to 10 minutes long.
+						</div>
+					</div>
+					<div class="assignment">
+						<div class="icon">
+							<Icon
+								icon="material-symbols:keyboard-outline"
+								class=""
+								width="inherit"
+								height="inherit"
+							/>
+						</div>
+						<div class="name">Hands-on Lab</div>
+						<div class="description">
+							Hands on laboratories allow us try out what I have learned in the lecture videos
+							through the hands-on laboratory
+						</div>
+					</div>
+					<div class="assignment">
+						<div class="icon">
+							<Icon icon="carbon:book" class="" width="inherit" height="inherit" />
+						</div>
+						<div class="name">Readings</div>
+						<div class="description">
+							Readings were also provided to elaborate on certain topics of the courses
+						</div>
+					</div>
+
+					<div class="assignment">
+						<div class="icon">
+							<Icon icon="ph:cursor-bold" class="" width="inherit" height="inherit" />
+						</div>
+						<div class="name">Interactive Modules</div>
+						<div class="description">
+							Readings were also provided to elaborate on certain topics of the courses
+						</div>
+					</div>
+					<div class="assignment">
+						<div class="icon">
+							<Icon icon="mdi:quiz-outline" class="" width="inherit" height="inherit" />
+						</div>
+						<div class="name">Quizzes</div>
+						<div class="description">
+							Quizzes were given at the end of each module to assess my knowledge of the topics
+							covered in the module
+						</div>
+					</div>
+					<div class="assignment">
+						<div class="icon">
+							<Icon icon="fluent:quiz-new-20-filled" class="" width="inherit" height="inherit" />
+						</div>
+						<div class="name">Capstone</div>
+						<div class="description">
+							The final part of the certification is a capstone where I had to demonstrate all the
+							concepts that I have learned in the 13 courses.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="subsection snappable">
+			<h2>Courses I have Taken</h2>
+
+			<div class="courses-taken">
+				<div>
+					<h3>IBM DevOps and Software Engineerng Professional Certificate</h3>
+					<ul>
+						<li>Introduction to DevOps</li>
+						<li>Introduction to Cloud Computing</li>
+						<li>Introduction to Agile Development and Scrum</li>
+						<li>Introduction to Software Engineering</li>
+						<li>Hands-on Introduction to Linux Commands and Shell Scripting</li>
+						<li>Getting Started with Git and GitHub</li>
+						<li>Python for Data Science, AI & Development</li>
+						<li>Python Project for AI & Application Development</li>
+						<li>Introduction to Containers w/ Docker, Kubernetes & OpenShift</li>
+						<li>Application Development using Microservices and Serverless</li>
+						<li>Introduction to Test Driven Development (TDD)</li>
+						<li>Continuous Integration and Continuous Delivery</li>
+						<li>Application Security and Monitoring</li>
+						<li>DevOps Capstone Project</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-of-activities subsection-full snappable">
+			<div class="subsection-header">
+				<h2>Timeline of Activities</h2>
+			</div>
+			<ActivitiesTimeline data={courseraTimeline} />
+		</div>
+
+		<div class="synthesis subsection snappable">
+			<h2>What I have learned</h2>
+			<div>
+				<p>
+					In the second part of my practicum, I had to get my IBM DevOps and Software Engineering
+					Professional Certificate through Coursera. In this professional certification, I learned
+					what it takes to be a modern software engineer. The topics that I have learned range from
+					software engineering, DevOps, practices, and tools.
+				</p>
+				<p>
+					One huge focus of the professional certificate was on DevOps. To understand DevOps, we
+					must first understand what Agile development is. As defined by John Rofrano, the
+					instructor of the professional certificate, agile development is an iterative approach to
+					development done by responsive teams whose purpose is to deliver value to the customer
+					faster. DevOps on the other hand is the extension of the agile development environment to
+					operations that aims to change the process of software delivery. The DevOps methodology
+					tears down organizational silos including development and operations to enable the
+					organization to deliver the software to the user in the best way possible. Through this
+					organizations can leverage and enable disruptive technology.
+				</p>
+				<p>
+					The professional certificate also covered Software Engineering. Topics that were discussed
+					include the software development lifecycle, the basics of programming, and software
+					architecture design and patterns. While I am already quite familiar with these concepts,
+					the certificate was able to refresh my knowledge of the basics of Software Engineering.
+				</p>
+				<p>
+					In addition to learning what software engineering and DevOps are, I have also learned the
+					technologies that enable teams to create highly effective software. One of these is using
+					Cloud technology. By using cloud technology, the hardware could be easily scaled up and
+					down both horizontally and vertically all without needing to worry about the physical
+					hardware. Another technology discussed is the use of containerization technology.
+					Containers allow software to be run anywhere. Using a container orchestration tool like
+					Kubernetes, software could scale up and down both horizontally and vertically.
+				</p>
+				<p>
+					Combining cloud and containerization technology allows both the hardware and software to
+					scale. To fully leverage this capability, the microservices software architecture is used.
+					Microservices is an approach to creating an application composed of many smaller services
+					that are loosely coupled, independently deployable, and small. By decomposing software
+					into smaller services, each service could be scaled and developed independently. An added
+					benefit of this approach is that when one service fails, the others are not affected. The
+					program must simply kill the container with the service and start a new one. Replica Sets
+					also allow the service to have multiple instances of a service running which could take
+					over the failing service, thus making the failure invisible to the user.
+				</p>
+				<p>
+					In developing microservice applications, there are various practices that are used to
+					ensure high-quality software. One of these is test-driven development (TDD) and
+					behavior-driven development (BDD). TDD is the practice of writing a test first for code
+					you wish you have, then writing the code to make the tests pass. This ensures that the
+					code you are writing is working as expected and ensures future changes don’t break the
+					code. BDD on the other hand describes the behavior of the system from the perspective of
+					the user. This makes BDD great for integration testing. Both are needed to create
+					high-quality software because BDD ensures that you are building the right things and TDD
+					ensures that you are building the thing right.
+				</p>
+				<p>
+					Another practice done to ensure high quality software is Continuous Integration (CI) and
+					Continuous Delivery (CD). Continuous integration is an automated process that allows
+					developers to integrate their work into a repository. A CI pipeline automatically runs
+					jobs such as building, testing, linting, security scanning. The pipeline ensures that the
+					code is working and is of high quality all the time. On the other hand, continuous
+					delivery is an automated process that deploys integrated code into a production-like
+					environment. These processes are important to reduce integration risk, increase code
+					quality, reduce deployment time, and enable faster reaction time to change.
+				</p>
+				<p>
+					Another practice done by software engineers that I have learned is measuring and
+					monitoring. Measuring is the process of collecting metrics. On the other hand, monitoring
+					is the process of keeping track of whether the metrics are within a certain threshold.
+					This is important because, as explained by John Rofrano, you cannot improve what you
+					cannot measure. These metrics are used to reason and judge the success of your progress. I
+					have also learned how important it is to differentiate between vanity and actionable
+					metrics. As software engineers, we must take actionable metrics and not vanity metrics.
+					While vanity metrics may look appealing, they provide no insight into how the system is
+					working. Instead, we should focus on actionable metrics because these produce value if we
+					act on them.
+				</p>
+				<p>
+					Finally, I have also learned about the various tools used by modern software developers.
+					These tools include Git and GitHub which are used for collaborating on code with other
+					developers. Another tool that was introduced was the Linux shell. The Linux shell is used
+					to manage files and the operating system. It is also important to learn as many developer
+					tools have a command line interface accessible through the Linux shell. Additionally, I
+					was also able to learn to use ZenHub which is an agile project management tool that allows
+					you to keep track of user stories.
+				</p>
+				<p>
+					All in all, taking the IBM DevOps and Software Engineering Professional certificate has
+					given me comprehensive knowledge of what it takes to be a modern software engineer. These
+					include the tools, practices, and technology that enable software engineers to create
+					high-quality and highly effective software.
+				</p>
+			</div>
+		</div>
+
+		<div class="outputs subsection-full snappable">
+			<div class="subsection-header">
+				<h2>Outputs</h2>
+			</div>
+			<div class="outputs-list">
+				{#each courseraActivities as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
@@ -243,7 +500,8 @@
 		display: flex;
 		max-width: $screen-md-min;
 		margin: 0 auto;
-		h1, h2{
+		h1,
+		h2 {
 			margin-bottom: 30px;
 			text-align: center;
 		}
@@ -388,6 +646,7 @@
 			border: $border;
 			border-radius: 20px;
 			padding: 20px;
+			margin-bottom: 20px;
 
 			.name {
 				font-weight: 600;
@@ -397,7 +656,7 @@
 			}
 
 			.icon {
-				width: 100px;
+				width: 80px;
 				display: block;
 			}
 

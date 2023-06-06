@@ -1,32 +1,32 @@
 export default [
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/cicd.png',
 		title: 'IBM CI/CD Project',
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/productprice.png',
 		title: 'Product Price Comparison Application',
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/serverless.png',
 		title: 'Serverless Guestbook Application',
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/backup.png',
 		title: 'Backup Shell Script',
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/translator.png',
 		title: 'Flask French to English Translator',
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
-		title: 'Flask French to English Translator',
+		imageLink: '/practicum/coursera/accountservice.png',
+		title: 'Flask Account Management Service',
 		link: ''
 	},
 	{
@@ -100,7 +100,7 @@ export default [
 		link: ''
 	},
 	{
-		imageLink: '/banners/SpeakByHand.png',
+		imageLink: '/practicum/coursera/0.jpg',
 		title: 'IBM DevOps and Software Engineering Professional Certificate',
 		link: ''
 	}
