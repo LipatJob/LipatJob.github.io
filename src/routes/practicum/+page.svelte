@@ -702,68 +702,69 @@
 			</div>
 		</div>
 	</div>
+
 	<div id="overall-synthesis" class="section snappable">
-		<div class="section-header snappable">
+		<div class="section-header">
 			<div>
 				<h1>Overall Synthesis</h1>
 			</div>
-		</div>
-		<div class="subsection">
-			<p>
-				My practicum was primary divided in three parts. The first part was my required modules that
-				I had to take in LinkedIn Learning. The second part was the IBM DevOps and Software
-				Engineering professional certificate which I had to take in Coursera. The third and final
-				parts were the three modules I had to take in Metacrafters.
-			</p>
-			<p>
-				Through the three parts of my practicum. I have also learned a lot of new knowledge and
-				skills that I can apply once I am in the workplace. Through my required modules, I have
-				learned how to improve my soft skills including my creativity, critical thinking, project
-				management, and time management. I have learned more about software engineering and DevOps
-				through my professional certificate. I have also learned more about blockchain and smart
-				contracts throughout the course in Metacrafters.
-			</p>
-			<p>
-				These skills and knowledge would be especially useful for me once I become a part of the
-				workforce as a Junior Software Engineer. For example, as a software engineer, I will be
-				working in a team, and creativity, critical thinking, and communication will be especially
-				useful. The practices and technologies such as test-driven development, CI/CD, and
-				microservices will be especially useful as these are commonly used in the industry. Learning
-				about blockchain and smart contracts also opens more possibilities for innovation and
-				employment.
-			</p>
-			<p>
-				Through the courses, I have also realized how much more there is to learn. Most of these, we
-				will not be able to learn just by following instructions and watching video lectures. These
-				could only be learned by experiencing them and by actually doing them. However, despite the
-				overwhelming amount of untapped knowledge out there, I am more confident in my skills, and I
-				now have a better idea of which areas I need to improve on.
-			</p>
-			<p>
-				I also honestly did not expect that learning the modules would be as hard as it was. At
-				first, I thought that if I just need to make some time to watch the modules, I would be
-				doing fine. However, I quickly realized that just allocating time for watching the modules
-				is not enough since I also had to absorb the lessons from the modules. By rushing through
-				the modules, I was able to get a lot done, but I couldn’t learn as much as I want to.
-			</p>
-			<p>
-				From this experience, I learned how important it is to pace yourself when you are doing
-				work. While it may be tempting to accomplish work all in one go, this increases the risk of
-				having low-quality outputs. In addition to this, I also realized that pacing work improves
-				health. By allocating time, I was able to avoid burning out and I was able to make time for
-				self-care.
-			</p>
-			<p>
-				All in all, I found the experience of doing this practicum an eye-opener. It opened my eyes
-				to new practices, technologies, and tools. I was able to gain a deeper understanding of
-				these through the courses I have taken. Most importantly, my eyes were also opened to the
-				areas I could improve to become a complete Software Engineer.
-			</p>
+			<div>
+				<p>
+					My practicum was primary divided in three parts. The first part was my required modules
+					that I had to take in LinkedIn Learning. The second part was the IBM DevOps and Software
+					Engineering professional certificate which I had to take in Coursera. The third and final
+					parts were the three modules I had to take in Metacrafters.
+				</p>
+				<p>
+					Through the three parts of my practicum. I have also learned a lot of new knowledge and
+					skills that I can apply once I am in the workplace. Through my required modules, I have
+					learned how to improve my soft skills including my creativity, critical thinking, project
+					management, and time management. I have learned more about software engineering and DevOps
+					through my professional certificate. I have also learned more about blockchain and smart
+					contracts throughout the course in Metacrafters.
+				</p>
+				<p>
+					These skills and knowledge would be especially useful for me once I become a part of the
+					workforce as a Junior Software Engineer. For example, as a software engineer, I will be
+					working in a team, and creativity, critical thinking, and communication will be especially
+					useful. The practices and technologies such as test-driven development, CI/CD, and
+					microservices will be especially useful as these are commonly used in the industry.
+					Learning about blockchain and smart contracts also opens more possibilities for innovation
+					and employment.
+				</p>
+				<p>
+					Through the courses, I have also realized how much more there is to learn. Most of these,
+					we will not be able to learn just by following instructions and watching video lectures.
+					These could only be learned by experiencing them and by actually doing them. However,
+					despite the overwhelming amount of untapped knowledge out there, I am more confident in my
+					skills, and I now have a better idea of which areas I need to improve on.
+				</p>
+				<p>
+					I also honestly did not expect that learning the modules would be as hard as it was. At
+					first, I thought that if I just need to make some time to watch the modules, I would be
+					doing fine. However, I quickly realized that just allocating time for watching the modules
+					is not enough since I also had to absorb the lessons from the modules. By rushing through
+					the modules, I was able to get a lot done, but I couldn’t learn as much as I want to.
+				</p>
+				<p>
+					From this experience, I learned how important it is to pace yourself when you are doing
+					work. While it may be tempting to accomplish work all in one go, this increases the risk
+					of having low-quality outputs. In addition to this, I also realized that pacing work
+					improves health. By allocating time, I was able to avoid burning out and I was able to
+					make time for self-care.
+				</p>
+				<p>
+					All in all, I found the experience of doing this practicum an eye-opener. It opened my
+					eyes to new practices, technologies, and tools. I was able to gain a deeper understanding
+					of these through the courses I have taken. Most importantly, my eyes were also opened to
+					the areas I could improve to become a complete Software Engineer.
+				</p>
+			</div>
 		</div>
 	</div>
 
 	<div id="appendices" class="section snappable">
-		<div class="subsection section-header snappable">
+		<div class="subsection section-header">
 			<div>
 				<h1>Appendices</h1>
 				<div class="appendices-container">
@@ -844,6 +845,7 @@
 	}
 
 	.subsection {
+		padding-top: 120px;
 		min-height: 100vh;
 		max-width: $screen-md-min;
 		width: 100%;
@@ -852,6 +854,7 @@
 	}
 
 	.subsection-full {
+		padding-top: 120px;
 		max-width: $screen-xl-min;
 		width: 100%;
 		margin: 0 auto;
@@ -859,6 +862,7 @@
 	}
 
 	.section-header {
+		padding-top: 0;
 		display: flex;
 		flex-direction: column;
 		max-width: $screen-md-min;
@@ -1021,7 +1025,7 @@
 			}
 
 			.icon {
-				width: 80px;
+				width: 60px;
 				display: block;
 			}
 
