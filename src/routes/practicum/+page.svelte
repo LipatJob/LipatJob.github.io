@@ -11,7 +11,7 @@
 	import Icon from '@iconify/svelte';
 	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 	import ExpandableSection from '../../components/Practicum/ExpandableSection.svelte';
-	import { fade  } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 </script>
 
 <div class="container">
@@ -146,7 +146,7 @@
 
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
-			<div >
+			<div>
 				<ExpandableSection>
 					<div slot="mainSection">
 						<p>
@@ -203,16 +203,16 @@
 			<div class="subsection-header">
 				<h2>Outputs</h2>
 			</div>
-			<div class="outputs-list" >
+			<div class="outputs-list">
 				<ExpandableSection>
 					<svelte:fragment slot="mainSection">
 						{#each linkedinActivities.slice(0, 8) as project}
-							<div >
+							<div>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
 							</div>
 						{/each}
 					</svelte:fragment>
-					<svelte:fragment slot="collapsableSection" >
+					<svelte:fragment slot="collapsableSection">
 						{#each linkedinActivities.slice(8) as project}
 							<div transition:fade>
 								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
@@ -373,7 +373,7 @@
 			<h2>What I have learned</h2>
 			<div>
 				<ExpandableSection>
-					<div slot="mainSection" >
+					<div slot="mainSection">
 						<p>
 							In the second part of my practicum, I had to get my IBM DevOps and Software
 							Engineering Professional Certificate through Coursera. In this professional
@@ -761,6 +761,67 @@
 			</p>
 		</div>
 	</div>
+
+	<div id="appendices" class="section snappable">
+		<div class="subsection section-header snappable">
+			<div>
+				<h1>Appendices</h1>
+				<div class="appendices-container">
+					<a
+						href="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
+						target="_blank"
+					>
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Competency-Based CV</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_practicum_confirmation" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Practicum Confirmation and Acceptance Form</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_liability_waiver" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Student Training Agreement and Liability Waiver</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_learning_path_proposal" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Learning Path Proposal</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/lipat_weekly_journal" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Complete Weekly Journal</p>
+						</div>
+					</a>
+					<a href="/practicum/appendices/" target="_blank">
+						<div class="appendix popup">
+							<div class="icon">
+								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							</div>
+							<p>Final Report Document</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
@@ -799,6 +860,7 @@
 
 	.section-header {
 		display: flex;
+		flex-direction: column;
 		max-width: $screen-md-min;
 		margin: 0 auto;
 		h1,
@@ -997,5 +1059,34 @@
 		align-self: center;
 		width: 100%;
 		top: 0px;
+	}
+
+	.appendices-container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		a {
+			text-decoration: none;
+		}
+
+		.appendix {
+			border: $border;
+			padding: 0px 10px;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.icon {
+				width: 40px;
+				height: auto;
+				margin-right: 14px;
+			}
+
+			p {
+				font-weight: 600;
+			}
+		}
 	}
 </style>
