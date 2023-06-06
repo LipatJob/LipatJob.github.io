@@ -18,7 +18,7 @@
 	<div class="nav">
 		<PracticumNav />
 	</div>
-	
+
 	<div id="introduction" class="section snappable">
 		<div class="section-header">
 			<div>
@@ -53,9 +53,10 @@
 	</div>
 
 	<div id="linkedin-learning" class="section">
-		<div class="subsection section-header snappable">
+		<div class="subsection-full section-header snappable">
 			<div>
 				<h1>Part 1. Required LinkedIn Learning Modules</h1>
+
 				<div class="key-figures-container">
 					<div class="key-figures">
 						<div class="key-figure">
@@ -792,59 +793,59 @@
 		<div class="subsection">
 			<div>
 				<h1>Appendices</h1>
-				<div class="appendices-container">
-					<a
-						href="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
-						target="_blank"
-					>
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Competency-Based CV</p>
+			</div>
+			<div class="appendices-container">
+				<a
+					href="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
+					target="_blank"
+				>
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-					<a href="/practicum/appendices/lipat_practicum_confirmation.pdf" target="_blank">
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Practicum Confirmation and Acceptance Form</p>
+						<p>Competency-Based CV</p>
+					</div>
+				</a>
+				<a href="/practicum/appendices/lipat_practicum_confirmation.pdf" target="_blank">
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-					<a href="/practicum/appendices/lipat_liability_waiver.pdf" target="_blank">
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Student Training Agreement and Liability Waiver</p>
+						<p>Practicum Confirmation and Acceptance Form</p>
+					</div>
+				</a>
+				<a href="/practicum/appendices/lipat_liability_waiver.pdf" target="_blank">
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-					<a href="/practicum/appendices/lipat_learning_path_proposal.pdf" target="_blank">
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Learning Path Proposal</p>
+						<p>Student Training Agreement and Liability Waiver</p>
+					</div>
+				</a>
+				<a href="/practicum/appendices/lipat_learning_path_proposal.pdf" target="_blank">
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-					<a href="/practicum/appendices/lipat_weekly_journal.pdf" target="_blank">
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Complete Weekly Journal</p>
+						<p>Learning Path Proposal</p>
+					</div>
+				</a>
+				<a href="/practicum/appendices/lipat_weekly_journal.pdf" target="_blank">
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-					<a href="/practicum/appendices/lipat_final_report.pdf" target="_blank">
-						<div class="appendix popup">
-							<div class="icon">
-								<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
-							</div>
-							<p>Final Report Document</p>
+						<p>Complete Weekly Journal</p>
+					</div>
+				</a>
+				<a href="/practicum/appendices/lipat_final_report.pdf" target="_blank">
+					<div class="appendix popup">
+						<div class="icon">
+							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
 						</div>
-					</a>
-				</div>
+						<p>Final Report Document</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -880,10 +881,11 @@
 
 	.subsection-full {
 		padding-top: 120px;
+		min-height: 100vh;
 		max-width: $screen-xl-min;
 		width: 100%;
 		margin: 0 auto;
-		margin-bottom: 20px;
+		margin-bottom: 0px;
 	}
 
 	.section-header {
@@ -1074,7 +1076,7 @@
 			font-size: 20px;
 		}
 
-		h3{
+		h3 {
 			margin-top: 0;
 		}
 	}
@@ -1085,7 +1087,7 @@
 			margin: auto;
 		}
 
-		h1{
+		h1 {
 			font-size: 52px;
 		}
 	}
@@ -1102,6 +1104,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		margin-top: 24px;
 
 		a {
 			text-decoration: none;
@@ -1124,6 +1127,23 @@
 			p {
 				font-weight: 600;
 			}
+		}
+	}
+
+	.section-navigation {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 20px;
+		font-weight: 500;
+		gap: 10px;
+		text-align: center;
+		a {
+			border: $border;
+			border-radius: 10px;
+			padding: 10px;
+			text-decoration: none;
+			@extend .popup;
 		}
 	}
 </style>
