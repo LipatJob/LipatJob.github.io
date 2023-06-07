@@ -1,4 +1,4 @@
-export default [
+const metacraftersProjects = [
 	{
 		imageLink: '/practicum/metacrafters/beginnerjavascript.png',
 		title: 'Beginner JavaScript Project',
@@ -28,7 +28,10 @@ export default [
 		imageLink: '/practicum/metacrafters/degentoken.png',
 		title: 'Degen Token',
 		link: 'https://github.com/LipatJob/degen-token'
-	},
+	}
+];
+
+const metacratersProofOfLearns = [
 	{
 		imageLink: '/practicum/metacrafters/jsproof.png',
 		title: 'JS PROOF: Beginner Course Proof of Learn',
@@ -45,3 +48,5 @@ export default [
 		link: '/practicum/metacrafters/ethavaxproof.png'
 	}
 ];
+
+export { metacraftersProjects, metacratersProofOfLearns };

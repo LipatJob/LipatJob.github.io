@@ -19,12 +19,12 @@
 		{#if !expanded}
 			<p>Expand</p>
 			<div class="icon">
-				<Icon icon="ooui:expand" class="" width="inherit" height="inherit" />
+				<Icon icon="ooui:expand" class="" width="none" height="none" />
 			</div>
 		{:else}
 			<p>Collapse</p>
 			<div class="icon">
-				<Icon icon="ooui:collapse" class="" width="inherit" height="inherit" />
+				<Icon icon="ooui:collapse" class="" width="none" height="none" />
 			</div>
 		{/if}
 	</button>

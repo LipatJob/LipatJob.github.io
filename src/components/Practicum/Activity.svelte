@@ -11,20 +11,27 @@
 <a href={link} class="link" target="_blank">
 	<div class="project popup">
 		<img src={imageLink} alt={`${title} project banner`} class="project-image" />
-		<div class="information">
-			<p class="title">{title}</p>
-		</div>
 	</div>
 </a>
 
 <style lang="scss">
 	.project {
+		height: 100%;
 		z-index: 0;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		border: $border;
 		border-radius: 14px;
 		overflow: hidden;
+		aspect-ratio: 16 / 9;
+	}
+
+	.project-image {
+		border: none;
+		object-fit: fill;
+		max-width: 100%;
 	}
 
 	.information {
@@ -49,6 +56,7 @@
 	}
 
 	.link {
+		height: 100%;
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 19px;
@@ -63,13 +71,7 @@
 		margin-right: 6px;
 	}
 
-	.project-image {
-		max-width: 100%;
-		height: auto;
-		border: none;
-		aspect-ratio: 2 / 1;
-		object-fit: cover;
-	}
+	
 
 	.tags {
 		display: flex;

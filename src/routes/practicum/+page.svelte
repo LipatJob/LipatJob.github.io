@@ -5,9 +5,9 @@
 	import courseraTimeline from '../../content/courseraTimeline.js';
 	import linkedinTimeline from '../../content/linkedinTimeline.js';
 	import metacraftersTimeline from '../../content/metacraftersTimeline.js';
-	import courseraActivities from '../../content/courseraActivities.js';
+	import { courseraProjects, courseraCertificates } from '../../content/courseraActivities.js';
 	import linkedinActivities from '../../content/linkedinActivities.js';
-	import metacraftersActivities from '../../content/metacraftersActivities.js';
+	import {metacraftersProjects, metacratersProofOfLearns} from '../../content/metacraftersActivities.js';
 	import Icon from '@iconify/svelte';
 	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 	import ExpandableSection from '../../components/Practicum/ExpandableSection.svelte';
@@ -53,7 +53,7 @@
 	</div>
 
 	<div id="linkedin-learning" class="section">
-		<div class="subsection-full section-header snappable">
+		<div class="subsection-large section-header snappable">
 			<div>
 				<h1>Part 1. Required LinkedIn Learning Modules</h1>
 
@@ -98,17 +98,17 @@
 				<div class="assignments">
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="ph:video" class="" width="inherit" height="inherit" />
+							<Icon icon="ph:video" class="" width="none" height="none" />
 						</div>
 						<div class="name">Lecture Videos</div>
 						<div class="description">
-							Lecture videos were the primary way of delivering lessons. These videos are delivered
-							by experts and were usually 5 to 10 minutes long.
+							Lecture videos were the primary way of delivering lessons. These videos were by
+							experts and were usually 5 minutes long.
 						</div>
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="mdi:quiz-outline" class="" width="inherit" height="inherit" />
+							<Icon icon="mdi:quiz-outline" class="" width="none" height="none" />
 						</div>
 						<div class="name">Quizzes</div>
 						<div class="description">
@@ -118,7 +118,7 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="fluent:quiz-new-20-filled" class="" width="inherit" height="inherit" />
+							<Icon icon="fluent:quiz-new-20-filled" class="" width="none" height="none" />
 						</div>
 						<div class="name">Assessments</div>
 						<div class="description">
@@ -163,7 +163,7 @@
 			</div>
 		</div>
 
-		<div class="timeline-of-activities subsection-full snappable">
+		<div class="timeline-of-activities subsection-large snappable">
 			<div class="subsection-header">
 				<h2>Timeline of Activities</h2>
 			</div>
@@ -230,22 +230,18 @@
 				<h2>Outputs</h2>
 			</div>
 			<div class="outputs-list">
-				<ExpandableSection>
-					<svelte:fragment slot="mainSection">
-						{#each linkedinActivities.slice(0, 8) as project}
-							<div>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-					<svelte:fragment slot="collapsableSection">
-						{#each linkedinActivities.slice(8) as project}
-							<div transition:fade>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-				</ExpandableSection>
+				{#each linkedinActivities.slice(Math.floor(linkedinActivities.length / 2)) as project}
+					<div class="output">
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="outputs-list">
+				{#each linkedinActivities.slice(Math.ceil(linkedinActivities.length / 2), linkedinActivities.length) as project}
+					<div class="output">
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -296,22 +292,17 @@
 				<div class="assignments">
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="ph:video" class="" width="inherit" height="inherit" />
+							<Icon icon="ph:video" class="" width="none" height="none" />
 						</div>
 						<div class="name">Lecture Videos</div>
 						<div class="description">
-							Lecture videos were the primary way of delivering lessons. These videos are delivered
-							by experts and were usually 5 to 10 minutes long.
+							Lecture videos were the primary way of delivering lessons. These videos were by
+							experts and were usually 5 minutes long.
 						</div>
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon
-								icon="material-symbols:keyboard-outline"
-								class=""
-								width="inherit"
-								height="inherit"
-							/>
+							<Icon icon="material-symbols:keyboard-outline" class="" width="none" height="none" />
 						</div>
 						<div class="name">Hands-on Lab</div>
 						<div class="description">
@@ -321,7 +312,7 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="carbon:book" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:book" class="" width="none" height="none" />
 						</div>
 						<div class="name">Readings</div>
 						<div class="description">
@@ -331,7 +322,7 @@
 
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="ph:cursor-bold" class="" width="inherit" height="inherit" />
+							<Icon icon="ph:cursor-bold" class="" width="none" height="none" />
 						</div>
 						<div class="name">Interactive Modules</div>
 						<div class="description">
@@ -340,7 +331,7 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="mdi:quiz-outline" class="" width="inherit" height="inherit" />
+							<Icon icon="mdi:quiz-outline" class="" width="none" height="none" />
 						</div>
 						<div class="name">Quizzes</div>
 						<div class="description">
@@ -350,12 +341,12 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="fluent:quiz-new-20-filled" class="" width="inherit" height="inherit" />
+							<Icon icon="fluent:quiz-new-20-filled" class="" width="none" height="none" />
 						</div>
 						<div class="name">Capstone</div>
 						<div class="description">
-							The final part of the certification is a capstone where I had to demonstrate all the
-							concepts that I have learned in the 13 courses.
+							The capstone is a project where I have to demonstrate all the concepts that I have
+							learned in the 13 courses.
 						</div>
 					</div>
 				</div>
@@ -388,7 +379,7 @@
 			</div>
 		</div>
 
-		<div class="timeline-of-activities subsection-full snappable">
+		<div class="timeline-of-activities subsection-large snappable">
 			<div class="subsection-header">
 				<h2>Timeline of Activities</h2>
 			</div>
@@ -505,25 +496,24 @@
 
 		<div class="outputs subsection-full snappable">
 			<div class="subsection-header">
-				<h2>Outputs</h2>
+				<h2>Projects</h2>
 			</div>
 			<div class="outputs-list">
-				<ExpandableSection>
-					<svelte:fragment slot="mainSection">
-						{#each courseraActivities.slice(0, 8) as project}
-							<div>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-					<svelte:fragment slot="collapsableSection">
-						{#each courseraActivities.slice(8) as project}
-							<div transition:fade>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-				</ExpandableSection>
+				{#each courseraProjects as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="subsection-header">
+				<h2>Certificates</h2>
+			</div>
+			<div class="outputs-list">
+				{#each courseraCertificates as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -574,18 +564,18 @@
 				<div class="assignments">
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="ph:video" class="" width="inherit" height="inherit" />
+							<Icon icon="ph:video" class="" width="none" height="none" />
 						</div>
 						<div class="name">Lecture Videos</div>
 						<div class="description">
-							Lecture videos were the primary way of delivering lessons. These videos are delivered
-							by experts and were usually 5 to 10 minutes long.
+							Lecture videos were the primary way of delivering lessons. These videos were by
+							experts and were usually 5 minutes long.
 						</div>
 					</div>
 
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="carbon:book" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:book" class="" width="none" height="none" />
 						</div>
 						<div class="name">Readings</div>
 						<div class="description">
@@ -595,17 +585,17 @@
 
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="mdi:quiz-outline" class="" width="inherit" height="inherit" />
+							<Icon icon="mdi:quiz-outline" class="" width="none" height="none" />
 						</div>
 						<div class="name">Quizzes</div>
 						<div class="description">
-							Challenges were provided so that we could test out the concepts that were discussed in
-							the module.
+							Quizzes were given at the end of each module to assess my knowledge of the topics
+							covered in the module
 						</div>
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="material-symbols:keyboard-outline" class="" width="inherit" height="inherit" />
+							<Icon icon="material-symbols:keyboard-outline" class="" width="none" height="none" />
 						</div>
 						<div class="name">Challenges</div>
 						<div class="description">
@@ -615,12 +605,12 @@
 					</div>
 					<div class="assignment">
 						<div class="icon">
-							<Icon icon="fluent:quiz-new-20-filled" class="" width="inherit" height="inherit" />
+							<Icon icon="fluent:quiz-new-20-filled" class="" width="none" height="none" />
 						</div>
 						<div class="name">Projects</div>
 						<div class="description">
-							Projects were also given at the end of each module so that we could demonstrate our
-							knowledge of the topics covered in the module
+							Projects were also given at the end of each module to show our knowledge of the topics
+							covered in the module
 						</div>
 					</div>
 				</div>
@@ -640,7 +630,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="timeline-of-activities subsection-full">
+			<div class="timeline-of-activities">
 				<div class="subsection-header">
 					<h2>Timeline of Activities</h2>
 				</div>
@@ -706,25 +696,24 @@
 
 		<div class="outputs subsection-full snappable">
 			<div class="subsection-header">
-				<h2>Outputs</h2>
+				<h2>Projects</h2>
 			</div>
 			<div class="outputs-list">
-				<ExpandableSection>
-					<svelte:fragment slot="mainSection">
-						{#each metacraftersActivities.slice(0, 8) as project}
-							<div>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-					<svelte:fragment slot="collapsableSection">
-						{#each metacraftersActivities.slice(8) as project}
-							<div transition:fade>
-								<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-							</div>
-						{/each}
-					</svelte:fragment>
-				</ExpandableSection>
+				{#each metacraftersProjects as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="subsection-header">
+				<h2>Proof of Learns</h2>
+			</div>
+			<div class="outputs-list">
+				{#each metacratersProofOfLearns as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -801,7 +790,7 @@
 				>
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Competency-Based CV</p>
 					</div>
@@ -809,7 +798,7 @@
 				<a href="/practicum/appendices/lipat_practicum_confirmation.pdf" target="_blank">
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Practicum Confirmation and Acceptance Form</p>
 					</div>
@@ -817,7 +806,7 @@
 				<a href="/practicum/appendices/lipat_liability_waiver.pdf" target="_blank">
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Student Training Agreement and Liability Waiver</p>
 					</div>
@@ -825,7 +814,7 @@
 				<a href="/practicum/appendices/lipat_learning_path_proposal.pdf" target="_blank">
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Learning Path Proposal</p>
 					</div>
@@ -833,7 +822,7 @@
 				<a href="/practicum/appendices/lipat_weekly_journal.pdf" target="_blank">
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Complete Weekly Journal</p>
 					</div>
@@ -841,7 +830,7 @@
 				<a href="/practicum/appendices/lipat_final_report.pdf" target="_blank">
 					<div class="appendix popup">
 						<div class="icon">
-							<Icon icon="carbon:document" class="" width="inherit" height="inherit" />
+							<Icon icon="carbon:document" class="" width="none" height="none" />
 						</div>
 						<p>Final Report Document</p>
 					</div>
@@ -880,6 +869,15 @@
 	}
 
 	.subsection-full {
+		padding-top: 120px;
+		min-height: 100vh;
+		max-width: 100vw;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0px;
+	}
+
+	.subsection-large {
 		padding-top: 120px;
 		min-height: 100vh;
 		max-width: $screen-xl-min;
@@ -1006,9 +1004,28 @@
 	}
 
 	.outputs-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		display: flex;
+		flex-direction: row;
 		gap: 20px;
+		max-width: 100vw;
+		position: relative;
+		flex-shrink: 0;
+		overflow-y: visible;
+		overflow-x: auto;
+		padding: 20px 50px;
+
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+
+		> * {
+			min-height: 100px;
+			height: calc(50vh - 200px);
+		}
+	}
+
+	.outputs-list::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
 	}
 
 	.snappable {
@@ -1057,6 +1074,7 @@
 			}
 
 			.description {
+				text-align: center;
 			}
 		}
 	}
@@ -1088,7 +1106,7 @@
 		}
 
 		h1 {
-			font-size: 52px;
+			font-size: 56px;
 		}
 	}
 

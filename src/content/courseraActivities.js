@@ -1,4 +1,4 @@
-export default [
+const courseraProjects = [
 	{
 		imageLink: '/practicum/coursera/cicd.png',
 		title: 'IBM CI/CD Project',
@@ -28,7 +28,10 @@ export default [
 		imageLink: '/practicum/coursera/accountservice.png',
 		title: 'Flask Account Management Service',
 		link: 'https://github.com/LipatJob/ibm-flask-english-french'
-	},
+	}
+];
+
+const courseraCertificates = [
 	{
 		imageLink: '/practicum/coursera/1.jpg',
 		title: 'Introduction to DevOps Certificate of Completion',
@@ -105,3 +108,5 @@ export default [
 		link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/2T6S7BXYT9RG'
 	}
 ];
+
+export { courseraProjects, courseraCertificates };

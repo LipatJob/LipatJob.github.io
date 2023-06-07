@@ -18,8 +18,7 @@
 			[[]]
 		);
 
-		const out = temp.map((arr) => arr.join(' '));
-		console.log(out);
+		const out = temp.map((arr: any) => arr.join(' '));
 		return out;
 	}
 
@@ -71,7 +70,6 @@
 			colors: ['#347be6']
 		}
 	};
-	console.log(options);
 </script>
 
 <div class="chart">
