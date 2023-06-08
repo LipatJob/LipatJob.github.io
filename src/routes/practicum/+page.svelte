@@ -173,6 +173,26 @@
 			<ActivitiesTimeline data={linkedinTimeline} />
 		</div>
 
+		<div class="outputs subsection-full snappable">
+			<div class="subsection-header">
+				<h2>Certificates</h2>
+			</div>
+			<div class="outputs-list">
+				{#each linkedinActivities.slice(Math.floor(linkedinActivities.length / 2)) as project}
+					<div class="output">
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="outputs-list">
+				{#each linkedinActivities.slice(Math.ceil(linkedinActivities.length / 2), linkedinActivities.length) as project}
+					<div class="output">
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
+
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
 			<div>
@@ -225,26 +245,6 @@
 						</p>
 					</div>
 				</ExpandableSection>
-			</div>
-		</div>
-
-		<div class="outputs subsection-full snappable">
-			<div class="subsection-header">
-				<h2>Certificates</h2>
-			</div>
-			<div class="outputs-list">
-				{#each linkedinActivities.slice(Math.floor(linkedinActivities.length / 2)) as project}
-					<div class="output">
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
-			</div>
-			<div class="outputs-list">
-				{#each linkedinActivities.slice(Math.ceil(linkedinActivities.length / 2), linkedinActivities.length) as project}
-					<div class="output">
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
 			</div>
 		</div>
 	</div>
@@ -390,6 +390,29 @@
 			<ActivitiesTimeline data={courseraTimeline} />
 		</div>
 
+		<div class="outputs subsection-full snappable">
+			<div class="subsection-header">
+				<h2>Projects</h2>
+			</div>
+			<div class="outputs-list">
+				{#each courseraProjects as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="subsection-header">
+				<h2>Certificates</h2>
+			</div>
+			<div class="outputs-list">
+				{#each courseraCertificates as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
+
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
 			<div>
@@ -495,29 +518,6 @@
 						</p>
 					</div>
 				</ExpandableSection>
-			</div>
-		</div>
-
-		<div class="outputs subsection-full snappable">
-			<div class="subsection-header">
-				<h2>Projects</h2>
-			</div>
-			<div class="outputs-list">
-				{#each courseraProjects as project}
-					<div>
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
-			</div>
-			<div class="subsection-header">
-				<h2>Certificates</h2>
-			</div>
-			<div class="outputs-list">
-				{#each courseraCertificates as project}
-					<div>
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
 			</div>
 		</div>
 	</div>
@@ -642,6 +642,29 @@
 			</div>
 		</div>
 
+		<div class="outputs subsection-full snappable">
+			<div class="subsection-header">
+				<h2>Projects</h2>
+			</div>
+			<div class="outputs-list">
+				{#each metacraftersProjects as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+			<div class="subsection-header">
+				<h2>Proof of Learns</h2>
+			</div>
+			<div class="outputs-list">
+				{#each metacratersProofOfLearns as project}
+					<div>
+						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
+					</div>
+				{/each}
+			</div>
+		</div>
+
 		<div class="synthesis subsection snappable">
 			<h2>What I have learned</h2>
 			<ExpandableSection>
@@ -696,29 +719,6 @@
 				</div>
 			</ExpandableSection>
 			<div />
-		</div>
-
-		<div class="outputs subsection-full snappable">
-			<div class="subsection-header">
-				<h2>Projects</h2>
-			</div>
-			<div class="outputs-list">
-				{#each metacraftersProjects as project}
-					<div>
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
-			</div>
-			<div class="subsection-header">
-				<h2>Proof of Learns</h2>
-			</div>
-			<div class="outputs-list">
-				{#each metacratersProofOfLearns as project}
-					<div>
-						<Activity imageLink={project.imageLink} title={project.title} link={project.link} />
-					</div>
-				{/each}
-			</div>
 		</div>
 	</div>
 
