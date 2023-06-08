@@ -49,6 +49,13 @@
 			<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
 		</div>
 		<div class={animateIn(5 * animationSpeed, 'fade')}>
+			<ButtonLink
+				link="https://www.linkedin.com/in/joblipat/"
+				iconLink="linkedin-icon.png"
+				text="LinkedIn"
+			/>
+		</div>
+		<div class={animateIn(6 * animationSpeed, 'fade')}>
 			<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
 		</div>
 	</div>

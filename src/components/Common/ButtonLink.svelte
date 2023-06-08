@@ -85,8 +85,8 @@
 		display: none;
 		@include md {
 			display: block;
-			width: 10.88px;
-			height: 10.89px;
+			width: 12px;
+			height: 12px;
 			margin-left: auto;
 		}
 	}

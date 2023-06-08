@@ -19,7 +19,6 @@
 
 <div class="section-container">
 	<div class="section">
-
 		<p class={'greeting ' + animateIn(1, 'fade')} transition:fade>
 			Hi, I'm <span class="greeting-name">Job Lipat</span>.
 		</p>
@@ -40,6 +39,14 @@
 			</div>
 			<div class={animateIn(4, 'fade')}>
 				<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
+			</div>
+
+			<div class={animateIn(4, 'fade')}>
+				<ButtonLink
+					link="https://www.linkedin.com/in/joblipat/"
+					iconLink="linkedin-icon.png"
+					text="LinkedIn"
+				/>
 			</div>
 
 			<div class={animateIn(4, 'fade')}>
@@ -126,6 +133,4 @@
 			gap: 24px;
 		}
 	}
-
-
 </style>
