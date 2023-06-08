@@ -603,8 +603,8 @@
 						</div>
 						<div class="name">Challenges</div>
 						<div class="description">
-							Quizzes were given at the end of each module to assess my knowledge of the topics
-							covered in the module
+							In between modules, challenges were provided so that we could test out the concepts
+							that were discussed
 						</div>
 					</div>
 					<div class="assignment">
