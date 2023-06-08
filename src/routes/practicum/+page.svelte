@@ -7,7 +7,10 @@
 	import metacraftersTimeline from '../../content/metacraftersTimeline.js';
 	import { courseraProjects, courseraCertificates } from '../../content/courseraActivities.js';
 	import linkedinActivities from '../../content/linkedinActivities.js';
-	import {metacraftersProjects, metacratersProofOfLearns} from '../../content/metacraftersActivities.js';
+	import {
+		metacraftersProjects,
+		metacratersProofOfLearns
+	} from '../../content/metacraftersActivities.js';
 	import Icon from '@iconify/svelte';
 	import PracticumNav from '../../components/Practicum/PracticumNav.svelte';
 	import ExpandableSection from '../../components/Practicum/ExpandableSection.svelte';
@@ -857,6 +860,11 @@
 	.section {
 		min-height: 100vh;
 		margin-bottom: 20px;
+
+		padding: 0 20px;
+		@include sm {
+			padding: 0;
+		}
 	}
 
 	.subsection {
@@ -919,13 +927,21 @@
 	}
 
 	h1 {
-		font-size: 42px;
+		font-size: 32px;
 		text-align: center;
+
+		@include sm {
+			font-size: 42px;
+		}
 	}
 
 	h2 {
 		font-weight: 600;
-		font-size: 28px;
+		font-size: 24px;
+
+		@include sm {
+			font-size:28px;
+		}
 	}
 
 	h3 {
@@ -1012,7 +1028,12 @@
 		flex-shrink: 0;
 		overflow-y: visible;
 		overflow-x: auto;
-		padding: 20px 50px;
+		padding: 20px 10px;
+
+		@include sm{
+			padding: 20px 50px;
+
+		}
 
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE 10+ */
@@ -1035,7 +1056,7 @@
 	}
 
 	.company-logo {
-		max-width: 400px;
+		max-width: min(400px, 100%);
 	}
 
 	.assignments {
