@@ -9,14 +9,27 @@
 </script>
 
 <a href={link} class="link" target="_blank">
-	<div class="project popup">
-		<img src={imageLink} alt={`${title} project banner`} class="project-image" />
+	<div class="project-container">
+		<div class="project popup">
+			<img src={imageLink} alt={`${title} project banner`} class="project-image" />
+		</div>
+		<div class="title">
+			{title}
+		</div>
 	</div>
 </a>
 
 <style lang="scss">
-	.project {
+	.project-container{
 		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+	}
+
+	.project {
+		height: calc(50vh - 200px);
 		z-index: 0;
 		display: flex;
 		flex-direction: column;
@@ -42,6 +55,7 @@
 
 	.title {
 		margin: auto auto;
+		margin-top: 10px;
 		text-align: center;
 		font-style: normal;
 		font-weight: 500;
@@ -70,8 +84,6 @@
 	.linkText {
 		margin-right: 6px;
 	}
-
-	
 
 	.tags {
 		display: flex;

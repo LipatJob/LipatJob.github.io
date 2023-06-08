@@ -227,7 +227,7 @@
 
 		<div class="outputs subsection-full snappable">
 			<div class="subsection-header">
-				<h2>Outputs</h2>
+				<h2>Certificates</h2>
 			</div>
 			<div class="outputs-list">
 				{#each linkedinActivities.slice(Math.floor(linkedinActivities.length / 2)) as project}
@@ -1016,11 +1016,6 @@
 
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE 10+ */
-
-		> * {
-			min-height: 100px;
-			height: calc(50vh - 200px);
-		}
 	}
 
 	.outputs-list::-webkit-scrollbar {
