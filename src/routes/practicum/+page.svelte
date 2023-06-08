@@ -329,7 +329,8 @@
 						</div>
 						<div class="name">Interactive Modules</div>
 						<div class="description">
-							Readings were also provided to elaborate on certain topics of the courses
+							Interactive modules were also provided to help in reviewing the concepts taught in the
+							lecture videos.
 						</div>
 					</div>
 					<div class="assignment">
@@ -940,7 +941,7 @@
 		font-size: 24px;
 
 		@include sm {
-			font-size:28px;
+			font-size: 28px;
 		}
 	}
 
@@ -1030,9 +1031,8 @@
 		overflow-x: auto;
 		padding: 20px 10px;
 
-		@include sm{
+		@include sm {
 			padding: 20px 50px;
-
 		}
 
 		scrollbar-width: none; /* Firefox */
