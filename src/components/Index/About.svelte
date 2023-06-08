@@ -100,7 +100,7 @@
 	}
 
 	.info {
-		font-size: 20px;
+		font-size: 26px;
 		font-weight: 600;
 		margin-bottom: 16px;
 		@include md {
@@ -109,7 +109,7 @@
 	}
 
 	.subinfo {
-		font-size: 18px;
+		font-size: 22px;
 		color: $secondary;
 		margin-bottom: 38px;
 		@include md {
@@ -125,7 +125,8 @@
 	.button-container {
 		display: flex;
 		flex-direction: row;
-		gap: 18px;
+		gap: 10px;
+		flex-wrap: wrap;
 		justify-content: center;
 
 		@include md {

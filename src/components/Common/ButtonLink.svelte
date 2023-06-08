@@ -27,7 +27,7 @@
 		border: $border;
 		padding: 8px 18px;
 		justify-content: center;
-		width: 50px;
+		width: 40px;
 
 		text-decoration: none;
 		color: $black;
@@ -48,7 +48,7 @@
 		line-height: 19px;
 		border-radius: 8px;
 		font-size: 16px;
-		width: 50px;
+		width: 40px;
 		padding: 8px 18px;
 		text-decoration: none;
 		background-color: $primary;
