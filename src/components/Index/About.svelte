@@ -125,7 +125,7 @@
 	.button-container {
 		display: flex;
 		flex-direction: row;
-		gap: 36px;
+		gap: 18px;
 		justify-content: center;
 
 		@include md {

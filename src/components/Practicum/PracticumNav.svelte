@@ -44,7 +44,6 @@
 <style lang="scss">
 	.nav {
 		background-color: $white;
-		overflow: hidden;
 		z-index: 10;
 	}
 
@@ -130,8 +129,6 @@
 		width: 40px;
 		height: 32px;
 		position: absolute;
-		top: -7px;
-		left: -5px;
 
 		cursor: pointer;
 
