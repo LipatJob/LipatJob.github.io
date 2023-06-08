@@ -45,7 +45,7 @@
 				title="B.S. Computer Science"
 				subtitle="Mapua Malayan Colleges Laguna"
 				bullets={[
-					'Running General Weighted Average of 1.06 (Expectd to graduate Summa Cum Laude)',
+					'Running General Weighted Average of 1.0598 (Expectd to graduate Summa Cum Laude)',
 					"Full Academic Scholar, Dean's Lister, and President's Lister for 3 years",
 					'Expected to graduate in June 2023'
 				]}
