@@ -18,7 +18,7 @@
 
 <div class="skill">
 	<button class="skill-toggle" on:click={toggle}>
-		<div class="toggle" class:closed={!opened}>
+		<div class="toggle popup" class:closed={!opened} class:opened={opened}>
 			<ChevronRight />
 		</div>
 		<p class="skill-name">
@@ -62,13 +62,39 @@
 
 	.toggle {
 		margin-right: 8px;
-		transform: rotate(90deg);
-		transition: transform 0.2s ease-in-out;
+		border: $border;
+		border-radius: 100%;
+		height: 30px;
+		width: 30px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.toggle:hover{
+		cursor: pointer;
+	}
+
+	.opened {
+		transform: rotate(90deg) translateY(0px);
+	}
+
+	.opened:hover {
+		transform: rotate(90deg) translateX(-4px);
+	}
+
+	.closed {
+		transform: rotate(0deg) translateY(0px);
+	}
+
+	.closed:hover {
+		transform: rotate(0deg) translateY(-4px);
 	}
 
 	.skill-name {
 		font-weight: 500;
-		font-size: 20px;
+		font-size: 24px;
 		margin-bottom: 8px;
 
 		@include sm {
@@ -103,10 +129,5 @@
 		flex-direction: row;
 		gap: 20px;
 		margin: 0 40px;
-	}
-
-	.closed {
-		transform: rotate(0deg);
-		transition: transform 0.2s ease-in-out;
 	}
 </style>

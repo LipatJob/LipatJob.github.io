@@ -95,11 +95,15 @@ p {
 .contain-height {
 	height: 100vh;
 }
-
+.popup {
+	transform: translateY(0px);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+	box-shadow: 0 0 0 rgb(0 0 0 / 0);
+}
 .popup:hover {
 	z-index: 0;
 	transform: translateY(-4px);
-	transition: 0.1s transform ease-in-out;
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 	box-shadow: 0 4px 4px rgb(0 0 0 / 0.1);
 }
 
