@@ -170,7 +170,9 @@
 			<div class="subsection-header">
 				<h2>Timeline of Activities</h2>
 			</div>
-			<ActivitiesTimeline data={linkedinTimeline} />
+			<div class="timeline">
+				<ActivitiesTimeline data={linkedinTimeline} />
+			</div>
 		</div>
 
 		<div class="outputs subsection-full snappable">
@@ -387,7 +389,9 @@
 			<div class="subsection-header">
 				<h2>Timeline of Activities</h2>
 			</div>
-			<ActivitiesTimeline data={courseraTimeline} />
+			<div class="timeline">
+				<ActivitiesTimeline data={courseraTimeline} />
+			</div>
 		</div>
 
 		<div class="outputs subsection-full snappable">
@@ -638,7 +642,9 @@
 				<div class="subsection-header">
 					<h2>Timeline of Activities</h2>
 				</div>
-				<ActivitiesTimeline data={metacraftersTimeline} />
+				<div class="timeline">
+					<ActivitiesTimeline data={metacraftersTimeline} />
+				</div>
 			</div>
 		</div>
 
@@ -993,8 +999,15 @@
 		flex-direction: row;
 		gap: 20px;
 		flex-wrap: wrap;
-		align-content: space-between;
 		justify-content: center;
+	}
+
+	.timeline-of-activities {
+		overflow-x: auto;
+	}
+
+	.timeline {
+		min-width: 800px;
 	}
 
 	.key-figure {
@@ -1122,7 +1135,10 @@
 		}
 
 		h1 {
-			font-size: 56px;
+			font-size: 42px;
+			@include sm {
+				font-size: 56px;
+			}
 		}
 	}
 
