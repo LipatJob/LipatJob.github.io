@@ -32,8 +32,10 @@
 
 <section class="section">
 	<div class="header">
-		<p class={"header-label "+animateIn(5 * animationSpeed, 'fade')}>Education</p>
-		<header class={"header-title "+animateIn(6 * animationSpeed, 'fade')}>Where I've Studied</header>
+		<p class={'header-label ' + animateIn(5 * animationSpeed, 'fade')}>Education</p>
+		<header class={'header-title ' + animateIn(6 * animationSpeed, 'fade')}>
+			Where I've Studied
+		</header>
 	</div>
 
 	<div class="schools">
@@ -43,8 +45,8 @@
 				title="B.S. Computer Science"
 				subtitle="Mapua Malayan Colleges Laguna"
 				bullets={[
-					'Full Academic Scholar, Dean’s Lister, and President’s Lister for 3 years',
-					'Running General Weighted Average of 1.06 (Expected to graduate Summa Cum Laude)',
+					'Running General Weighted Average of 1.06 (Expectd to graduate Summa Cum Laude)',
+					"Full Academic Scholar, Dean's Lister, and President's Lister for 3 years",
 					'Expected to graduate in June 2023'
 				]}
 				dateStart="August 2019"

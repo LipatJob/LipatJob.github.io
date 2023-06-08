@@ -43,8 +43,8 @@
 	.icon-container {
 		margin: 0 auto;
 		display: flex;
-		width: 60px;
-		height: 60px;
+		width: 70px;
+		height: 70px;
 		padding: 4px;
 	}
 
@@ -64,7 +64,7 @@
 
 	.title {
 		font-weight: 700;
-		font-size: 18px;
+		font-size: 22px;
 		text-align: center;
 		@include sm {
 			text-align: left;
@@ -72,7 +72,7 @@
 	}
 
 	.date {
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
 		@include sm {
 			text-align: left;
@@ -82,7 +82,7 @@
 
 	.subtitle {
 		font-style: italic;
-		font-size: 16px;
+		font-size: 20px;
 		text-align: center;
 		@include sm {
 			text-align: left;
@@ -96,6 +96,6 @@
 	}
 
 	.bullet {
-		font-size: 16px;
+		font-size: 18px;
 	}
 </style>
