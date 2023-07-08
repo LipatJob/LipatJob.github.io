@@ -40,7 +40,7 @@
 	>
 		<div class="image-carousel-container">
 			<div class="image-carousel content" class:vertical={project.verticalPhotos}>
-				<ImageCarousel photos={project.photos} vertical={project.verticalPhotos} />
+				<ImageCarousel photos={project.photos} />
 			</div>
 			<button class="close close-mobile popup" on:click={onClose}>
 				<Icon icon="material-symbols:close" style="width: 24px; height: 24px" slot="icon" />
@@ -135,10 +135,12 @@
 		aspect-ratio: 9/16;
 		max-height: 100%;
 		height: 100%;
+		width: 100%;
 		max-width: 100%;
 
 		@include sm {
 			max-width: 400px;
+			width: 400px;
 		}
 	}
 
