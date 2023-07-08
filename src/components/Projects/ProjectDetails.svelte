@@ -117,10 +117,11 @@
 
 	.image-carousel-container {
 		position: relative;
+		flex-grow: 1;
 	}
+
 	.image-carousel {
 		aspect-ratio: 16/9;
-		flex-grow: 1;
 		overflow: hidden;
 	}
 
