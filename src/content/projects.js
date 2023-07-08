@@ -192,8 +192,7 @@ const data = [
 			'An application that allows users to navigate the campus of Mapua Malayan Colleges Laguna with the help of augmented reality.',
 		links: {
 			github: 'https://github.com/LipatJob/DiscoverMapuaMCL',
-			slides:
-				'https://github.com/LipatJob/DiscoverMapuaMCL/blob/main/discover%20mapua%20mcl%20pitch%20deck.pdf'
+			slides: 'https://drive.google.com/file/d/1yOA1cJCwZQOARet6-3qQsHTk_rJ818pt/view?usp=sharing'
 		},
 		tags: ['AR', 'Unity', 'ARCore'],
 		photos: [

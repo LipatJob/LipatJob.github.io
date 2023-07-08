@@ -13,6 +13,7 @@
 			github?: string | undefined;
 			website?: string | undefined;
 			paper?: string | undefined;
+			slides?: string | undefined;
 		};
 		tags: string[];
 		photos: string[];
@@ -69,6 +70,11 @@
 				{#if project.links.paper}
 					<ButtonLink link={project.links.paper} text="Paper">
 						<Icon icon="humbleicons:document" style="width: 24px; height: 24px" slot="icon" />
+					</ButtonLink>
+				{/if}
+				{#if project.links.slides}
+					<ButtonLink link={project.links.slides} text="Slides">
+						<Icon icon="mdi:presentation" style="width: 24px; height: 24px" slot="icon" />
 					</ButtonLink>
 				{/if}
 			</div>
