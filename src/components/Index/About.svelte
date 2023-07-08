@@ -32,25 +32,25 @@
 			<div class={animateIn(4, 'fade')}>
 				<ButtonLink
 					link="https://drive.google.com/file/d/1U6Z6PfnT-CBCUv4GbUzcyWh4jyzRKGO-/view?usp=share_link"
-					iconLink="resume-icon.svg"
+					iconLink="icons/resume.svg"
 					text="Resume"
 					type="primary"
 				/>
 			</div>
 			<div class={animateIn(4, 'fade')}>
-				<ButtonLink link="https://github.com/LipatJob" iconLink="github-icon.svg" text="Github" />
+				<ButtonLink link="https://github.com/LipatJob" iconLink="icons/github.svg" text="Github" />
 			</div>
 
 			<div class={animateIn(4, 'fade')}>
 				<ButtonLink
 					link="https://www.linkedin.com/in/joblipat/"
-					iconLink="linkedin-icon.png"
+					iconLink="icons/linkedin.png"
 					text="LinkedIn"
 				/>
 			</div>
 
 			<div class={animateIn(4, 'fade')}>
-				<ButtonLink link="mailto:joblipat@gmail.com" iconLink="email-icon.svg" text="Email" />
+				<ButtonLink link="mailto:joblipat@gmail.com" iconLink="icons/email.svg" text="Email" />
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let link: string;
-	export let iconLink: string;
+	export let iconLink: string | undefined = undefined;
 	export let text: string;
 	export let type: string = 'normal';
 </script>
@@ -10,7 +10,13 @@
 	class={type == 'normal' ? 'button popup button-normal' : 'button popup button-primary'}
 	target="_blank"
 >
-	<img src={iconLink} alt={`${text} Icon`} class="button-icon" />
+	{#if $$slots.icon}
+		<slot name="icon" />
+	{/if}
+	{#if iconLink}
+		<img src={iconLink} alt={`${text} Icon`} class="button-icon" />
+	{/if}
+
 	<span class="button-text">{text}</span>
 </a>
 
@@ -28,9 +34,10 @@
 		padding: 8px 18px;
 		justify-content: center;
 		width: 40px;
-
+		background-color: $white;
 		text-decoration: none;
 		color: $black;
+		text-align: center;
 
 		@include md {
 			width: 120px;
@@ -53,6 +60,7 @@
 		text-decoration: none;
 		background-color: $primary;
 		border: $primary 2px solid;
+		text-align: center;
 
 		@include md {
 			align-items: center;
@@ -68,6 +76,7 @@
 	.button-icon {
 		width: auto;
 		height: 36px;
+
 		@include md {
 			width: auto;
 			height: 24px;

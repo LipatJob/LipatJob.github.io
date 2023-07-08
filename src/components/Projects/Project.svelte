@@ -4,25 +4,22 @@
 
 	export let imageLink: string;
 	export let title: string;
-	export let description: string;
-	export let link: string;
+	export let summary: string;
 	export let tags: Array<string> = [];
 </script>
 
-<a href={link} class="link" target="_blank">
-	<div class="project popup">
-		<img src={imageLink} alt={`${title} project banner`} class="project-image" />
-		<div class="information">
-			<p class="title">{title}</p>
-			<p class="description">{description}</p>
-			<div class="tags">
-				{#each tags as tag}
-					<Pill text={tag} />
-				{/each}
-			</div>
+<div class="project popup">
+	<img src={imageLink} alt={`${title} project banner`} class="project-image" />
+	<div class="information">
+		<p class="title">{title}</p>
+		<p class="description">{summary}</p>
+		<div class="tags">
+			{#each tags as tag}
+				<Pill text={tag} />
+			{/each}
 		</div>
 	</div>
-</a>
+</div>
 
 <style lang="scss">
 	.project {

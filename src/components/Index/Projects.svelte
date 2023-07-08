@@ -2,9 +2,14 @@
 	import { onMount } from 'svelte';
 	import Project from '../Projects/Project.svelte';
 	import projects from '../../content/projects.js';
+	import ProjectDetails from '../Projects/ProjectDetails.svelte';
+	import { fade } from 'svelte/transition';
 
 	let ready = false;
 	let animationIndex = 1;
+	let isProjectDetailsOpen = false;
+	let selectedProjectIndex = 0;
+
 	onMount(() => {
 		const observer = new IntersectionObserver(
 			(elements) => {
@@ -27,8 +32,27 @@
 	$: animateIn = (targetIndex: number, animation: string) => {
 		return targetIndex >= animationIndex ? 'hidden' : animation;
 	};
+
+	function showProjectDetails(index: number) {
+		isProjectDetailsOpen = true;
+		selectedProjectIndex = index;
+	}
+
+	function closeProjectDetails() {
+		isProjectDetailsOpen = false;
+	}
+
 	const animationSpeed = 3;
 </script>
+
+{#if isProjectDetailsOpen}
+	<div class="project-details" transition:fade={{ duration: 100 }}>
+		<ProjectDetails
+			onClose={() => closeProjectDetails()}
+			project={projects[selectedProjectIndex]}
+		/>
+	</div>
+{/if}
 
 <section class="section" id="projects">
 	<div class="header">
@@ -42,12 +66,15 @@
 	<div class="projects-container">
 		<div class="projects-list" style="--project-count: {projects.length}">
 			{#each projects as project, index}
-				<div class={'project ' + animateIn((4 + index) * (animationSpeed / 1.5), 'fade')}>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div
+					class={'project ' + animateIn((4 + index) * (animationSpeed / 1.5), 'fade')}
+					on:click={() => showProjectDetails(index)}
+				>
 					<Project
 						imageLink={project.imageLink}
 						title={project.title}
-						description={project.description}
-						link={project.link}
+						summary={project.summary}
 						tags={project.tags}
 					/>
 				</div>
@@ -69,6 +96,23 @@
 		}
 		max-width: $screen-lg-min;
 		padding-bottom: 40px;
+	}
+
+	.project-details {
+		position: fixed;
+		// center
+		display: flex;
+		z-index: 20;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		@include sm {
+			width: 100vw;
+			height: 100vh;
+		}
+		// background is transparent gray
 	}
 
 	.projects-list {
