@@ -47,9 +47,9 @@
 				skillName="Back-End Development"
 				tools={['ASP.NET', 'Express.js']}
 				bullets={[
-					'Used frameworks such as ASP.NET Core, Express.Js, and Laravel to create RESTful APIs',
-					'Queried and manipulated databases using MS SQL, My SQL, Prisma, Entity Framework, and GraphQL',
-					'Involved in software design and architecture of multiple projects'
+					"I've used frameworks such as ASP.NET Core, Express.Js, and Laravel to create RESTful APIs",
+					"I've queried and manipulated databases using MS SQL, My SQL, Prisma, Entity Framework, and GraphQL",
+					"I was involved in software design and architecture of multiple projects"
 				]}
 			/>
 		</div>
@@ -58,9 +58,9 @@
 				skillName="Data Science"
 				tools={['Tensorflow', 'PyTorch']}
 				bullets={[
-					'Trained a computer vision model that detects how many people are inside a room using PyTorch',
-					'Developed CNN and LSTM based models that detects Gestures using TensorFlow',
-					'Developed natural language processing models that predict the grades of essays'
+					"I've trained a computer vision model that detects how many people are inside a room using PyTorch",
+					"I've developed CNN and LSTM based models that detects Gestures using TensorFlow",
+					"I've developed natural language processing models that predict the grades of essay"
 				]}
 			/>
 		</div>
@@ -69,9 +69,9 @@
 				skillName="Front-End Development"
 				tools={['React.js', 'Vue.js', 'TailwindCSS']}
 				bullets={[
-					'Developed multiple projects using front-end frameworks including React, Vue.Js, and Svelte',
-					'Used user interface frameworks such as SASS, TailwindCSS and Bootstrap',
-					'Created dashboard data visualizations using ApexCharts and ChartJs'
+					"I've developed multiple projects using front-end frameworks including React, Vue.Js, and Svelte",
+					"I've used user interface frameworks such as SASS, TailwindCSS and Bootstrap",
+					"I've created dashboard data visualizations using ApexCharts and ChartJ"
 				]}
 			/>
 		</div>
@@ -80,10 +80,10 @@
 				skillName="Project Management"
 				tools={['Agile', 'Traditional', 'Jira']}
 				bullets={[
-					'Lead different teams through the planning, analysis, design, and implementation of various projects',
-					'Enforced agile practices and principles as a scrum master in different projects',
-					'Collaborated with the project sponsors and stakeholders regularly for progress updates',
-					'Used tools such as Trello, Jira, and GitHub Issues for managing project deliverables'
+					"I've lead different teams through the planning, analysis, design, and implementation of various projects",
+					"I've enforced agile practices and principles as a scrum master in different projects",
+					"I've collaborated with the project sponsors and stakeholders regularly for progress updates",
+					"I've used tools such as Trello, Jira, and GitHub Issues for managing project deliverable"
 				]}
 			/>
 		</div>
