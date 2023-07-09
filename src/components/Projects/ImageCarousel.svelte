@@ -2,19 +2,36 @@
 	import { fade } from 'svelte/transition';
 	import ChevronRight from '../Common/ChevronRight.svelte';
 	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
 
 	export let photos: string[];
 	export let vertical: boolean = false;
 
 	let currentIndex = 0;
 	let transitioning = false;
+	let loading = true;
+
+	onMount(() => {
+		const img = new Image();
+		img.src = photos[currentIndex];
+		img.onload = () => {
+			loading = false;
+		};
+	});
 
 	const next = () => {
 		if (!transitioning) {
 			transitioning = true;
+			loading = true;
 			setTimeout(() => {
 				currentIndex = (currentIndex + 1) % photos.length;
 				transitioning = false;
+
+				const img = new Image();
+				img.src = photos[currentIndex];
+				img.onload = () => {
+					loading = false;
+				};
 			}, 300);
 		}
 	};
@@ -22,6 +39,7 @@
 	const previous = () => {
 		if (!transitioning) {
 			transitioning = true;
+			loading = true;
 			setTimeout(() => {
 				if (currentIndex === 0) {
 					currentIndex = photos.length - 1;
@@ -29,6 +47,12 @@
 					currentIndex = (currentIndex - 1) % photos.length;
 				}
 				transitioning = false;
+
+				const img = new Image();
+				img.src = photos[currentIndex];
+				img.onload = () => {
+					loading = false;
+				};
 			}, 300);
 		}
 	};
@@ -36,7 +60,7 @@
 
 <div class="carousel">
 	{#each photos as item, index}
-		<div class:transitioning class="image-container">
+		<div class:transitioning={transitioning || loading} class="image-container">
 			{#if index === currentIndex}
 				<img class="image" src={item} alt="" class:vertical />
 			{/if}
@@ -115,7 +139,6 @@
 		transition: opacity 0.3s ease-in-out;
 	}
 
-	.vertical{
-		
+	.vertical {
 	}
 </style>
