@@ -135,7 +135,7 @@ const data = [
 		description:
 			'A dashboard where users may view visualizations of COVID-19 cases in the cities and barangays of the provice of Laguna, Philippines',
 		links: {
-			github: 'https://mcl-covid19tracker-laguna.netlify.app'
+			website: 'https://mcl-covid19tracker-laguna.netlify.app'
 		},
 		tags: ['Vue', 'ApexCharts', 'Data Pipeline'],
 		photos: [
