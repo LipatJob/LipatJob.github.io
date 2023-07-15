@@ -23,10 +23,10 @@
 			Hi, I'm <span class="greeting-name">Job Lipat</span>.
 		</p>
 		<p class={'info ' + animateIn(2, 'fade')}>
-			I am a 4th-year Computer Science student at Mapua Malayan Colleges Laguna.
+			I'm a B.S. Computer Science graduate from Mapua Malayan Colleges Laguna.
 		</p>
 		<p class={'subinfo ' + animateIn(3, 'fade')}>
-			I use code to transform complexity into simplicity.
+			Problem Solver at heart, Software Engineer by profession.
 		</p>
 		<div class="button-container">
 			<div class={animateIn(4, 'fade')}>
@@ -114,7 +114,7 @@
 		margin-bottom: 38px;
 		@include md {
 			line-height: 43px;
-			font-size: 20px;
+			font-size: 24px;
 		}
 	}
 

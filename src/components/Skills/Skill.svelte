@@ -46,6 +46,9 @@
 </div>
 
 <style lang="scss">
+	.skill{
+		height: 100%;
+	}
 	.skill-toggle {
 		display: flex;
 		flex-direction: column;

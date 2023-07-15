@@ -15,7 +15,9 @@ const data = [
 		description:
 			'A Smartwatch-Based Alternative Communication Aid for Nonverbal Individuals that uses a CNN Based Gesture Recognition Model',
 		links: {
-			github: 'https://github.com/OlivarezK/SpeakByHand'
+			github: 'https://github.com/OlivarezK/SpeakByHand',
+			slides: 'https://drive.google.com/file/d/1_iPltneUz4BzZBBa8I7Iv7snIxMfzoyx/view?usp=sharing',
+			video: 'https://drive.google.com/file/d/1S0MeUzsjN1hwXTBIcgjocETu1H3n80FD/preview'
 		},
 		tags: ['AAC', 'ML', 'Jetpack', 'Smartwatch'],
 		photos: [

@@ -24,11 +24,12 @@
 			animationIndex++;
 		}
 	}, 50);
+
 	$: animateIn = (targetIndex: number, animation: string) => {
 		return targetIndex >= animationIndex ? 'hidden' : animation;
 	};
 
-	const animationSpeed = 3
+	const animationSpeed = 3;
 </script>
 
 <section class="section" id="skills">
@@ -36,8 +37,7 @@
 		<p class={'header-label ' + animateIn(1 * animationSpeed, 'fade')}>Skills</p>
 		<header class={'header-title ' + animateIn(2 * animationSpeed, 'fade')}>What I Can Do</header>
 		<p class={'header-subtitle ' + animateIn(3 * animationSpeed, 'fade')}>
-			Through my studies, I've gained a solid understanding of Computer Science and Software
-			Engineering concepts.
+			With a solid foundation in Computer Science, I bring a diverse set of skills to the table.
 		</p>
 	</div>
 
@@ -49,7 +49,7 @@
 				bullets={[
 					"I've used frameworks such as ASP.NET Core, Express.Js, and Laravel to create RESTful APIs",
 					"I've queried and manipulated databases using MS SQL, My SQL, Prisma, Entity Framework, and GraphQL",
-					"I was involved in software design and architecture of multiple projects"
+					'I was involved in software design and architecture of multiple projects'
 				]}
 			/>
 		</div>
@@ -90,7 +90,7 @@
 	</div>
 </section>
 
-<style>
+<style lang="scss">
 	.skills {
 		display: flex;
 		flex-direction: column;
